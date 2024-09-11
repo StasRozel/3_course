@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px 5px 0px 5px;
+        }
+        button {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Лабораторная работа 1</h1>
+    <a href="https://belsty.by/">БГТУ</a>
+    <button>Информация о браузере</button>
+    <p></p>
+</body>
+<script>
+    const info = window.navigator;
+
+    document.querySelector('button').addEventListener('click', ()=> {
+        document.querySelector('p').innerHTML = 
+                                                `<p>appCodeName = ${info.appCodeName}</p>
+                                                 <p>appName = ${info.appName}</p>
+                                                 <p>appVersion = ${info.appVersion}</p>
+                                                 <p>User-Agent = ${info.userAgent}</p>`
+    })
+
+    console.log("hello world")
+</script>
+</html>
