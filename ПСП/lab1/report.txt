@@ -1,0 +1,214 @@
+﻿
+ЂЄвЁў­лҐ Ї®¤Є«озҐ­Ёп
+
+  €¬п    ‹®Є «м­л©  ¤аҐб        ‚­Ґи­Ё©  ¤аҐб          ‘®бв®п­ЁҐ
+  TCP    0.0.0.0:135            DESKTOP-RDL67AB:0      LISTENING
+  RpcSs
+ [svchost.exe]
+  TCP    0.0.0.0:445            DESKTOP-RDL67AB:0      LISTENING
+ ЌҐ г¤ Ґвбп Ї®«гзЁвм бўҐ¤Ґ­Ёп ® ў« ¤Ґ«мжҐ
+  TCP    0.0.0.0:5040           DESKTOP-RDL67AB:0      LISTENING
+  CDPSvc
+ [svchost.exe]
+  TCP    0.0.0.0:5357           DESKTOP-RDL67AB:0      LISTENING
+ ЌҐ г¤ Ґвбп Ї®«гзЁвм бўҐ¤Ґ­Ёп ® ў« ¤Ґ«мжҐ
+  TCP    0.0.0.0:7680           DESKTOP-RDL67AB:0      LISTENING
+ ЌҐ г¤ Ґвбп Ї®«гзЁвм бўҐ¤Ґ­Ёп ® ў« ¤Ґ«мжҐ
+  TCP    0.0.0.0:49664          DESKTOP-RDL67AB:0      LISTENING
+ [lsass.exe]
+  TCP    0.0.0.0:49665          DESKTOP-RDL67AB:0      LISTENING
+ ЌҐ г¤ Ґвбп Ї®«гзЁвм бўҐ¤Ґ­Ёп ® ў« ¤Ґ«мжҐ
+  TCP    0.0.0.0:49666          DESKTOP-RDL67AB:0      LISTENING
+  EventLog
+ [svchost.exe]
+  TCP    0.0.0.0:49667          DESKTOP-RDL67AB:0      LISTENING
+  Schedule
+ [svchost.exe]
+  TCP    0.0.0.0:49668          DESKTOP-RDL67AB:0      LISTENING
+ [spoolsv.exe]
+  TCP    0.0.0.0:49670          DESKTOP-RDL67AB:0      LISTENING
+ ЌҐ г¤ Ґвбп Ї®«гзЁвм бўҐ¤Ґ­Ёп ® ў« ¤Ґ«мжҐ
+  TCP    0.0.0.0:50128          DESKTOP-RDL67AB:0      LISTENING
+ ЌҐ г¤ Ґвбп Ї®«гзЁвм бўҐ¤Ґ­Ёп ® ў« ¤Ґ«мжҐ
+  TCP    192.168.1.9:139        DESKTOP-RDL67AB:0      LISTENING
+ ЌҐ г¤ Ґвбп Ї®«гзЁвм бўҐ¤Ґ­Ёп ® ў« ¤Ґ«мжҐ
+  TCP    192.168.1.9:61722      149.154.167.51:https   ESTABLISHED
+ [Telegram.exe]
+  TCP    192.168.1.9:61754      20.54.37.64:https      ESTABLISHED
+  WpnService
+ [svchost.exe]
+  TCP    192.168.1.9:61758      20.54.36.229:https     ESTABLISHED
+ [OneDrive.exe]
+  TCP    192.168.1.9:61791      waw07s03-in-f10:https  CLOSE_WAIT
+ [Arc.exe]
+  TCP    192.168.1.9:61795      waw02s13-in-f10:https  CLOSE_WAIT
+ [Arc.exe]
+  TCP    192.168.1.9:61797      waw07s03-in-f10:https  ESTABLISHED
+ [Arc.exe]
+  TCP    192.168.1.9:61865      a23-64-12-18:https     CLOSE_WAIT
+ [SearchApp.exe]
+  TCP    192.168.1.9:61866      40.99.149.146:https    ESTABLISHED
+ [SearchApp.exe]
+  TCP    192.168.1.9:61867      a23-64-12-25:https     CLOSE_WAIT
+ [SearchApp.exe]
+  TCP    192.168.1.9:61871      13.107.246.44:https    CLOSE_WAIT
+ [SearchApp.exe]
+  TCP    192.168.1.9:61872      13.107.246.45:https    CLOSE_WAIT
+ [SearchApp.exe]
+  TCP    192.168.1.9:61882      a1370dc23e25e46ce:https  ESTABLISHED
+ [Arc.exe]
+  TCP    192.168.1.9:61885      20.69.137.228:https    TIME_WAIT
+  TCP    192.168.1.9:61887      20.56.187.20:https     ESTABLISHED
+ [smartscreen.exe]
+  TCP    192.168.1.9:61888      149.154.167.41:https   TIME_WAIT
+  TCP    192.168.1.9:61889      149.154.167.50:https   TIME_WAIT
+  TCP    192.168.1.9:61890      149.154.167.51:https   ESTABLISHED
+ [Telegram.exe]
+  TCP    192.168.1.9:61891      149.154.167.41:http    TIME_WAIT
+  TCP    192.168.1.9:61892      149.154.167.50:http    TIME_WAIT
+  TCP    192.168.1.9:61893      149.154.167.51:http    TIME_WAIT
+  TCP    192.168.56.1:139       DESKTOP-RDL67AB:0      LISTENING
+ ЌҐ г¤ Ґвбп Ї®«гзЁвм бўҐ¤Ґ­Ёп ® ў« ¤Ґ«мжҐ
+  TCP    [::]:135               DESKTOP-RDL67AB:0      LISTENING
+  RpcSs
+ [svchost.exe]
+  TCP    [::]:445               DESKTOP-RDL67AB:0      LISTENING
+ ЌҐ г¤ Ґвбп Ї®«гзЁвм бўҐ¤Ґ­Ёп ® ў« ¤Ґ«мжҐ
+  TCP    [::]:5357              DESKTOP-RDL67AB:0      LISTENING
+ ЌҐ г¤ Ґвбп Ї®«гзЁвм бўҐ¤Ґ­Ёп ® ў« ¤Ґ«мжҐ
+  TCP    [::]:7680              DESKTOP-RDL67AB:0      LISTENING
+ ЌҐ г¤ Ґвбп Ї®«гзЁвм бўҐ¤Ґ­Ёп ® ў« ¤Ґ«мжҐ
+  TCP    [::]:49664             DESKTOP-RDL67AB:0      LISTENING
+ [lsass.exe]
+  TCP    [::]:49665             DESKTOP-RDL67AB:0      LISTENING
+ ЌҐ г¤ Ґвбп Ї®«гзЁвм бўҐ¤Ґ­Ёп ® ў« ¤Ґ«мжҐ
+  TCP    [::]:49666             DESKTOP-RDL67AB:0      LISTENING
+  EventLog
+ [svchost.exe]
+  TCP    [::]:49667             DESKTOP-RDL67AB:0      LISTENING
+  Schedule
+ [svchost.exe]
+  TCP    [::]:49668             DESKTOP-RDL67AB:0      LISTENING
+ [spoolsv.exe]
+  TCP    [::]:49670             DESKTOP-RDL67AB:0      LISTENING
+ ЌҐ г¤ Ґвбп Ї®«гзЁвм бўҐ¤Ґ­Ёп ® ў« ¤Ґ«мжҐ
+  TCP    [::]:50128             DESKTOP-RDL67AB:0      LISTENING
+ ЌҐ г¤ Ґвбп Ї®«гзЁвм бўҐ¤Ґ­Ёп ® ў« ¤Ґ«мжҐ
+  TCP    [::1]:49669            DESKTOP-RDL67AB:0      LISTENING
+ [jhi_service.exe]
+  UDP    0.0.0.0:3702           *:*                    
+  FDResPub
+ [svchost.exe]
+  UDP    0.0.0.0:3702           *:*                    
+ [dashost.exe]
+  UDP    0.0.0.0:3702           *:*                    
+  FDResPub
+ [svchost.exe]
+  UDP    0.0.0.0:3702           *:*                    
+ [dashost.exe]
+  UDP    0.0.0.0:5050           *:*                    
+  CDPSvc
+ [svchost.exe]
+  UDP    0.0.0.0:5353           *:*                    
+ [Arc.exe]
+  UDP    0.0.0.0:5353           *:*                    
+ [Arc.exe]
+  UDP    0.0.0.0:5353           *:*                    
+ [Arc.exe]
+  UDP    0.0.0.0:5353           *:*                    
+ [Arc.exe]
+  UDP    0.0.0.0:5353           *:*                    
+ [Arc.exe]
+  UDP    0.0.0.0:5353           *:*                    
+ [Arc.exe]
+  UDP    0.0.0.0:5353           *:*                    
+  Dnscache
+ [svchost.exe]
+  UDP    0.0.0.0:5353           *:*                    
+ [Arc.exe]
+  UDP    0.0.0.0:5353           *:*                    
+ [Arc.exe]
+  UDP    0.0.0.0:5355           *:*                    
+  Dnscache
+ [svchost.exe]
+  UDP    0.0.0.0:52207          *:*                    
+ [dashost.exe]
+  UDP    0.0.0.0:59695          *:*                    
+  FDResPub
+ [svchost.exe]
+  UDP    127.0.0.1:1900         *:*                    
+  SSDPSRV
+ [svchost.exe]
+  UDP    127.0.0.1:54997        *:*                    
+  iphlpsvc
+ [svchost.exe]
+  UDP    127.0.0.1:62742        *:*                    
+  SSDPSRV
+ [svchost.exe]
+  UDP    192.168.1.9:137        *:*                    
+ ЌҐ г¤ Ґвбп Ї®«гзЁвм бўҐ¤Ґ­Ёп ® ў« ¤Ґ«мжҐ
+  UDP    192.168.1.9:138        *:*                    
+ ЌҐ г¤ Ґвбп Ї®«гзЁвм бўҐ¤Ґ­Ёп ® ў« ¤Ґ«мжҐ
+  UDP    192.168.1.9:1900       *:*                    
+  SSDPSRV
+ [svchost.exe]
+  UDP    192.168.1.9:62741      *:*                    
+  SSDPSRV
+ [svchost.exe]
+  UDP    192.168.56.1:137       *:*                    
+ ЌҐ г¤ Ґвбп Ї®«гзЁвм бўҐ¤Ґ­Ёп ® ў« ¤Ґ«мжҐ
+  UDP    192.168.56.1:138       *:*                    
+ ЌҐ г¤ Ґвбп Ї®«гзЁвм бўҐ¤Ґ­Ёп ® ў« ¤Ґ«мжҐ
+  UDP    192.168.56.1:1900      *:*                    
+  SSDPSRV
+ [svchost.exe]
+  UDP    192.168.56.1:62740     *:*                    
+  SSDPSRV
+ [svchost.exe]
+  UDP    [::]:3702              *:*                    
+  FDResPub
+ [svchost.exe]
+  UDP    [::]:3702              *:*                    
+ [dashost.exe]
+  UDP    [::]:3702              *:*                    
+ [dashost.exe]
+  UDP    [::]:3702              *:*                    
+  FDResPub
+ [svchost.exe]
+  UDP    [::]:5353              *:*                    
+ [Arc.exe]
+  UDP    [::]:5353              *:*                    
+ [Arc.exe]
+  UDP    [::]:5353              *:*                    
+ [Arc.exe]
+  UDP    [::]:5353              *:*                    
+  Dnscache
+ [svchost.exe]
+  UDP    [::]:5353              *:*                    
+ [Arc.exe]
+  UDP    [::]:5355              *:*                    
+  Dnscache
+ [svchost.exe]
+  UDP    [::]:52208             *:*                    
+ [dashost.exe]
+  UDP    [::]:59696             *:*                    
+  FDResPub
+ [svchost.exe]
+  UDP    [::1]:1900             *:*                    
+  SSDPSRV
+ [svchost.exe]
+  UDP    [::1]:62739            *:*                    
+  SSDPSRV
+ [svchost.exe]
+  UDP    [fe80::762e:5b58:71de:6e76%17]:1900  *:*                    
+  SSDPSRV
+ [svchost.exe]
+  UDP    [fe80::762e:5b58:71de:6e76%17]:62737  *:*                    
+  SSDPSRV
+ [svchost.exe]
+  UDP    [fe80::e966:e0cd:34b:7a7%5]:1900  *:*                    
+  SSDPSRV
+ [svchost.exe]
+  UDP    [fe80::e966:e0cd:34b:7a7%5]:62738  *:*                    
+  SSDPSRV
+ [svchost.exe]

@@ -1,0 +1,3 @@
+E:/Универ/3 курс/СП/lab1/bild/CMakeFiles/MyExecutable.dir
+E:/Универ/3 курс/СП/lab1/bild/CMakeFiles/ALL_BUILD.dir
+E:/Универ/3 курс/СП/lab1/bild/CMakeFiles/ZERO_CHECK.dir

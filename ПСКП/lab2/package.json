@@ -1,0 +1,21 @@
+{
+  "name": "lab2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "02-01": "nodemon js/02-01/02-01.js",
+    "02-02": "nodemon js/02-02/02-02.js",
+    "02-03": "nodemon js/02-03/02-03.js",
+    "02-04": "nodemon js/02-04/02-04.js",
+    "02-05": "nodemon js/02-05/02-05.js",
+    "02-06": "nodemon js/02-06/02-06.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.0",
+    "nodemon": "^3.1.4"
+  }
+}
