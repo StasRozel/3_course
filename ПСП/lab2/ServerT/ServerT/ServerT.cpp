@@ -50,36 +50,47 @@ int main()
             throw  SetErrorMsgText("listen:", WSAGetLastError());
 
         SOCKET cS;
-        SOCKADDR_IN clnt;           
+        SOCKADDR_IN clnt;
         memset(&clnt, 0, sizeof(clnt));
-        int lclnt = sizeof(clnt);    
+        int lclnt = sizeof(clnt);
+        while (true) {
+            
 
-        if ((cS = accept(sS, (sockaddr*)&clnt, &lclnt)) == INVALID_SOCKET)
-            throw  SetErrorMsgText("accept:", WSAGetLastError());
+            if ((cS = accept(sS, (sockaddr*)&clnt, &lclnt)) == INVALID_SOCKET)
+                throw  SetErrorMsgText("accept:", WSAGetLastError());
 
-        char buffer[64];
-        int bytesReceived;
+            char buffer[64];
+            int bytesReceived;
+            bool flag = true;
+            while (flag) {
+                bytesReceived = recv(cS, buffer, sizeof(buffer) - 1, 0);
+                if (bytesReceived == 0) {
+                    cout << "Соединение закрыто клиентом." << endl;
+                    flag = false;
+                    break;
+                }
 
-        for (int i = 0; i < 1000; ++i) {
-            bytesReceived = recv(cS, buffer, sizeof(buffer) - 1, 0);
-            if (bytesReceived == SOCKET_ERROR) {
-                throw SetErrorMsgText("recv:", WSAGetLastError());
-            }
-            else if (bytesReceived == 0) {
-                cout << "Соединение закрыто клиентом." << endl;
-                break;
-            }
+                buffer[bytesReceived] = '\0';
+                cout << "Получено: " << buffer << endl;
 
-            buffer[bytesReceived] = '\0';
-            cout << "Получено: " << buffer << endl;
+                string response = string(buffer);
+                int result = send(cS, response.c_str(), response.size(), 0);
+                if (result == SOCKET_ERROR) {
+                    throw SetErrorMsgText("send:", WSAGetLastError());
+                }
 
-            string response = "Ответ от сервера: " + string(buffer);
-            int result = send(cS, response.c_str(), response.size(), 0);
-            if (result == SOCKET_ERROR) {
-                throw SetErrorMsgText("send:", WSAGetLastError());
+                bytesReceived = recv(cS, buffer, sizeof(buffer) - 1, 0);
+                if  (bytesReceived == 0) {
+                    cout << "Соединение закрыто клиентом." << endl;
+                    flag = false;
+                    break;
+                }
+
+                cout << "Получено после сложения: " << buffer << endl;
+                cout << endl;
+
             }
         }
-
         cout << "IP-address: " << inet_ntoa(clnt.sin_addr) << "\nPort: " << clnt.sin_port << endl;
        
 

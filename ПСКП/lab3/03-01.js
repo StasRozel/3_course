@@ -1,25 +1,44 @@
 const express = require("express");
-const readline = require("readline");
+  const readline = require('readline');
 
-const app = express();
-
-const rl = readline.createInterface({
+  const app = express();
+  // Создаем интерфейс для ввода/вывода
+  const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
   });
+
+  const states = {
+    norm: "norm",
+    stop: "stop",
+    idle: "idle",
+    test: "test"
+  }
+
+  let globalAnswer = "norm";
   
-  // Запрашиваем ввод пользователя
-  rl.question('Введите что-то: ', (answer) => {
-    console.log(`Вы ввели: ${answer}`);
-    
-    // Закрываем интерфейс после получения ввода
-    rl.close();
-  });
+  function askQuestion() {
+    let buff = 'norm';
+    buff = globalAnswer;
+    rl.question(`${buff}-> `, (answer) => {
+      if (answer.toLowerCase() === 'exit') {
+        console.log('Выход...');
+        rl.close();
+      } else {
+        if (states[answer]) {
+          globalAnswer = answer;
+        }
+        
+        console.log(`reg =${buff}-> ${answer}`);
+        askQuestion();
+      }
+    });
+  }
+  
+  askQuestion();
 
 app.get('/', (req, res) => {
-
+  res.send(`<h3>${globalAnswer}</h3>`);
 })
 
-app.listen(3000, () => {
-    console.log("Server start on port 3000...")
-})
+app.listen(3000)

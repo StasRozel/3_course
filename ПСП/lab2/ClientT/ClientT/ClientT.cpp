@@ -32,7 +32,9 @@ int main()
 
 	try
 	{
-
+		int count = 0;
+		cout << "Введите кол-во сообщений: " << endl;
+		cin >> count;
 		if (WSAStartup(MAKEWORD(2, 0), &wsaData) != 0)
 			throw  SetErrorMsgText("Startup:", WSAGetLastError());
 
@@ -44,39 +46,68 @@ int main()
 		serv.sin_family = AF_INET;           // используется IP-адресация  
 		serv.sin_port = htons(2000);                   // TCP-порт 2000
 
-		if (inet_pton(AF_INET, "127.0.0.1", &serv.sin_addr) <= 0)
+		if (inet_pton(AF_INET, "192.168.107.38", &serv.sin_addr) <= 0)
 			throw SetErrorMsgText("inet_pton:", WSAGetLastError());
 
 		if ((connect(cC, (sockaddr*)&serv, sizeof(serv))) == SOCKET_ERROR)
 			throw  SetErrorMsgText("connect:", WSAGetLastError());
+		clock_t time_req;
 
-		for (int i = 0; i < 1000; ++i) {
+		time_req = clock();
+		for (int i = 0; i < count; ++i) {
 			char buffer[64];
 			int bytesReceived;
 
-            string message = "Сообщение номер: " + to_string(i + 1);
-            int result = send(cC, message.c_str(), message.size(), 0);
-            if (result == SOCKET_ERROR)
-                throw SetErrorMsgText("send:", WSAGetLastError());
+			string message = "Hello from Client  ";
 
-            cout << "Отправлено: " << message << endl;
-            // Можно добавить задержку между сообщениями, если нужно
-            // Sleep(100); // Задержка в миллисекундах
+			if (i < 10) {
+				message += "00";
+			}
+			else if (i < 100 && i >= 10) {
+				message += "0";
+			}
+
+			message += to_string(i + 1);
+
+			int result1 = send(cC, message.c_str(), message.size(), 0);
+			if (result1 == SOCKET_ERROR)
+				throw SetErrorMsgText("send:", WSAGetLastError());
+
+			cout << "Отправлено на сервер: " << message << endl;
 
 			bytesReceived = recv(cC, buffer, sizeof(buffer) - 1, 0);
 			if (bytesReceived == SOCKET_ERROR) {
 				throw SetErrorMsgText("recv:", WSAGetLastError());
 			}
 			buffer[bytesReceived] = '\0';
-			cout << buffer << endl;
-        }
+
+			cout << "Ответ от сервера: " << buffer << endl;
+
+			string msg = buffer;
+			std::string clientNumberStr = msg.substr(19, 22);
+
+			int clientNumber = stoi(clientNumberStr);
+			int size = clientNumber == 1000 ? 4 : 3;
+			msg.replace(19, size, to_string(++clientNumber));
+
+			int result2 = send(cC, msg.c_str(), msg.size(), 0);
+			if (result2 == SOCKET_ERROR)
+				throw SetErrorMsgText("send:", WSAGetLastError());
+
+			cout << "Отправлено измененное: " << msg << endl;
+			cout << endl;
+		}
 
 		if (closesocket(cC) == SOCKET_ERROR)
 			throw  SetErrorMsgText("closesocket:", WSAGetLastError());
 
 		if (WSACleanup() == SOCKET_ERROR)
 			throw  SetErrorMsgText("Cleanup:", WSAGetLastError());
+
+		time_req = clock() - time_req;
+		cout << "Передача "<< count << " сообщений прошла за " << (float)time_req / CLOCKS_PER_SEC << " seconds" << endl;
 	}
+
 	catch (string errorMsgText)
 	{
 		cout << endl << "WSAGetLastError: " << errorMsgText;

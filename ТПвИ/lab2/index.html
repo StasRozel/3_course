@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <h2>Задача A</h2>
+        <label>Введите x: <input type="number" class="A-in"></label>
+        <label>Введите y: <input type="number" class="A-in"></label>
+        <p class="A-out">Результат z:</p>
+        <button class="A-btn" type="button">Submit</button>
+    </form>
+
+    <form>
+        <h2>Задача В</h2>
+        <label>Введите N: <input type="text" class="B-in"></label>
+        <p class="B-out"></p>
+        <button class="B-btn" type="button">Submit</button>
+    </form>
+
+    <form>
+        <h2>Задача C</h2>
+        <label>Введите x: <input type="number" class="C-in"></label>
+        <label>Введите y: <input type="number" class="C-in"></label>
+
+        <label>Введите N: <input type="text" class="C-in"></label>
+        <p class="C-out"></p>
+        <button class="C-btn" type="button">Submit</button>
+    </form>
+
+    <script>
+        const inputs = document.querySelectorAll(".A-in");
+
+        document.querySelector(".A-btn").addEventListener("click", () => {
+            fetch("/sum-headers", {
+                method: "POST",
+                headers: {
+                    "X-Value-x": inputs[0].value,
+                    "X-Value-y": inputs[1].value,
+                },
+                body: "ВСЕ ОК",
+            }).then((response) => {
+                const headers = response.headers;
+                document.querySelector("p").innerHTML =
+                    "Результат z: " + headers.get("x-value-z");
+            });
+        });
+
+        const input = document.querySelector(".B-in");
+
+        document.querySelector(".B-btn").addEventListener("click", () => {
+            fetch("/rand-header", {
+                method: "POST",
+                headers: {
+                    "X-Rand-N": input.value,
+                },
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    document.querySelector(".B-out").innerHTML = JSON.stringify(data);
+                });
+        });
+
+        const inputs3 = document.querySelectorAll('.C-in');
+
+        document.querySelector('.C-btn').addEventListener('click', () => {
+            let xhr = new XMLHttpRequest();
+            let xhr1 = new XMLHttpRequest();
+           
+            
+            xhr.open('POST', '/sum-headers', false);
+            xhr.setRequestHeader('X-Value-X', inputs3[0].value);
+            xhr.setRequestHeader('X-Value-Y', inputs3[1].value);
+            xhr.send();
+            xhr.onload = async function () {
+                if (xhr.status >= 200) {
+                    console.log('Ответ сервера:', xhr.responseText);
+                    await document.querySelector('.C-out').insertAdjacentHTML('afterend', `<p>${xhr.getResponseHeader('X-Value-Z')}</p>`)
+                }
+            };
+
+            xhr1.open('POST', '/rand-header', false);
+            xhr1.setRequestHeader('X-Rand-N', inputs3[2].value);
+            xhr1.send();
+            xhr1.onload = async function () {
+                if (xhr1.status >= 200) {
+                    console.log('Ответ сервера:', xhr1.responseText);
+                    await document.querySelector('.C-out').insertAdjacentHTML('afterend', `<p>${xhr1.responseText}</p>`)
+                }
+            };
+        })
+    </script>
+</body>
+
+</html>

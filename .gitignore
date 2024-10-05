@@ -1,3 +1,5 @@
+/.vscode
+
 /КМС
 /ПСКП/lab1/lab1-1/node_modules
 /ПСКП/lab1/lab1-2/node_modules
@@ -12,3 +14,11 @@
 /ПСКП/lab10/node_modules
 /ПСКП/lab11/node_modules
 /ПСКП/lab12/node_modules
+
+/ТПвИ/lab2/node_modules
+/ТПвИ/lab3/node_modules
+/ТПвИ/lab4/node_modules
+/ТПвИ/lab5/node_modules
+/ТПвИ/lab6/node_modules
+/ТПвИ/lab7/node_modules
+/ТПвИ/lab8/node_modules

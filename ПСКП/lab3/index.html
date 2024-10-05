@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <p></p>
+    <p class="time"></p>
+    <script>
+        let totalTime = 0;
+        for (let i = 0; i <= 20; i++) {
+            const start = performance.now();
+            
+            fetch(`http://localhost:3000/fact?k=${i}`, {
+            method: "GET"
+        }).then(res => res.text())
+          .then(data => {
+
+            const end = performance.now();
+            totalTime += Math.floor(end-start);
+
+            document.querySelector('p').insertAdjacentHTML(
+                'beforeend', 
+                `<p>${i}. Результат: ${Math.floor(end-start)}-${i}/${data}</p>`
+            );
+
+            document.querySelector('.time').innerHTML = `${totalTime} ms`;
+        });   
+        }
+    </script>
+</body>
+
+</html>
