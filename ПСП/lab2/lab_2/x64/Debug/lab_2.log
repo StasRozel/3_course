@@ -1,0 +1,6 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: промежуточный каталог (x64\Debug\) содержит файлы, которые используются совместно с другим проектом (lab_2.vcxproj).  Это может привести к ошибкам очистки и перестроения.
+  client.cpp
+E:\Универ\3 курс\ПСП\lab_2\lab_2\client.cpp(113,43): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+E:\Универ\3 курс\ПСП\lab_2\lab_2\client.cpp(98,4): warning C4101: obuf: неиспользованная локальная переменная
+E:\Универ\3 курс\ПСП\lab_2\lab_2\client.cpp(97,8): warning C4101: ibuf: неиспользованная локальная переменная
+  lab_2.vcxproj -> E:\Универ\3 курс\ПСП\lab_2\x64\Debug\client.exe

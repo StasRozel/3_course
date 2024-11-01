@@ -1,0 +1,1381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<properties>
+	<Controls>
+		<Table1>
+			<Parent value="#TOP"/>
+			<Properties>
+				<^checks value="0"/>
+				<^group value="-1"/>
+				<^height value="-1"/>
+				<^indexes value="0"/>
+				<^level value="8"/>
+				<^links value="0"/>
+				<^lock value="0"/>
+				<^methods value="0"/>
+				<^minimized value="0"/>
+				<^properties value="0"/>
+				<^triggers value="0"/>
+				<^uniques value="0"/>
+				<back_color value="ffffff"/>
+				<name value="Table1"/>
+				<position value="562;196"/>
+				<size value="253;116"/>
+				<sort_fields value="1"/>
+			</Properties>
+			<Type value="Table"/>
+		</Table1>
+		<Table2>
+			<Parent value="#TOP"/>
+			<Properties>
+				<^checks value="0"/>
+				<^group value="-1"/>
+				<^height value="-1"/>
+				<^indexes value="0"/>
+				<^level value="7"/>
+				<^links value="0"/>
+				<^lock value="0"/>
+				<^methods value="0"/>
+				<^minimized value="0"/>
+				<^properties value="0"/>
+				<^triggers value="0"/>
+				<^uniques value="0"/>
+				<back_color value="ffffff"/>
+				<name value="Table2"/>
+				<position value="403;392"/>
+				<size value="273;137"/>
+				<sort_fields value="1"/>
+			</Properties>
+			<Type value="Table"/>
+		</Table2>
+		<Table3>
+			<Parent value="#TOP"/>
+			<Properties>
+				<^checks value="0"/>
+				<^group value="-1"/>
+				<^height value="-1"/>
+				<^indexes value="0"/>
+				<^level value="6"/>
+				<^links value="0"/>
+				<^lock value="0"/>
+				<^methods value="0"/>
+				<^minimized value="0"/>
+				<^properties value="0"/>
+				<^triggers value="0"/>
+				<^uniques value="0"/>
+				<back_color value="ffffff"/>
+				<name value="Table3"/>
+				<position value="756;435"/>
+				<size value="328;137"/>
+				<sort_fields value="1"/>
+			</Properties>
+			<Type value="Table"/>
+		</Table3>
+		<Table4>
+			<Parent value="#TOP"/>
+			<Properties>
+				<^checks value="0"/>
+				<^group value="-1"/>
+				<^height value="-1"/>
+				<^indexes value="0"/>
+				<^level value="5"/>
+				<^links value="0"/>
+				<^lock value="0"/>
+				<^methods value="0"/>
+				<^minimized value="0"/>
+				<^properties value="0"/>
+				<^triggers value="0"/>
+				<^uniques value="0"/>
+				<back_color value="ffffff"/>
+				<name value="Table4"/>
+				<position value="962;160"/>
+				<size value="316;116"/>
+				<sort_fields value="1"/>
+			</Properties>
+			<Type value="Table"/>
+		</Table4>
+		<Table5>
+			<Parent value="#TOP"/>
+			<Properties>
+				<^checks value="0"/>
+				<^group value="-1"/>
+				<^height value="-1"/>
+				<^indexes value="0"/>
+				<^level value="4"/>
+				<^links value="0"/>
+				<^lock value="0"/>
+				<^methods value="0"/>
+				<^minimized value="0"/>
+				<^properties value="0"/>
+				<^triggers value="0"/>
+				<^uniques value="0"/>
+				<back_color value="ffffff"/>
+				<name value="Table5"/>
+				<position value="797;620"/>
+				<size value="253;158"/>
+				<sort_fields value="1"/>
+			</Properties>
+			<Type value="Table"/>
+		</Table5>
+		<Table6>
+			<Parent value="#TOP"/>
+			<Properties>
+				<^checks value="0"/>
+				<^group value="-1"/>
+				<^height value="-1"/>
+				<^indexes value="0"/>
+				<^level value="3"/>
+				<^links value="0"/>
+				<^lock value="0"/>
+				<^methods value="0"/>
+				<^minimized value="0"/>
+				<^properties value="0"/>
+				<^triggers value="0"/>
+				<^uniques value="0"/>
+				<back_color value="ffffff"/>
+				<name value="Table6"/>
+				<position value="955;288"/>
+				<size value="369;137"/>
+				<sort_fields value="1"/>
+			</Properties>
+			<Type value="Table"/>
+		</Table6>
+		<Table7>
+			<Parent value="#TOP"/>
+			<Properties>
+				<^checks value="0"/>
+				<^group value="-1"/>
+				<^height value="-1"/>
+				<^indexes value="0"/>
+				<^level value="2"/>
+				<^links value="0"/>
+				<^lock value="0"/>
+				<^methods value="0"/>
+				<^minimized value="0"/>
+				<^properties value="0"/>
+				<^triggers value="0"/>
+				<^uniques value="0"/>
+				<back_color value="ffffff"/>
+				<name value="Table7"/>
+				<position value="446;717"/>
+				<size value="238;137"/>
+				<sort_fields value="1"/>
+			</Properties>
+			<Type value="Table"/>
+		</Table7>
+		<Table8>
+			<Parent value="#TOP"/>
+			<Properties>
+				<^checks value="0"/>
+				<^group value="-1"/>
+				<^height value="-1"/>
+				<^indexes value="0"/>
+				<^level value="1"/>
+				<^links value="0"/>
+				<^lock value="0"/>
+				<^methods value="0"/>
+				<^minimized value="0"/>
+				<^properties value="0"/>
+				<^triggers value="0"/>
+				<^uniques value="0"/>
+				<back_color value="ffffff"/>
+				<name value="Table8"/>
+				<position value="433;553"/>
+				<size value="230;95"/>
+				<sort_fields value="1"/>
+			</Properties>
+			<Type value="Table"/>
+		</Table8>
+		<course_bd>
+			<Properties>
+				<^lock value="0"/>
+				<back_color value="FFFFFF"/>
+				<font value=""/>
+				<gamma value="0"/>
+				<name value="course_bd"/>
+				<size value="1680;2376"/>
+				<style value="4"/>
+				<style_links value="0"/>
+				<units value="5"/>
+			</Properties>
+			<Type value="Diagram"/>
+		</course_bd>
+	</Controls>
+	<GUI>
+		<FullToolbarLeft value="1"/>
+		<FullToolbarRight value="1"/>
+		<HiddenLinks value=""/>
+		<PageEditor value="-1"/>
+		<PageEditorHRel value="0.000000"/>
+		<PageToolbarLeft value="0"/>
+		<PageToolbarRB value="0"/>
+		<PageToolbarRight value="0"/>
+		<ScrollX value="0"/>
+		<ScrollY value="0"/>
+		<Selection value="Y291cnNlX2Jk"/>
+		<ShowAll value="1"/>
+		<ShowChanges value="1"/>
+		<ShowGL value="1"/>
+		<ShowGrid value="1"/>
+		<UseGrid value="0"/>
+	</GUI>
+	<Model>
+		<public>
+			<Links>
+				<o0>
+					<Changes value=""/>
+					<Properties>
+						<Cardinality value="ONE to MANY"/>
+						<Child_Table value="Купленные_Билеты"/>
+						<Child_Table_Schema value="public"/>
+						<Comment value=""/>
+						<Foreign_Key value="id_Билета"/>
+						<ID value="25729"/>
+						<Match_Types value="SIMPLE"/>
+						<Name value="Купленные_Билеты_id_Билета_fkey"/>
+						<On_Delete value="No Action"/>
+						<On_Update value="No Action"/>
+						<Parent_Table value="Билеты"/>
+						<Parent_Table_Schema value="public"/>
+						<Primary_Key value="id_Билета"/>
+						<Schema value="public"/>
+					</Properties>
+					<control value=""/>
+					<delete value="0"/>
+					<id value="25729"/>
+					<name value="Купленные_Билеты_id_Билета_fkey"/>
+					<virtual value="0"/>
+				</o0>
+				<o1>
+					<Changes value=""/>
+					<Properties>
+						<Cardinality value="ONE to MANY"/>
+						<Child_Table value="Купленные_Билеты"/>
+						<Child_Table_Schema value="public"/>
+						<Comment value=""/>
+						<Foreign_Key value="id_Пассажира"/>
+						<ID value="25734"/>
+						<Match_Types value="SIMPLE"/>
+						<Name value="Купленные_Билеты_id_Пассажира_fkey"/>
+						<On_Delete value="No Action"/>
+						<On_Update value="No Action"/>
+						<Parent_Table value="Пассажиры"/>
+						<Parent_Table_Schema value="public"/>
+						<Primary_Key value="id_Пассажира"/>
+						<Schema value="public"/>
+					</Properties>
+					<control value=""/>
+					<delete value="0"/>
+					<id value="25734"/>
+					<name value="Купленные_Билеты_id_Пассажира_fkey"/>
+					<virtual value="0"/>
+				</o1>
+				<o2>
+					<Changes value=""/>
+					<Properties>
+						<Cardinality value="ONE to MANY"/>
+						<Child_Table value="Поезда"/>
+						<Child_Table_Schema value="public"/>
+						<Comment value=""/>
+						<Foreign_Key value="id_Маршрута"/>
+						<ID value="25679"/>
+						<Match_Types value="SIMPLE"/>
+						<Name value="Поезда_id_Маршрута_fkey"/>
+						<On_Delete value="No Action"/>
+						<On_Update value="No Action"/>
+						<Parent_Table value="Маршруты"/>
+						<Parent_Table_Schema value="public"/>
+						<Primary_Key value="id_Маршрута"/>
+						<Schema value="public"/>
+					</Properties>
+					<control value=""/>
+					<delete value="0"/>
+					<id value="25679"/>
+					<name value="Поезда_id_Маршрута_fkey"/>
+					<virtual value="0"/>
+				</o2>
+				<o3>
+					<Changes value=""/>
+					<Properties>
+						<Cardinality value="ONE to MANY"/>
+						<Child_Table value="Вагоны"/>
+						<Child_Table_Schema value="public"/>
+						<Comment value=""/>
+						<Foreign_Key value="id_Поезда"/>
+						<ID value="25705"/>
+						<Match_Types value="SIMPLE"/>
+						<Name value="Вагоны_id_Поезда_fkey"/>
+						<On_Delete value="No Action"/>
+						<On_Update value="No Action"/>
+						<Parent_Table value="Поезда"/>
+						<Parent_Table_Schema value="public"/>
+						<Primary_Key value="id_Поезда"/>
+						<Schema value="public"/>
+					</Properties>
+					<control value=""/>
+					<delete value="0"/>
+					<id value="25705"/>
+					<name value="Вагоны_id_Поезда_fkey"/>
+					<virtual value="0"/>
+				</o3>
+				<o4>
+					<Changes value=""/>
+					<Properties>
+						<Cardinality value="ONE to MANY"/>
+						<Child_Table value="Билеты"/>
+						<Child_Table_Schema value="public"/>
+						<Comment value=""/>
+						<Foreign_Key value="id_Поезда"/>
+						<ID value="25717"/>
+						<Match_Types value="SIMPLE"/>
+						<Name value="Билеты_id_Поезда_fkey"/>
+						<On_Delete value="No Action"/>
+						<On_Update value="No Action"/>
+						<Parent_Table value="Поезда"/>
+						<Parent_Table_Schema value="public"/>
+						<Primary_Key value="id_Поезда"/>
+						<Schema value="public"/>
+					</Properties>
+					<control value=""/>
+					<delete value="0"/>
+					<id value="25717"/>
+					<name value="Билеты_id_Поезда_fkey"/>
+					<virtual value="0"/>
+				</o4>
+				<o5>
+					<Changes value=""/>
+					<Properties>
+						<Cardinality value="ONE to MANY"/>
+						<Child_Table value="Пассажиры"/>
+						<Child_Table_Schema value="public"/>
+						<Comment value=""/>
+						<Foreign_Key value="id_Пользователя"/>
+						<ID value="25693"/>
+						<Match_Types value="SIMPLE"/>
+						<Name value="Пассажиры_id_Пользователя_fkey"/>
+						<On_Delete value="No Action"/>
+						<On_Update value="No Action"/>
+						<Parent_Table value="Пользователи"/>
+						<Parent_Table_Schema value="public"/>
+						<Primary_Key value="id_Пользователя"/>
+						<Schema value="public"/>
+					</Properties>
+					<control value=""/>
+					<delete value="0"/>
+					<id value="25693"/>
+					<name value="Пассажиры_id_Пользователя_fkey"/>
+					<virtual value="0"/>
+				</o5>
+				<o6>
+					<Changes value=""/>
+					<Properties>
+						<Cardinality value="ONE to MANY"/>
+						<Child_Table value="Пользователи"/>
+						<Child_Table_Schema value="public"/>
+						<Comment value=""/>
+						<Foreign_Key value="id_Роли"/>
+						<ID value="25658"/>
+						<Match_Types value="SIMPLE"/>
+						<Name value="Пользователи_id_Роли_fkey"/>
+						<On_Delete value="No Action"/>
+						<On_Update value="No Action"/>
+						<Parent_Table value="Роли"/>
+						<Parent_Table_Schema value="public"/>
+						<Primary_Key value="id_Роли"/>
+						<Schema value="public"/>
+					</Properties>
+					<control value=""/>
+					<delete value="0"/>
+					<id value="25658"/>
+					<name value="Пользователи_id_Роли_fkey"/>
+					<virtual value="0"/>
+				</o6>
+			</Links>
+			<Tables>
+				<o0>
+					<Changes value=""/>
+					<Fields>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value='nextval(&apos;"Билеты_id_Билета_seq"&apos;::regclass)'/>
+								<Dimensions value="0"/>
+								<Field_Position value="1"/>
+								<Identity value="0"/>
+								<Indexed value="1"/>
+								<Name value="id_Билета"/>
+								<Nullable value="0"/>
+								<Type value="Integer"/>
+								<Unique value="1"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="id_Билета"/>
+							<virtual value="0"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="2"/>
+								<Identity value="0"/>
+								<Indexed value="0"/>
+								<Name value="Стоимость"/>
+								<Nullable value="0"/>
+								<Precision value="10"/>
+								<Scale value="2"/>
+								<Type value="Numeric"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="Стоимость"/>
+							<virtual value="0"/>
+						</o1>
+						<o2>
+							<Changes value=""/>
+							<Properties>
+								<Collation value='"pg_catalog"."default"'/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="3"/>
+								<Identity value="0"/>
+								<Indexed value="0"/>
+								<Length value="20"/>
+								<Name value="Тип_Билета"/>
+								<Nullable value="0"/>
+								<Type value="Character Varying"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="Тип_Билета"/>
+							<virtual value="0"/>
+						</o2>
+						<o3>
+							<Changes value=""/>
+							<Properties>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="4"/>
+								<Identity value="0"/>
+								<Indexed value="0"/>
+								<Name value="id_Поезда"/>
+								<Nullable value="0"/>
+								<Type value="Integer"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="id_Поезда"/>
+							<virtual value="0"/>
+						</o3>
+					</Fields>
+					<Properties>
+						<Check_Count value="0"/>
+						<Comment value=""/>
+						<Field_Count value="4"/>
+						<ID value="25711"/>
+						<Index_Count value="0"/>
+						<Link_Count value="2"/>
+						<Method_Count value="0"/>
+						<Name value="Билеты"/>
+						<Object_Owner value="postgres"/>
+						<Primary_Key value="id_Билета"/>
+						<Primary_Key_Name value="Билеты_pkey"/>
+						<Record_Count value="0"/>
+						<Schema value="public"/>
+						<Temporary value="0"/>
+						<Trigger_Count value="0"/>
+						<Unique_Count value="0"/>
+					</Properties>
+					<control value="Table1"/>
+					<delete value="0"/>
+					<id value="25711"/>
+					<name value="Билеты"/>
+					<virtual value="0"/>
+				</o0>
+				<o1>
+					<Changes value=""/>
+					<Fields>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value='nextval(&apos;"Вагоны_id_Вагона_seq"&apos;::regclass)'/>
+								<Dimensions value="0"/>
+								<Field_Position value="1"/>
+								<Identity value="0"/>
+								<Indexed value="1"/>
+								<Name value="id_Вагона"/>
+								<Nullable value="0"/>
+								<Type value="Integer"/>
+								<Unique value="1"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="id_Вагона"/>
+							<virtual value="0"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Collation value='"pg_catalog"."default"'/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="2"/>
+								<Identity value="0"/>
+								<Indexed value="0"/>
+								<Length value="10"/>
+								<Name value="Номер_Вагона"/>
+								<Nullable value="0"/>
+								<Type value="Character Varying"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="Номер_Вагона"/>
+							<virtual value="0"/>
+						</o1>
+						<o2>
+							<Changes value=""/>
+							<Properties>
+								<Collation value='"pg_catalog"."default"'/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="3"/>
+								<Identity value="0"/>
+								<Indexed value="0"/>
+								<Length value="20"/>
+								<Name value="Тип_Вагона"/>
+								<Nullable value="0"/>
+								<Type value="Character Varying"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="Тип_Вагона"/>
+							<virtual value="0"/>
+						</o2>
+						<o3>
+							<Changes value=""/>
+							<Properties>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="4"/>
+								<Identity value="0"/>
+								<Indexed value="0"/>
+								<Name value="Количество_Мест"/>
+								<Nullable value="0"/>
+								<Type value="Integer"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="Количество_Мест"/>
+							<virtual value="0"/>
+						</o3>
+						<o4>
+							<Changes value=""/>
+							<Properties>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="5"/>
+								<Identity value="0"/>
+								<Indexed value="0"/>
+								<Name value="id_Поезда"/>
+								<Nullable value="0"/>
+								<Type value="Integer"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="id_Поезда"/>
+							<virtual value="0"/>
+						</o4>
+					</Fields>
+					<Properties>
+						<Check_Count value="0"/>
+						<Comment value=""/>
+						<Field_Count value="5"/>
+						<ID value="25699"/>
+						<Index_Count value="0"/>
+						<Link_Count value="1"/>
+						<Method_Count value="0"/>
+						<Name value="Вагоны"/>
+						<Object_Owner value="postgres"/>
+						<Primary_Key value="id_Вагона"/>
+						<Primary_Key_Name value="Вагоны_pkey"/>
+						<Record_Count value="0"/>
+						<Schema value="public"/>
+						<Temporary value="0"/>
+						<Trigger_Count value="0"/>
+						<Unique_Count value="0"/>
+					</Properties>
+					<control value="Table2"/>
+					<delete value="0"/>
+					<id value="25699"/>
+					<name value="Вагоны"/>
+					<virtual value="0"/>
+				</o1>
+				<o2>
+					<Changes value=""/>
+					<Fields>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value='nextval(&apos;"Купленные_Билет_id_Купленного_Би_seq"&apos;::regclass)'/>
+								<Dimensions value="0"/>
+								<Field_Position value="1"/>
+								<Identity value="0"/>
+								<Indexed value="1"/>
+								<Name value="id_Купленного_Билета"/>
+								<Nullable value="0"/>
+								<Type value="Integer"/>
+								<Unique value="1"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="id_Купленного_Билета"/>
+							<virtual value="0"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="2"/>
+								<Identity value="0"/>
+								<Indexed value="0"/>
+								<Name value="id_Билета"/>
+								<Nullable value="0"/>
+								<Type value="Integer"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="id_Билета"/>
+							<virtual value="0"/>
+						</o1>
+						<o2>
+							<Changes value=""/>
+							<Properties>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="3"/>
+								<Identity value="0"/>
+								<Indexed value="0"/>
+								<Name value="id_Пассажира"/>
+								<Nullable value="0"/>
+								<Type value="Integer"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="id_Пассажира"/>
+							<virtual value="0"/>
+						</o2>
+						<o3>
+							<Changes value=""/>
+							<Properties>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="4"/>
+								<Identity value="0"/>
+								<Indexed value="0"/>
+								<Name value="Дата_Покупки"/>
+								<Nullable value="0"/>
+								<Precision value="-1"/>
+								<Type value="Timestamp Without Time Zone"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="Дата_Покупки"/>
+							<virtual value="0"/>
+						</o3>
+						<o4>
+							<Changes value=""/>
+							<Properties>
+								<Collation value='"pg_catalog"."default"'/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="5"/>
+								<Identity value="0"/>
+								<Indexed value="0"/>
+								<Length value="20"/>
+								<Name value="status"/>
+								<Nullable value="0"/>
+								<Type value="Character Varying"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="status"/>
+							<virtual value="0"/>
+						</o4>
+					</Fields>
+					<Properties>
+						<Check_Count value="0"/>
+						<Comment value=""/>
+						<Field_Count value="5"/>
+						<ID value="25723"/>
+						<Index_Count value="0"/>
+						<Link_Count value="2"/>
+						<Method_Count value="0"/>
+						<Name value="Купленные_Билеты"/>
+						<Object_Owner value="postgres"/>
+						<Primary_Key value="id_Купленного_Билета"/>
+						<Primary_Key_Name value="Купленные_Билеты_pkey"/>
+						<Record_Count value="0"/>
+						<Schema value="public"/>
+						<Temporary value="0"/>
+						<Trigger_Count value="0"/>
+						<Unique_Count value="0"/>
+					</Properties>
+					<control value="Table3"/>
+					<delete value="0"/>
+					<id value="25723"/>
+					<name value="Купленные_Билеты"/>
+					<virtual value="0"/>
+				</o2>
+				<o3>
+					<Changes value=""/>
+					<Fields>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value='nextval(&apos;"Маршруты_id_Маршрута_seq"&apos;::regclass)'/>
+								<Dimensions value="0"/>
+								<Field_Position value="1"/>
+								<Identity value="0"/>
+								<Indexed value="1"/>
+								<Name value="id_Маршрута"/>
+								<Nullable value="0"/>
+								<Type value="Integer"/>
+								<Unique value="1"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="id_Маршрута"/>
+							<virtual value="0"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Collation value='"pg_catalog"."default"'/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="2"/>
+								<Identity value="0"/>
+								<Indexed value="0"/>
+								<Length value="100"/>
+								<Name value="Место_отправления"/>
+								<Nullable value="0"/>
+								<Type value="Character Varying"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="Место_отправления"/>
+							<virtual value="0"/>
+						</o1>
+						<o2>
+							<Changes value=""/>
+							<Properties>
+								<Collation value='"pg_catalog"."default"'/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="3"/>
+								<Identity value="0"/>
+								<Indexed value="0"/>
+								<Length value="100"/>
+								<Name value="Место_прибытия"/>
+								<Nullable value="0"/>
+								<Type value="Character Varying"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="Место_прибытия"/>
+							<virtual value="0"/>
+						</o2>
+						<o3>
+							<Changes value=""/>
+							<Properties>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="4"/>
+								<Identity value="0"/>
+								<Indexed value="0"/>
+								<Name value="Остановки"/>
+								<Nullable value="1"/>
+								<Type value="JSON"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="Остановки"/>
+							<virtual value="0"/>
+						</o3>
+					</Fields>
+					<Properties>
+						<Check_Count value="0"/>
+						<Comment value=""/>
+						<Field_Count value="4"/>
+						<ID value="25664"/>
+						<Index_Count value="0"/>
+						<Link_Count value="1"/>
+						<Method_Count value="0"/>
+						<Name value="Маршруты"/>
+						<Object_Owner value="postgres"/>
+						<Primary_Key value="id_Маршрута"/>
+						<Primary_Key_Name value="Маршруты_pkey"/>
+						<Record_Count value="0"/>
+						<Schema value="public"/>
+						<Temporary value="0"/>
+						<Trigger_Count value="0"/>
+						<Unique_Count value="0"/>
+					</Properties>
+					<control value="Table4"/>
+					<delete value="0"/>
+					<id value="25664"/>
+					<name value="Маршруты"/>
+					<virtual value="0"/>
+				</o3>
+				<o4>
+					<Changes value=""/>
+					<Fields>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value='nextval(&apos;"Пассажиры_id_Пассажира_seq"&apos;::regclass)'/>
+								<Dimensions value="0"/>
+								<Field_Position value="1"/>
+								<Identity value="0"/>
+								<Indexed value="1"/>
+								<Name value="id_Пассажира"/>
+								<Nullable value="0"/>
+								<Type value="Integer"/>
+								<Unique value="1"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="id_Пассажира"/>
+							<virtual value="0"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="2"/>
+								<Identity value="0"/>
+								<Indexed value="0"/>
+								<Name value="id_Пользователя"/>
+								<Nullable value="0"/>
+								<Type value="Integer"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="id_Пользователя"/>
+							<virtual value="0"/>
+						</o1>
+						<o2>
+							<Changes value=""/>
+							<Properties>
+								<Collation value='"pg_catalog"."default"'/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="3"/>
+								<Identity value="0"/>
+								<Indexed value="1"/>
+								<Length value="50"/>
+								<Name value="Логин"/>
+								<Nullable value="0"/>
+								<Type value="Character Varying"/>
+								<Unique value="1"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="Логин"/>
+							<virtual value="0"/>
+						</o2>
+						<o3>
+							<Changes value=""/>
+							<Properties>
+								<Collation value='"pg_catalog"."default"'/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="4"/>
+								<Identity value="0"/>
+								<Indexed value="0"/>
+								<Length value="50"/>
+								<Name value="Имя"/>
+								<Nullable value="0"/>
+								<Type value="Character Varying"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="Имя"/>
+							<virtual value="0"/>
+						</o3>
+						<o4>
+							<Changes value=""/>
+							<Properties>
+								<Collation value='"pg_catalog"."default"'/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="5"/>
+								<Identity value="0"/>
+								<Indexed value="0"/>
+								<Length value="50"/>
+								<Name value="Отчество"/>
+								<Nullable value="1"/>
+								<Type value="Character Varying"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="Отчество"/>
+							<virtual value="0"/>
+						</o4>
+					</Fields>
+					<Properties>
+						<Check_Count value="0"/>
+						<Comment value=""/>
+						<Field_Count value="5"/>
+						<ID value="25685"/>
+						<Index_Count value="0"/>
+						<Link_Count value="2"/>
+						<Method_Count value="0"/>
+						<Name value="Пассажиры"/>
+						<Object_Owner value="postgres"/>
+						<Primary_Key value="id_Пассажира"/>
+						<Primary_Key_Name value="Пассажиры_pkey"/>
+						<Record_Count value="0"/>
+						<Schema value="public"/>
+						<Temporary value="0"/>
+						<Trigger_Count value="0"/>
+						<Unique_Count value="1"/>
+					</Properties>
+					<Uniques>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Comment value=""/>
+								<Fields value="Логин"/>
+								<ID value="25692"/>
+								<Name value="Пассажиры_Логин_key"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<id value="25692"/>
+							<name value="Пассажиры_Логин_key"/>
+							<virtual value="0"/>
+						</o0>
+					</Uniques>
+					<control value="Table5"/>
+					<delete value="0"/>
+					<id value="25685"/>
+					<name value="Пассажиры"/>
+					<virtual value="0"/>
+				</o4>
+				<o5>
+					<Changes value=""/>
+					<Fields>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value='nextval(&apos;"Поезда_id_Поезда_seq"&apos;::regclass)'/>
+								<Dimensions value="0"/>
+								<Field_Position value="1"/>
+								<Identity value="0"/>
+								<Indexed value="1"/>
+								<Name value="id_Поезда"/>
+								<Nullable value="0"/>
+								<Type value="Integer"/>
+								<Unique value="1"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="id_Поезда"/>
+							<virtual value="0"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Collation value='"pg_catalog"."default"'/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="2"/>
+								<Identity value="0"/>
+								<Indexed value="0"/>
+								<Length value="10"/>
+								<Name value="Номер_Поезда"/>
+								<Nullable value="0"/>
+								<Type value="Character Varying"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="Номер_Поезда"/>
+							<virtual value="0"/>
+						</o1>
+						<o2>
+							<Changes value=""/>
+							<Properties>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="3"/>
+								<Identity value="0"/>
+								<Indexed value="0"/>
+								<Name value="id_Маршрута"/>
+								<Nullable value="0"/>
+								<Type value="Integer"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="id_Маршрута"/>
+							<virtual value="0"/>
+						</o2>
+						<o3>
+							<Changes value=""/>
+							<Properties>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="4"/>
+								<Identity value="0"/>
+								<Indexed value="0"/>
+								<Name value="Время_Отправления"/>
+								<Nullable value="0"/>
+								<Precision value="-1"/>
+								<Type value="Timestamp Without Time Zone"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="Время_Отправления"/>
+							<virtual value="0"/>
+						</o3>
+						<o4>
+							<Changes value=""/>
+							<Properties>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="5"/>
+								<Identity value="0"/>
+								<Indexed value="0"/>
+								<Name value="Время_Прибытия"/>
+								<Nullable value="0"/>
+								<Precision value="-1"/>
+								<Type value="Timestamp Without Time Zone"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="Время_Прибытия"/>
+							<virtual value="0"/>
+						</o4>
+					</Fields>
+					<Properties>
+						<Check_Count value="0"/>
+						<Comment value=""/>
+						<Field_Count value="5"/>
+						<ID value="25673"/>
+						<Index_Count value="0"/>
+						<Link_Count value="3"/>
+						<Method_Count value="0"/>
+						<Name value="Поезда"/>
+						<Object_Owner value="postgres"/>
+						<Primary_Key value="id_Поезда"/>
+						<Primary_Key_Name value="Поезда_pkey"/>
+						<Record_Count value="0"/>
+						<Schema value="public"/>
+						<Temporary value="0"/>
+						<Trigger_Count value="0"/>
+						<Unique_Count value="0"/>
+					</Properties>
+					<control value="Table6"/>
+					<delete value="0"/>
+					<id value="25673"/>
+					<name value="Поезда"/>
+					<virtual value="0"/>
+				</o5>
+				<o6>
+					<Changes value=""/>
+					<Fields>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value='nextval(&apos;"Пользователи_id_Пользователя_seq"&apos;::regclass)'/>
+								<Dimensions value="0"/>
+								<Field_Position value="1"/>
+								<Identity value="0"/>
+								<Indexed value="1"/>
+								<Name value="id_Пользователя"/>
+								<Nullable value="0"/>
+								<Type value="Integer"/>
+								<Unique value="1"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="id_Пользователя"/>
+							<virtual value="0"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Collation value='"pg_catalog"."default"'/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="2"/>
+								<Identity value="0"/>
+								<Indexed value="1"/>
+								<Length value="50"/>
+								<Name value="Логин"/>
+								<Nullable value="0"/>
+								<Type value="Character Varying"/>
+								<Unique value="1"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="Логин"/>
+							<virtual value="0"/>
+						</o1>
+						<o2>
+							<Changes value=""/>
+							<Properties>
+								<Collation value='"pg_catalog"."default"'/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="3"/>
+								<Identity value="0"/>
+								<Indexed value="0"/>
+								<Length value="100"/>
+								<Name value="Пароль"/>
+								<Nullable value="0"/>
+								<Type value="Character Varying"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="Пароль"/>
+							<virtual value="0"/>
+						</o2>
+						<o3>
+							<Changes value=""/>
+							<Properties>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="4"/>
+								<Identity value="0"/>
+								<Indexed value="0"/>
+								<Name value="id_Роли"/>
+								<Nullable value="0"/>
+								<Type value="Integer"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="id_Роли"/>
+							<virtual value="0"/>
+						</o3>
+					</Fields>
+					<Properties>
+						<Check_Count value="0"/>
+						<Comment value=""/>
+						<Field_Count value="4"/>
+						<ID value="25650"/>
+						<Index_Count value="0"/>
+						<Link_Count value="2"/>
+						<Method_Count value="0"/>
+						<Name value="Пользователи"/>
+						<Object_Owner value="postgres"/>
+						<Primary_Key value="id_Пользователя"/>
+						<Primary_Key_Name value="Пользователи_pkey"/>
+						<Record_Count value="0"/>
+						<Schema value="public"/>
+						<Temporary value="0"/>
+						<Trigger_Count value="0"/>
+						<Unique_Count value="1"/>
+					</Properties>
+					<Uniques>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Comment value=""/>
+								<Fields value="Логин"/>
+								<ID value="25657"/>
+								<Name value="Пользователи_Логин_key"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<id value="25657"/>
+							<name value="Пользователи_Логин_key"/>
+							<virtual value="0"/>
+						</o0>
+					</Uniques>
+					<control value="Table7"/>
+					<delete value="0"/>
+					<id value="25650"/>
+					<name value="Пользователи"/>
+					<virtual value="0"/>
+				</o6>
+				<o7>
+					<Changes value=""/>
+					<Fields>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value='nextval(&apos;"Роли_id_Роли_seq"&apos;::regclass)'/>
+								<Dimensions value="0"/>
+								<Field_Position value="1"/>
+								<Identity value="0"/>
+								<Indexed value="1"/>
+								<Name value="id_Роли"/>
+								<Nullable value="0"/>
+								<Type value="Integer"/>
+								<Unique value="1"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="id_Роли"/>
+							<virtual value="0"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Collation value='"pg_catalog"."default"'/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="2"/>
+								<Identity value="0"/>
+								<Indexed value="1"/>
+								<Length value="50"/>
+								<Name value="Роль"/>
+								<Nullable value="0"/>
+								<Type value="Character Varying"/>
+								<Unique value="1"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="Роль"/>
+							<virtual value="0"/>
+						</o1>
+					</Fields>
+					<Properties>
+						<Check_Count value="0"/>
+						<Comment value=""/>
+						<Field_Count value="2"/>
+						<ID value="25641"/>
+						<Index_Count value="0"/>
+						<Link_Count value="1"/>
+						<Method_Count value="0"/>
+						<Name value="Роли"/>
+						<Object_Owner value="postgres"/>
+						<Primary_Key value="id_Роли"/>
+						<Primary_Key_Name value="Роли_pkey"/>
+						<Record_Count value="0"/>
+						<Schema value="public"/>
+						<Temporary value="0"/>
+						<Trigger_Count value="0"/>
+						<Unique_Count value="1"/>
+					</Properties>
+					<Uniques>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Comment value=""/>
+								<Fields value="Роль"/>
+								<ID value="25648"/>
+								<Name value="Роли_Роль_key"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<id value="25648"/>
+							<name value="Роли_Роль_key"/>
+							<virtual value="0"/>
+						</o0>
+					</Uniques>
+					<control value="Table8"/>
+					<delete value="0"/>
+					<id value="25641"/>
+					<name value="Роли"/>
+					<virtual value="0"/>
+				</o7>
+			</Tables>
+		</public>
+	</Model>
+	<Scene>
+		<HeightPX value="2376"/>
+		<MarginBottom value="0"/>
+		<MarginLeft value="0"/>
+		<MarginRight value="0"/>
+		<MarginTop value="0"/>
+		<PageHeight value="2376"/>
+		<PageWidth value="1680"/>
+		<PagesH value="1"/>
+		<PagesV value="1"/>
+		<WidthPX value="1680"/>
+	</Scene>
+	<version value="140502"/>
+</properties>
+

@@ -1,0 +1,4 @@
+﻿  server.cpp
+E:\Универ\3 курс\ПСП\lab_2\server\server.cpp(139,52): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+E:\Универ\3 курс\ПСП\lab_2\server\server.cpp(96,7): warning C4101: t: неиспользованная локальная переменная
+  server.vcxproj -> E:\Универ\3 курс\ПСП\lab_2\x64\Debug\server.exe

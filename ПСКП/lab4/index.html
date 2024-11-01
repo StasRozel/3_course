@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Interface</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { max-width: 600px; margin: 20px auto; }
+        .entry { border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Database Interface</h1>
+        <div id="entries"></div>
+        
+        <h2>Add New Entry</h2>
+        <input type="text" id="name" placeholder="Name">
+        <input type="date" id="bday">
+        <button onclick="addEntry()">Add Entry</button>
+
+        <h2>Update Entry</h2>
+        <input type="number" id="updateId" placeholder="ID">
+        <input type="text" id="updateName" placeholder="New Name">
+        <input type="date" id="updateBday">
+        <button onclick="updateEntry()">Update Entry</button>
+    </div>
+
+    <script>
+        const apiUrl = 'http://localhost:3000';
+        async function fetchEntries() {
+            const response = await fetch(`${apiUrl}/get`);
+            const data = await response.json();
+            const entriesDiv = document.getElementById('entries');
+            entriesDiv.innerHTML = '';
+            data.forEach(entry => {
+                const div = document.createElement('div');
+                div.className = 'entry';
+                div.innerHTML = `
+                    <strong>ID:</strong> ${entry.id} <br>
+                    <strong>Name:</strong> ${entry.name} <br>
+                    <strong>Birthday:</strong> ${entry.bday} <br>
+                    <button onclick="deleteEntry(${entry.id})">Delete</button>
+                `;
+                entriesDiv.appendChild(div);
+            });
+        }
+
+        async function addEntry() {
+            const name = document.getElementById('name').value;
+            const bday = document.getElementById('bday').value;
+            const newEntry = { name, bday };
+
+            await fetch(`${apiUrl}/post`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ obj: newEntry })
+            });
+
+            fetchEntries();
+        }
+
+        async function updateEntry() {
+            const id = document.getElementById('updateId').value;
+            const name = document.getElementById('updateName').value;
+            const bday = document.getElementById('updateBday').value;
+            const updatedEntry = { id: parseInt(id), name, bday };
+
+            await fetch(`${apiUrl}/put`, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ obj: updatedEntry })
+            });
+
+            fetchEntries();
+        }
+
+        async function deleteEntry(id) {
+            await fetch(`${apiUrl}/delete?id=${id}`, {
+                method: 'DELETE'
+            });
+
+            fetchEntries();
+        }
+
+        // Initially fetch and display entries
+        fetchEntries();
+    </script>
+</body>
+</html>
