@@ -1,0 +1,29 @@
+D:\BSTU3_1\OC\lab4\os04_06\os04_06\bin\Debug\net8.0\os04_06.exe
+D:\BSTU3_1\OC\lab4\os04_06\os04_06\bin\Debug\net8.0\os04_06.deps.json
+D:\BSTU3_1\OC\lab4\os04_06\os04_06\bin\Debug\net8.0\os04_06.runtimeconfig.json
+D:\BSTU3_1\OC\lab4\os04_06\os04_06\bin\Debug\net8.0\os04_06.dll
+D:\BSTU3_1\OC\lab4\os04_06\os04_06\bin\Debug\net8.0\os04_06.pdb
+D:\BSTU3_1\OC\lab4\os04_06\os04_06\obj\Debug\net8.0\os04_06.GeneratedMSBuildEditorConfig.editorconfig
+D:\BSTU3_1\OC\lab4\os04_06\os04_06\obj\Debug\net8.0\os04_06.AssemblyInfoInputs.cache
+D:\BSTU3_1\OC\lab4\os04_06\os04_06\obj\Debug\net8.0\os04_06.AssemblyInfo.cs
+D:\BSTU3_1\OC\lab4\os04_06\os04_06\obj\Debug\net8.0\os04_06.csproj.CoreCompileInputs.cache
+D:\BSTU3_1\OC\lab4\os04_06\os04_06\obj\Debug\net8.0\os04_06.dll
+D:\BSTU3_1\OC\lab4\os04_06\os04_06\obj\Debug\net8.0\refint\os04_06.dll
+D:\BSTU3_1\OC\lab4\os04_06\os04_06\obj\Debug\net8.0\os04_06.pdb
+D:\BSTU3_1\OC\lab4\os04_06\os04_06\obj\Debug\net8.0\os04_06.genruntimeconfig.cache
+D:\BSTU3_1\OC\lab4\os04_06\os04_06\obj\Debug\net8.0\ref\os04_06.dll
+E:\Универ\3 курс\OC\lab4\os04_06\os04_06\bin\Debug\net8.0\os04_06.exe
+E:\Универ\3 курс\OC\lab4\os04_06\os04_06\bin\Debug\net8.0\os04_06.deps.json
+E:\Универ\3 курс\OC\lab4\os04_06\os04_06\bin\Debug\net8.0\os04_06.runtimeconfig.json
+E:\Универ\3 курс\OC\lab4\os04_06\os04_06\bin\Debug\net8.0\os04_06.dll
+E:\Универ\3 курс\OC\lab4\os04_06\os04_06\bin\Debug\net8.0\os04_06.pdb
+E:\Универ\3 курс\OC\lab4\os04_06\os04_06\obj\Debug\net8.0\os04_06.GeneratedMSBuildEditorConfig.editorconfig
+E:\Универ\3 курс\OC\lab4\os04_06\os04_06\obj\Debug\net8.0\os04_06.AssemblyInfoInputs.cache
+E:\Универ\3 курс\OC\lab4\os04_06\os04_06\obj\Debug\net8.0\os04_06.AssemblyInfo.cs
+E:\Универ\3 курс\OC\lab4\os04_06\os04_06\obj\Debug\net8.0\os04_06.csproj.CoreCompileInputs.cache
+E:\Универ\3 курс\OC\lab4\os04_06\os04_06\obj\Debug\net8.0\os04_06.sourcelink.json
+E:\Универ\3 курс\OC\lab4\os04_06\os04_06\obj\Debug\net8.0\os04_06.dll
+E:\Универ\3 курс\OC\lab4\os04_06\os04_06\obj\Debug\net8.0\refint\os04_06.dll
+E:\Универ\3 курс\OC\lab4\os04_06\os04_06\obj\Debug\net8.0\os04_06.pdb
+E:\Универ\3 курс\OC\lab4\os04_06\os04_06\obj\Debug\net8.0\os04_06.genruntimeconfig.cache
+E:\Универ\3 курс\OC\lab4\os04_06\os04_06\obj\Debug\net8.0\ref\os04_06.dll

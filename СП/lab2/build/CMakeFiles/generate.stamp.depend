@@ -1,0 +1,25 @@
+# CMake generation dependency list for this directory.
+C:/Users/Павел Пиво/Desktop/лабы/СП/lab_2/CMakeLists.txt
+C:/Users/Павел Пиво/Desktop/лабы/СП/lab_2/build/CMakeFiles/3.30.3/CMakeCCompiler.cmake
+C:/Users/Павел Пиво/Desktop/лабы/СП/lab_2/build/CMakeFiles/3.30.3/CMakeCXXCompiler.cmake
+C:/Users/Павел Пиво/Desktop/лабы/СП/lab_2/build/CMakeFiles/3.30.3/CMakeRCCompiler.cmake
+C:/Users/Павел Пиво/Desktop/лабы/СП/lab_2/build/CMakeFiles/3.30.3/CMakeSystem.cmake
+D:/progs/cmake/share/cmake-3.30/Modules/CMakeCInformation.cmake
+D:/progs/cmake/share/cmake-3.30/Modules/CMakeCXXInformation.cmake
+D:/progs/cmake/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake
+D:/progs/cmake/share/cmake-3.30/Modules/CMakeGenericSystem.cmake
+D:/progs/cmake/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake
+D:/progs/cmake/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake
+D:/progs/cmake/share/cmake-3.30/Modules/CMakeRCInformation.cmake
+D:/progs/cmake/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake
+D:/progs/cmake/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake
+D:/progs/cmake/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake
+D:/progs/cmake/share/cmake-3.30/Modules/Compiler/MSVC-C.cmake
+D:/progs/cmake/share/cmake-3.30/Modules/Compiler/MSVC-CXX.cmake
+D:/progs/cmake/share/cmake-3.30/Modules/Compiler/MSVC.cmake
+D:/progs/cmake/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake
+D:/progs/cmake/share/cmake-3.30/Modules/Platform/Windows-MSVC-C.cmake
+D:/progs/cmake/share/cmake-3.30/Modules/Platform/Windows-MSVC-CXX.cmake
+D:/progs/cmake/share/cmake-3.30/Modules/Platform/Windows-MSVC.cmake
+D:/progs/cmake/share/cmake-3.30/Modules/Platform/Windows.cmake
+D:/progs/cmake/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake

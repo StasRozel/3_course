@@ -1,0 +1,10 @@
+^E:\УНИВЕР\3 КУРС\СП\LAB2CMAKE\BUILD\CMAKEFILES\B9A28CB8FFAB815A6A569D3B36E9DA28\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SE:/Универ/3 курс/СП/lab2Cmake" "-BE:/Универ/3 курс/СП/lab2Cmake/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "E:/Универ/3 курс/СП/lab2Cmake/build/Lab2.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

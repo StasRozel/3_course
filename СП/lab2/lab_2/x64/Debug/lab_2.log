@@ -1,0 +1,5 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: промежуточный каталог (x64\Debug\) содержит файлы, которые используются совместно с другим проектом (lab_2.vcxproj).  Это может привести к ошибкам очистки и перестроения.
+  lab_2.c
+E:\Универ\3 курс\СП\lab2\lab_2\lab_2.c(29,16): warning C4477: "printf": в строке форматирования "%lu" требуется аргумент типа "unsigned long", но вариативный аргумент "1" имеет тип "DWORD (__cdecl *)(void)"
+E:\Универ\3 курс\СП\lab2\lab_2\lab_2.c(29,16): warning C4313: printf: конфликт "%u" в строке формата с аргументом 1 типа "DWORD (__cdecl *)(void)"
+  lab_2.vcxproj -> E:\Универ\3 курс\СП\lab2\x64\Debug\lab-02x.exe

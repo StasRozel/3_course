@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>E:\Универ\3 курс\СП\lab2Cmake\build\x64\Debug\ZERO_CHECK</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>E:\Универ\3 курс\СП\lab2Cmake\build\Debug\lab-02a.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>E:\Универ\3 курс\СП\lab2Cmake\build\Debug\lab-02b.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>E:\Универ\3 курс\СП\lab2Cmake\build\Debug\lab-02c.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>E:\Универ\3 курс\СП\lab2Cmake\build\Debug\lab-02d.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>E:\Универ\3 курс\СП\lab2Cmake\build\Debug\lab-02hw.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>E:\Универ\3 курс\СП\lab2Cmake\build\Debug\lab-02inf.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>E:\Универ\3 курс\СП\lab2Cmake\build\Debug\lab-02x.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>E:\Универ\3 курс\СП\lab2Cmake\build\x64\Debug\ALL_BUILD</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles />
+  <SatelliteDlls />
+  <NonRecipeFileRefs />
+</Project>

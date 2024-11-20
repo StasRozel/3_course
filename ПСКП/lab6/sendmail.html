@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: grid;
+            place-items: center;
+        }
+
+        input {
+            width: 160px;
+            display: block;
+            margin: 10px;
+        }
+
+        button {
+            width: 166px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Отправка письма</h2>
+    <form method="post">
+        <input type="email" name="from" placeholder="Отправитель">
+        <input type="email" name="to" placeholder="Получатель">
+        <input type="text" name="message" placeholder="Текст письма">
+        <button type="submit">Отправить письмо</button>
+    </form>
+
+</body>
+
+</html>

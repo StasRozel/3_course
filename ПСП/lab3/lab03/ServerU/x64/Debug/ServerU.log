@@ -1,5 +1,5 @@
 ﻿  ServerU.cpp
-E:\Универ\3 курс\ПСП\lab03\lab03\ServerU\ServerU.cpp(44,32): warning C4101: obuf: неиспользованная локальная переменная
+E:\Универ\3 курс\ПСП\lab3\lab03\ServerU\ServerU.cpp(44,32): warning C4101: obuf: неиспользованная локальная переменная
   WSAErrors.cpp
   Создание кода...
-  ServerU.vcxproj -> E:\Универ\3 курс\ПСП\lab03\lab03\x64\Debug\ServerU.exe
+  ServerU.vcxproj -> E:\Универ\3 курс\ПСП\lab3\lab03\x64\Debug\ServerU.exe

@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ResolveNugetPackages>false</ResolveNugetPackages>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D131242E-DD50-3DC5-8252-27A30D953267}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Павел Пиво\Desktop\лабы\СП\lab_2\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Павел Пиво/Desktop/лабы/СП/lab_2/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\progs\cmake\bin\cmake.exe "-SC:/Users/Павел Пиво/Desktop/лабы/СП/lab_2" "-BC:/Users/Павел Пиво/Desktop/лабы/СП/lab_2/build" --check-stamp-file "C:/Users/Павел Пиво/Desktop/лабы/СП/lab_2/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Павел Пиво\Desktop\лабы\СП\lab_2\build\CMakeFiles\3.30.3\CMakeCCompiler.cmake;C:\Users\Павел Пиво\Desktop\лабы\СП\lab_2\build\CMakeFiles\3.30.3\CMakeCXXCompiler.cmake;C:\Users\Павел Пиво\Desktop\лабы\СП\lab_2\build\CMakeFiles\3.30.3\CMakeRCCompiler.cmake;C:\Users\Павел Пиво\Desktop\лабы\СП\lab_2\build\CMakeFiles\3.30.3\CMakeSystem.cmake;D:\progs\cmake\share\cmake-3.30\Modules\CMakeCInformation.cmake;D:\progs\cmake\share\cmake-3.30\Modules\CMakeCXXInformation.cmake;D:\progs\cmake\share\cmake-3.30\Modules\CMakeCommonLanguageInclude.cmake;D:\progs\cmake\share\cmake-3.30\Modules\CMakeGenericSystem.cmake;D:\progs\cmake\share\cmake-3.30\Modules\CMakeInitializeConfigs.cmake;D:\progs\cmake\share\cmake-3.30\Modules\CMakeLanguageInformation.cmake;D:\progs\cmake\share\cmake-3.30\Modules\CMakeRCInformation.cmake;D:\progs\cmake\share\cmake-3.30\Modules\CMakeSystemSpecificInformation.cmake;D:\progs\cmake\share\cmake-3.30\Modules\CMakeSystemSpecificInitialize.cmake;D:\progs\cmake\share\cmake-3.30\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\progs\cmake\share\cmake-3.30\Modules\Compiler\MSVC-C.cmake;D:\progs\cmake\share\cmake-3.30\Modules\Compiler\MSVC-CXX.cmake;D:\progs\cmake\share\cmake-3.30\Modules\Compiler\MSVC.cmake;D:\progs\cmake\share\cmake-3.30\Modules\Platform\Windows-Initialize.cmake;D:\progs\cmake\share\cmake-3.30\Modules\Platform\Windows-MSVC-C.cmake;D:\progs\cmake\share\cmake-3.30\Modules\Platform\Windows-MSVC-CXX.cmake;D:\progs\cmake\share\cmake-3.30\Modules\Platform\Windows-MSVC.cmake;D:\progs\cmake\share\cmake-3.30\Modules\Platform\Windows.cmake;D:\progs\cmake\share\cmake-3.30\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Павел Пиво\Desktop\лабы\СП\lab_2\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Павел Пиво/Desktop/лабы/СП/lab_2/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\progs\cmake\bin\cmake.exe "-SC:/Users/Павел Пиво/Desktop/лабы/СП/lab_2" "-BC:/Users/Павел Пиво/Desktop/лабы/СП/lab_2/build" --check-stamp-file "C:/Users/Павел Пиво/Desktop/лабы/СП/lab_2/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Павел Пиво\Desktop\лабы\СП\lab_2\build\CMakeFiles\3.30.3\CMakeCCompiler.cmake;C:\Users\Павел Пиво\Desktop\лабы\СП\lab_2\build\CMakeFiles\3.30.3\CMakeCXXCompiler.cmake;C:\Users\Павел Пиво\Desktop\лабы\СП\lab_2\build\CMakeFiles\3.30.3\CMakeRCCompiler.cmake;C:\Users\Павел Пиво\Desktop\лабы\СП\lab_2\build\CMakeFiles\3.30.3\CMakeSystem.cmake;D:\progs\cmake\share\cmake-3.30\Modules\CMakeCInformation.cmake;D:\progs\cmake\share\cmake-3.30\Modules\CMakeCXXInformation.cmake;D:\progs\cmake\share\cmake-3.30\Modules\CMakeCommonLanguageInclude.cmake;D:\progs\cmake\share\cmake-3.30\Modules\CMakeGenericSystem.cmake;D:\progs\cmake\share\cmake-3.30\Modules\CMakeInitializeConfigs.cmake;D:\progs\cmake\share\cmake-3.30\Modules\CMakeLanguageInformation.cmake;D:\progs\cmake\share\cmake-3.30\Modules\CMakeRCInformation.cmake;D:\progs\cmake\share\cmake-3.30\Modules\CMakeSystemSpecificInformation.cmake;D:\progs\cmake\share\cmake-3.30\Modules\CMakeSystemSpecificInitialize.cmake;D:\progs\cmake\share\cmake-3.30\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\progs\cmake\share\cmake-3.30\Modules\Compiler\MSVC-C.cmake;D:\progs\cmake\share\cmake-3.30\Modules\Compiler\MSVC-CXX.cmake;D:\progs\cmake\share\cmake-3.30\Modules\Compiler\MSVC.cmake;D:\progs\cmake\share\cmake-3.30\Modules\Platform\Windows-Initialize.cmake;D:\progs\cmake\share\cmake-3.30\Modules\Platform\Windows-MSVC-C.cmake;D:\progs\cmake\share\cmake-3.30\Modules\Platform\Windows-MSVC-CXX.cmake;D:\progs\cmake\share\cmake-3.30\Modules\Platform\Windows-MSVC.cmake;D:\progs\cmake\share\cmake-3.30\Modules\Platform\Windows.cmake;D:\progs\cmake\share\cmake-3.30\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Павел Пиво\Desktop\лабы\СП\lab_2\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/Павел Пиво/Desktop/лабы/СП/lab_2/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\progs\cmake\bin\cmake.exe "-SC:/Users/Павел Пиво/Desktop/лабы/СП/lab_2" "-BC:/Users/Павел Пиво/Desktop/лабы/СП/lab_2/build" --check-stamp-file "C:/Users/Павел Пиво/Desktop/лабы/СП/lab_2/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Павел Пиво\Desktop\лабы\СП\lab_2\build\CMakeFiles\3.30.3\CMakeCCompiler.cmake;C:\Users\Павел Пиво\Desktop\лабы\СП\lab_2\build\CMakeFiles\3.30.3\CMakeCXXCompiler.cmake;C:\Users\Павел Пиво\Desktop\лабы\СП\lab_2\build\CMakeFiles\3.30.3\CMakeRCCompiler.cmake;C:\Users\Павел Пиво\Desktop\лабы\СП\lab_2\build\CMakeFiles\3.30.3\CMakeSystem.cmake;D:\progs\cmake\share\cmake-3.30\Modules\CMakeCInformation.cmake;D:\progs\cmake\share\cmake-3.30\Modules\CMakeCXXInformation.cmake;D:\progs\cmake\share\cmake-3.30\Modules\CMakeCommonLanguageInclude.cmake;D:\progs\cmake\share\cmake-3.30\Modules\CMakeGenericSystem.cmake;D:\progs\cmake\share\cmake-3.30\Modules\CMakeInitializeConfigs.cmake;D:\progs\cmake\share\cmake-3.30\Modules\CMakeLanguageInformation.cmake;D:\progs\cmake\share\cmake-3.30\Modules\CMakeRCInformation.cmake;D:\progs\cmake\share\cmake-3.30\Modules\CMakeSystemSpecificInformation.cmake;D:\progs\cmake\share\cmake-3.30\Modules\CMakeSystemSpecificInitialize.cmake;D:\progs\cmake\share\cmake-3.30\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\progs\cmake\share\cmake-3.30\Modules\Compiler\MSVC-C.cmake;D:\progs\cmake\share\cmake-3.30\Modules\Compiler\MSVC-CXX.cmake;D:\progs\cmake\share\cmake-3.30\Modules\Compiler\MSVC.cmake;D:\progs\cmake\share\cmake-3.30\Modules\Platform\Windows-Initialize.cmake;D:\progs\cmake\share\cmake-3.30\Modules\Platform\Windows-MSVC-C.cmake;D:\progs\cmake\share\cmake-3.30\Modules\Platform\Windows-MSVC-CXX.cmake;D:\progs\cmake\share\cmake-3.30\Modules\Platform\Windows-MSVC.cmake;D:\progs\cmake\share\cmake-3.30\Modules\Platform\Windows.cmake;D:\progs\cmake\share\cmake-3.30\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Павел Пиво\Desktop\лабы\СП\lab_2\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/Павел Пиво/Desktop/лабы/СП/lab_2/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\progs\cmake\bin\cmake.exe "-SC:/Users/Павел Пиво/Desktop/лабы/СП/lab_2" "-BC:/Users/Павел Пиво/Desktop/лабы/СП/lab_2/build" --check-stamp-file "C:/Users/Павел Пиво/Desktop/лабы/СП/lab_2/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Павел Пиво\Desktop\лабы\СП\lab_2\build\CMakeFiles\3.30.3\CMakeCCompiler.cmake;C:\Users\Павел Пиво\Desktop\лабы\СП\lab_2\build\CMakeFiles\3.30.3\CMakeCXXCompiler.cmake;C:\Users\Павел Пиво\Desktop\лабы\СП\lab_2\build\CMakeFiles\3.30.3\CMakeRCCompiler.cmake;C:\Users\Павел Пиво\Desktop\лабы\СП\lab_2\build\CMakeFiles\3.30.3\CMakeSystem.cmake;D:\progs\cmake\share\cmake-3.30\Modules\CMakeCInformation.cmake;D:\progs\cmake\share\cmake-3.30\Modules\CMakeCXXInformation.cmake;D:\progs\cmake\share\cmake-3.30\Modules\CMakeCommonLanguageInclude.cmake;D:\progs\cmake\share\cmake-3.30\Modules\CMakeGenericSystem.cmake;D:\progs\cmake\share\cmake-3.30\Modules\CMakeInitializeConfigs.cmake;D:\progs\cmake\share\cmake-3.30\Modules\CMakeLanguageInformation.cmake;D:\progs\cmake\share\cmake-3.30\Modules\CMakeRCInformation.cmake;D:\progs\cmake\share\cmake-3.30\Modules\CMakeSystemSpecificInformation.cmake;D:\progs\cmake\share\cmake-3.30\Modules\CMakeSystemSpecificInitialize.cmake;D:\progs\cmake\share\cmake-3.30\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\progs\cmake\share\cmake-3.30\Modules\Compiler\MSVC-C.cmake;D:\progs\cmake\share\cmake-3.30\Modules\Compiler\MSVC-CXX.cmake;D:\progs\cmake\share\cmake-3.30\Modules\Compiler\MSVC.cmake;D:\progs\cmake\share\cmake-3.30\Modules\Platform\Windows-Initialize.cmake;D:\progs\cmake\share\cmake-3.30\Modules\Platform\Windows-MSVC-C.cmake;D:\progs\cmake\share\cmake-3.30\Modules\Platform\Windows-MSVC-CXX.cmake;D:\progs\cmake\share\cmake-3.30\Modules\Platform\Windows-MSVC.cmake;D:\progs\cmake\share\cmake-3.30\Modules\Platform\Windows.cmake;D:\progs\cmake\share\cmake-3.30\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Павел Пиво\Desktop\лабы\СП\lab_2\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\Павел Пиво\Desktop\лабы\СП\lab_2\build\ZERO_CHECK.vcxproj">
+      <Project>{37E6A4EC-3B60-3235-8200-0F3C2C4403EF}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Павел Пиво\Desktop\лабы\СП\lab_2\build\lab-02a.exe.vcxproj">
+      <Project>{1570906C-128C-3BDF-A7A6-91535AA35607}</Project>
+      <Name>lab-02a.exe</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Павел Пиво\Desktop\лабы\СП\lab_2\build\lab-02b.exe.vcxproj">
+      <Project>{005E3592-5295-3063-863F-DD455363E47B}</Project>
+      <Name>lab-02b.exe</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Павел Пиво\Desktop\лабы\СП\lab_2\build\lab-02c.exe.vcxproj">
+      <Project>{D9531A1C-8E66-3E8F-9208-3C58E9F9F264}</Project>
+      <Name>lab-02c.exe</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Павел Пиво\Desktop\лабы\СП\lab_2\build\lab-02d.exe.vcxproj">
+      <Project>{90BDF782-2D1B-3CC2-A91B-9FC62CF3CE72}</Project>
+      <Name>lab-02d.exe</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Павел Пиво\Desktop\лабы\СП\lab_2\build\lab-02hw.exe.vcxproj">
+      <Project>{4588B93F-B6D4-3FB9-BE81-0ACA25C25CD9}</Project>
+      <Name>lab-02hw.exe</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Павел Пиво\Desktop\лабы\СП\lab_2\build\lab-02inf.exe.vcxproj">
+      <Project>{24B72385-DE39-3E78-BEDE-12FCE1737F06}</Project>
+      <Name>lab-02inf.exe</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Павел Пиво\Desktop\лабы\СП\lab_2\build\lab-02x.exe.vcxproj">
+      <Project>{57D94861-CA8E-3B88-997B-87DA27616D43}</Project>
+      <Name>lab-02x.exe</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

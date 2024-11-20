@@ -1,0 +1,9 @@
+E:/Универ/3 курс/СП/lab2Cmake/build/CMakeFiles/lab-02a.dir
+E:/Универ/3 курс/СП/lab2Cmake/build/CMakeFiles/lab-02x.dir
+E:/Универ/3 курс/СП/lab2Cmake/build/CMakeFiles/lab-02b.dir
+E:/Универ/3 курс/СП/lab2Cmake/build/CMakeFiles/lab-02c.dir
+E:/Универ/3 курс/СП/lab2Cmake/build/CMakeFiles/lab-02d.dir
+E:/Универ/3 курс/СП/lab2Cmake/build/CMakeFiles/lab-02inf.dir
+E:/Универ/3 курс/СП/lab2Cmake/build/CMakeFiles/lab-02hw.dir
+E:/Универ/3 курс/СП/lab2Cmake/build/CMakeFiles/ALL_BUILD.dir
+E:/Универ/3 курс/СП/lab2Cmake/build/CMakeFiles/ZERO_CHECK.dir

@@ -1,0 +1,9 @@
+C:/Users/Павел Пиво/Desktop/лабы/СП/lab_2/build/CMakeFiles/lab-02a.exe.dir
+C:/Users/Павел Пиво/Desktop/лабы/СП/lab_2/build/CMakeFiles/lab-02x.exe.dir
+C:/Users/Павел Пиво/Desktop/лабы/СП/lab_2/build/CMakeFiles/lab-02b.exe.dir
+C:/Users/Павел Пиво/Desktop/лабы/СП/lab_2/build/CMakeFiles/lab-02c.exe.dir
+C:/Users/Павел Пиво/Desktop/лабы/СП/lab_2/build/CMakeFiles/lab-02d.exe.dir
+C:/Users/Павел Пиво/Desktop/лабы/СП/lab_2/build/CMakeFiles/lab-02inf.exe.dir
+C:/Users/Павел Пиво/Desktop/лабы/СП/lab_2/build/CMakeFiles/lab-02hw.exe.dir
+C:/Users/Павел Пиво/Desktop/лабы/СП/lab_2/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Павел Пиво/Desktop/лабы/СП/lab_2/build/CMakeFiles/ZERO_CHECK.dir

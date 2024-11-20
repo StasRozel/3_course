@@ -1,0 +1,7 @@
+﻿  lab-02c.c
+E:\Универ\3 курс\СП\lab2\lab-02c\lab-02c.c(18,9): warning C4090: "функция": разные квалификаторы "const"
+E:\Универ\3 курс\СП\lab2\lab-02c\lab-02c.c(25,9): warning C4133: функция: несовместимые типы - из "STARTUPINFO *" в "LPSTARTUPINFOA"
+E:\Универ\3 курс\СП\lab2\lab-02c\lab-02c.c(41,29): warning C4133: функция: несовместимые типы - из "const char *" в "LPCWSTR"
+E:\Универ\3 курс\СП\lab2\lab-02c\lab-02c.c(41,41): warning C4047: ==: "BOOL" отличается по уровням косвенного обращения от "void *"
+E:\Универ\3 курс\СП\lab2\lab-02c\lab-02c.c(37,17): warning C4133: инициализация: несовместимые типы - из "unsigned short [25]" в "const char *"
+  lab-02c.vcxproj -> E:\Универ\3 курс\СП\lab2\x64\Debug\lab-02c.exe
