@@ -1,0 +1,9 @@
+﻿  ServerB.cpp
+E:\Универ\3 курс\ПСП\Lab4\ServerB\ServerB.cpp(20,6): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+E:\Универ\3 курс\ПСП\Lab4\ServerB\ServerB.cpp(63,35): warning C4244: аргумент: преобразование "SOCKET" в "short", возможна потеря данных
+E:\Универ\3 курс\ПСП\Lab4\ServerB\ServerB.cpp(71,49): warning C4244: аргумент: преобразование "SOCKET" в "short", возможна потеря данных
+E:\Универ\3 курс\ПСП\Lab4\ServerB\ServerB.cpp(31,7): warning C4101: ibuf: неиспользованная локальная переменная
+E:\Универ\3 курс\ПСП\Lab4\ServerB\ServerB.cpp(29,6): warning C4101: lobuf: неиспользованная локальная переменная
+E:\Универ\3 курс\ПСП\Lab4\ServerB\ServerB.cpp(104,45): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+E:\Универ\3 курс\ПСП\Lab4\ServerB\ServerB.cpp(163,37): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+  ServerB.vcxproj -> E:\Универ\3 курс\ПСП\Lab4\x64\Debug\ServerB.exe

@@ -1,0 +1,8 @@
+[2025-01-14 08:17:41] Попытка запуска сервиса DirectoryWatcherService с параметрами E:\Univer\3_course\SP\Lab_09\Service09\log, E:\Univer\3_course\SP\Lab_09\Service09\folder
+[2025-01-14 08:17:41] Успех! DirectoryWatcherService обнаружил каталог E:\Univer\3_course\SP\Lab_09\Service09\log
+[2025-01-14 08:17:41] Service started
+
+[2025-01-14 08:19:47] Service paused
+[2025-01-14 08:20:32] Service stop requested
+[2025-01-14 08:20:47] Service stopped
+

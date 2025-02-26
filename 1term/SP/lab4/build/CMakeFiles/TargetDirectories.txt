@@ -1,0 +1,4 @@
+D:/Desktop/Учёба_БГТУ_5_семестр/СП/4/build/CMakeFiles/Lab-04.dir
+D:/Desktop/Учёба_БГТУ_5_семестр/СП/4/build/CMakeFiles/Lab-04b.dir
+D:/Desktop/Учёба_БГТУ_5_семестр/СП/4/build/CMakeFiles/edit_cache.dir
+D:/Desktop/Учёба_БГТУ_5_семестр/СП/4/build/CMakeFiles/rebuild_cache.dir

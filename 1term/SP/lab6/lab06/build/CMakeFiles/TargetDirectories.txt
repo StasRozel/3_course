@@ -1,0 +1,5 @@
+E:/Рабочий стол/BSTU/3 course/1 term/SP/Lab_06/lab06/build/CMakeFiles/Lab-06a.dir
+E:/Рабочий стол/BSTU/3 course/1 term/SP/Lab_06/lab06/build/CMakeFiles/Lab-06b.dir
+E:/Рабочий стол/BSTU/3 course/1 term/SP/Lab_06/lab06/build/CMakeFiles/Lab-06c.dir
+E:/Рабочий стол/BSTU/3 course/1 term/SP/Lab_06/lab06/build/CMakeFiles/edit_cache.dir
+E:/Рабочий стол/BSTU/3 course/1 term/SP/Lab_06/lab06/build/CMakeFiles/rebuild_cache.dir

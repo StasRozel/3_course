@@ -1,0 +1,12 @@
+E:/Univer/3_course/SP/Lab_08/build/CMakeFiles/ALL_BUILD.dir
+E:/Univer/3_course/SP/Lab_08/build/CMakeFiles/ZERO_CHECK.dir
+E:/Univer/3_course/SP/Lab_08/build/src/mappings/CMakeFiles/mappings.dir
+E:/Univer/3_course/SP/Lab_08/build/src/mappings/CMakeFiles/ALL_BUILD.dir
+E:/Univer/3_course/SP/Lab_08/build/src/mappingsd/CMakeFiles/mappings_def.dir
+E:/Univer/3_course/SP/Lab_08/build/src/mappingsd/CMakeFiles/ALL_BUILD.dir
+E:/Univer/3_course/SP/Lab_08/build/src/mappingsd-2/CMakeFiles/mappings_dllexport.dir
+E:/Univer/3_course/SP/Lab_08/build/src/mappingsd-2/CMakeFiles/ALL_BUILD.dir
+E:/Univer/3_course/SP/Lab_08/build/src/Lab-08a/CMakeFiles/Lab08a.dir
+E:/Univer/3_course/SP/Lab_08/build/src/Lab-08a/CMakeFiles/ALL_BUILD.dir
+E:/Univer/3_course/SP/Lab_08/build/src/Lab-08b/CMakeFiles/Lab_08b.dir
+E:/Univer/3_course/SP/Lab_08/build/src/Lab-08b/CMakeFiles/ALL_BUILD.dir

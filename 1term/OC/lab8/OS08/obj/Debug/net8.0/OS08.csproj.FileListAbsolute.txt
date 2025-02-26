@@ -1,0 +1,29 @@
+D:\Desktop\projects3\OSI\OS08\OS08\bin\Debug\net8.0\OS08.exe
+D:\Desktop\projects3\OSI\OS08\OS08\bin\Debug\net8.0\OS08.deps.json
+D:\Desktop\projects3\OSI\OS08\OS08\bin\Debug\net8.0\OS08.runtimeconfig.json
+D:\Desktop\projects3\OSI\OS08\OS08\bin\Debug\net8.0\OS08.dll
+D:\Desktop\projects3\OSI\OS08\OS08\bin\Debug\net8.0\OS08.pdb
+D:\Desktop\projects3\OSI\OS08\OS08\obj\Debug\net8.0\OS08.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desktop\projects3\OSI\OS08\OS08\obj\Debug\net8.0\OS08.AssemblyInfoInputs.cache
+D:\Desktop\projects3\OSI\OS08\OS08\obj\Debug\net8.0\OS08.AssemblyInfo.cs
+D:\Desktop\projects3\OSI\OS08\OS08\obj\Debug\net8.0\OS08.csproj.CoreCompileInputs.cache
+D:\Desktop\projects3\OSI\OS08\OS08\obj\Debug\net8.0\OS08.dll
+D:\Desktop\projects3\OSI\OS08\OS08\obj\Debug\net8.0\refint\OS08.dll
+D:\Desktop\projects3\OSI\OS08\OS08\obj\Debug\net8.0\OS08.pdb
+D:\Desktop\projects3\OSI\OS08\OS08\obj\Debug\net8.0\OS08.genruntimeconfig.cache
+D:\Desktop\projects3\OSI\OS08\OS08\obj\Debug\net8.0\ref\OS08.dll
+E:\Универ\3 курс\OC\lab8\OS08\bin\Debug\net8.0\OS08.exe
+E:\Универ\3 курс\OC\lab8\OS08\bin\Debug\net8.0\OS08.deps.json
+E:\Универ\3 курс\OC\lab8\OS08\bin\Debug\net8.0\OS08.runtimeconfig.json
+E:\Универ\3 курс\OC\lab8\OS08\bin\Debug\net8.0\OS08.dll
+E:\Универ\3 курс\OC\lab8\OS08\bin\Debug\net8.0\OS08.pdb
+E:\Универ\3 курс\OC\lab8\OS08\obj\Debug\net8.0\OS08.GeneratedMSBuildEditorConfig.editorconfig
+E:\Универ\3 курс\OC\lab8\OS08\obj\Debug\net8.0\OS08.AssemblyInfoInputs.cache
+E:\Универ\3 курс\OC\lab8\OS08\obj\Debug\net8.0\OS08.AssemblyInfo.cs
+E:\Универ\3 курс\OC\lab8\OS08\obj\Debug\net8.0\OS08.csproj.CoreCompileInputs.cache
+E:\Универ\3 курс\OC\lab8\OS08\obj\Debug\net8.0\OS08.sourcelink.json
+E:\Универ\3 курс\OC\lab8\OS08\obj\Debug\net8.0\OS08.dll
+E:\Универ\3 курс\OC\lab8\OS08\obj\Debug\net8.0\refint\OS08.dll
+E:\Универ\3 курс\OC\lab8\OS08\obj\Debug\net8.0\OS08.pdb
+E:\Универ\3 курс\OC\lab8\OS08\obj\Debug\net8.0\OS08.genruntimeconfig.cache
+E:\Универ\3 курс\OC\lab8\OS08\obj\Debug\net8.0\ref\OS08.dll

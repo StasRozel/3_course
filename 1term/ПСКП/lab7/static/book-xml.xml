@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<book>
+    <title>Мастер и Маргарита</title>
+    <author>Михаил Булгаков</author>
+    <year>1967</year>
+    <genre>Роман</genre>
+    <description>Сатирический роман о дьяволе, который посещает атеистическую Москву</description>
+    <characters>
+        <character>
+            <name>Воланд</name>
+            <role>Дьявол</role>
+        </character>
+        <character>
+            <name>Маргарита</name>
+            <role>Главная героиня</role>
+        </character>
+    </characters>
+</book>

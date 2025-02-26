@@ -1,0 +1,29 @@
+D:\Desktop\projects3\OSI\OS05\OS05_02\bin\Debug\net8.0\OS05_02.exe
+D:\Desktop\projects3\OSI\OS05\OS05_02\bin\Debug\net8.0\OS05_02.deps.json
+D:\Desktop\projects3\OSI\OS05\OS05_02\bin\Debug\net8.0\OS05_02.runtimeconfig.json
+D:\Desktop\projects3\OSI\OS05\OS05_02\bin\Debug\net8.0\OS05_02.dll
+D:\Desktop\projects3\OSI\OS05\OS05_02\bin\Debug\net8.0\OS05_02.pdb
+D:\Desktop\projects3\OSI\OS05\OS05_02\obj\Debug\net8.0\OS05_02.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desktop\projects3\OSI\OS05\OS05_02\obj\Debug\net8.0\OS05_02.AssemblyInfoInputs.cache
+D:\Desktop\projects3\OSI\OS05\OS05_02\obj\Debug\net8.0\OS05_02.AssemblyInfo.cs
+D:\Desktop\projects3\OSI\OS05\OS05_02\obj\Debug\net8.0\OS05_02.csproj.CoreCompileInputs.cache
+D:\Desktop\projects3\OSI\OS05\OS05_02\obj\Debug\net8.0\OS05_02.dll
+D:\Desktop\projects3\OSI\OS05\OS05_02\obj\Debug\net8.0\refint\OS05_02.dll
+D:\Desktop\projects3\OSI\OS05\OS05_02\obj\Debug\net8.0\OS05_02.pdb
+D:\Desktop\projects3\OSI\OS05\OS05_02\obj\Debug\net8.0\OS05_02.genruntimeconfig.cache
+D:\Desktop\projects3\OSI\OS05\OS05_02\obj\Debug\net8.0\ref\OS05_02.dll
+E:\Универ\3 курс\OC\OS05\OS05_02\bin\Debug\net8.0\OS05_02.exe
+E:\Универ\3 курс\OC\OS05\OS05_02\bin\Debug\net8.0\OS05_02.deps.json
+E:\Универ\3 курс\OC\OS05\OS05_02\bin\Debug\net8.0\OS05_02.runtimeconfig.json
+E:\Универ\3 курс\OC\OS05\OS05_02\bin\Debug\net8.0\OS05_02.dll
+E:\Универ\3 курс\OC\OS05\OS05_02\bin\Debug\net8.0\OS05_02.pdb
+E:\Универ\3 курс\OC\OS05\OS05_02\obj\Debug\net8.0\OS05_02.GeneratedMSBuildEditorConfig.editorconfig
+E:\Универ\3 курс\OC\OS05\OS05_02\obj\Debug\net8.0\OS05_02.AssemblyInfoInputs.cache
+E:\Универ\3 курс\OC\OS05\OS05_02\obj\Debug\net8.0\OS05_02.AssemblyInfo.cs
+E:\Универ\3 курс\OC\OS05\OS05_02\obj\Debug\net8.0\OS05_02.csproj.CoreCompileInputs.cache
+E:\Универ\3 курс\OC\OS05\OS05_02\obj\Debug\net8.0\OS05_02.sourcelink.json
+E:\Универ\3 курс\OC\OS05\OS05_02\obj\Debug\net8.0\OS05_02.dll
+E:\Универ\3 курс\OC\OS05\OS05_02\obj\Debug\net8.0\refint\OS05_02.dll
+E:\Универ\3 курс\OC\OS05\OS05_02\obj\Debug\net8.0\OS05_02.pdb
+E:\Универ\3 курс\OC\OS05\OS05_02\obj\Debug\net8.0\OS05_02.genruntimeconfig.cache
+E:\Универ\3 курс\OC\OS05\OS05_02\obj\Debug\net8.0\ref\OS05_02.dll

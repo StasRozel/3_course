@@ -1,0 +1,65 @@
+--------------task 2----------
+CREATE TABLESPACE RSA_QDATA 
+DATAFILE 'RSA_QDATA1.dbf' SIZE 10M 
+OFFLINE;
+ALTER USER C##RSA QUOTA 2M ON RSA_QDATA;
+
+ALTER TABLESPACE RSA_QDATA ONLINE;
+-------------task 3 ------------
+SELECT SEGMENT_NAME, SEGMENT_TYPE 
+FROM DBA_SEGMENTS
+WHERE TABLESPACE_NAME = 'RSA_QDATA';
+-------------task 7-------------
+SELECT COUNT(*) AS extent_count
+FROM DBA_EXTENTS
+WHERE SEGMENT_NAME = 'RSA_T1'
+  AND SEGMENT_TYPE = 'TABLE'
+  AND TABLESPACE_NAME = 'RSA_QDATA';
+  
+  
+SELECT 
+    SUM(BYTES) AS total_extent_size_bytes,
+    SUM(BLOCKS) AS total_extent_size_blocks
+FROM DBA_EXTENTS
+WHERE SEGMENT_NAME = 'RSA_T1'
+  AND SEGMENT_TYPE = 'TABLE'
+  AND TABLESPACE_NAME = 'RSA_QDATA';
+  
+SELECT 
+    SEGMENT_NAME, 
+    SEGMENT_TYPE,
+    EXTENT_ID,
+    BYTES,
+    BLOCKS
+FROM DBA_EXTENTS
+WHERE SEGMENT_NAME = 'RSA_T1'
+  AND SEGMENT_TYPE = 'TABLE'
+  AND TABLESPACE_NAME = 'RSA_QDATA'
+ORDER BY EXTENT_ID;
+-------------task 8------------------
+DROP TABLESPACE RSA_QDATA INCLUDING CONTENTS AND DATAFILES;
+-------------task 9------------------
+SELECT 
+    GROUP#, 
+    THREAD#, 
+    SEQUENCE#, 
+    BYTES, 
+    MEMBERS, 
+    STATUS
+FROM V$LOG;
+
+SELECT 
+    GROUP#, 
+    THREAD#, 
+    SEQUENCE#, 
+    BYTES, 
+    MEMBERS, 
+    STATUS
+FROM V$LOG
+WHERE STATUS = 'CURRENT';
+-------------task 10------------
+SELECT 
+    *
+FROM V$LOGFILE;
+------------task 16--------------
+shutdown immediate;

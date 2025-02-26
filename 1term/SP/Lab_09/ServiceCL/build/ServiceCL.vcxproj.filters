@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\Univer\3_course\SP\Lab_09\ServiceCL\ServiceCL.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\Univer\3_course\SP\Lab_09\ServiceCL\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{A5CCC1AD-767F-33FE-9EAC-7488EA0DF675}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

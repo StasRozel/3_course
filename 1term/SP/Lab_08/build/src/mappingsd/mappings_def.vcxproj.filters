@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\Univer\3_course\SP\Lab_08\src\mappingsd\src\mappings.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\Univer\3_course\SP\Lab_08\src\mappingsd\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="E:\Univer\3_course\SP\Lab_08\src\mappingsd\src\mappings.def">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{D70B9BE3-E9BD-3D4A-BC1C-7FA8FB99D412}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

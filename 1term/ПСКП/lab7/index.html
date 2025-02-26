@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Демонстрация работы с файлами</title>
+    <link rel="stylesheet" href="http://localhost:3000/static/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Демонстрация работы с разными типами файлов</h1>
+
+        <div class="section">
+            <h2>Изображение PNG</h2>
+            <img src="http://localhost:3000/static/vinni.png" alt="Демонстрационное изображение" width="300">
+        </div>
+
+        <div class="section">
+            <h2>Видео MP4</h2>
+            <video width="400" height="300" controls>
+                <source src="http://localhost:3000/static/bober.mp4" type="video/mp4">
+                Ваш браузер не поддерживает видео тег.
+            </video>
+        </div>
+
+        <div class="section">
+            <h2>Документ Word</h2>
+            <a href="http://localhost:3000/static/Course.docx" download>Скачать документ Word</a>
+        </div>
+
+        <div class="section">
+            <h2>Тестирование скрипта</h2>
+            <button class="press">Нажми</button>
+        </div>
+
+        <div class="section">
+            <h2>JSON</h2>
+            <button onclick="loadJSON()">Загрузить JSON</button>
+            <pre id="jsonOutput"></pre>
+        </div>
+        
+        <div class="section">
+            <h2>XML</h2>
+            <button onclick="loadXML()">Загрузить XML</button>
+            <pre id="xmlOutput"></pre>
+        </div>
+    </div>
+
+    <script src="http://localhost:3000/static/script.js"></script>
+    <script>
+        async function loadJSON() {
+            try {
+                const response = await fetch('http://localhost:3000/static/book-json.json');
+                const data = await response.json();
+
+                const jsonOutput = document.getElementById('jsonOutput');
+                jsonOutput.textContent = JSON.stringify(data, null, 2);
+            } catch (error) {
+                console.error('Ошибка загрузки JSON:', error);
+                document.getElementById('jsonOutput').textContent = 'Ошибка загрузки файла';
+            }
+        }
+
+        async function loadXML() {
+            try {
+                const response = await fetch('http://localhost:3000/static/book-xml.xml');
+                const xmlText = await response.text();
+
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+
+                const formatXML = (node, indent = 0) => {
+                    let result = '';
+                    const indentStr = ' '.repeat(indent);
+
+                    if (node.nodeType === Node.ELEMENT_NODE) {
+                        result += `${indentStr}<${node.nodeName}>\n`;
+
+                        node.childNodes.forEach(child => {
+                            result += formatXML(child, indent + 2);
+                        });
+
+                        result += `${indentStr}</${node.nodeName}>\n`;
+                    } else if (node.nodeType === Node.TEXT_NODE) {
+                        const trimmedText = node.textContent.trim();
+                        if (trimmedText) {
+                            result += `${indentStr}${trimmedText}\n`;
+                        }
+                    }
+
+                    return result;
+                };
+
+                const xmlOutput = document.getElementById('xmlOutput');
+                xmlOutput.textContent = formatXML(xmlDoc.documentElement);
+            } catch (error) {
+                console.error('Ошибка загрузки XML:', error);
+                document.getElementById('xmlOutput').textContent = 'Ошибка загрузки файла';
+            }
+        }
+    </script>
+</body>
+
+</html>

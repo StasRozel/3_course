@@ -1,0 +1,2 @@
+sc stop DirectoryWatcherService
+sc delete DirectoryWatcherService

@@ -1,0 +1,1 @@
+E:\Univer\3_course\SP\Lab_09\ServiceCL\build\Debug\ServiceCL.exe DirectoryWatcherService Start E:\Univer\3_course\SP\Lab_09\Service09\log E:\Univer\3_course\SP\Lab_09\Service09\folder

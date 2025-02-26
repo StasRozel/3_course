@@ -1,0 +1,6 @@
+E:/Рабочий стол/BSTU/3 course/1 term/SP/Lab_03/lab03/build/CMakeFiles/Lab-03a-client.dir
+E:/Рабочий стол/BSTU/3 course/1 term/SP/Lab_03/lab03/build/CMakeFiles/Lab-03b-client.dir
+E:/Рабочий стол/BSTU/3 course/1 term/SP/Lab_03/lab03/build/CMakeFiles/Lab-03a-server.dir
+E:/Рабочий стол/BSTU/3 course/1 term/SP/Lab_03/lab03/build/CMakeFiles/Lab-03b-server.dir
+E:/Рабочий стол/BSTU/3 course/1 term/SP/Lab_03/lab03/build/CMakeFiles/edit_cache.dir
+E:/Рабочий стол/BSTU/3 course/1 term/SP/Lab_03/lab03/build/CMakeFiles/rebuild_cache.dir

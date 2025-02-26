@@ -1,0 +1,4 @@
+E:/Универ/3 курс/СП/lab4/out/build/x64-Debug/CMakeFiles/Lab-04.dir
+E:/Универ/3 курс/СП/lab4/out/build/x64-Debug/CMakeFiles/Lab-04b.dir
+E:/Универ/3 курс/СП/lab4/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+E:/Универ/3 курс/СП/lab4/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir

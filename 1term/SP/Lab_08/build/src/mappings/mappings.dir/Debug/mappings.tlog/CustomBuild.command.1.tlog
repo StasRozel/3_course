@@ -1,0 +1,10 @@
+^E:\UNIVER\3_COURSE\SP\LAB_08\SRC\MAPPINGS\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/Univer/3_course/SP/Lab_08 -BE:/Univer/3_course/SP/Lab_08/build --check-stamp-file E:/Univer/3_course/SP/Lab_08/build/src/mappings/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

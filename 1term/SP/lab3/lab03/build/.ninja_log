@@ -1,0 +1,17 @@
+# ninja log v6
+15	491	7529377901883079	CMakeFiles/Lab-03b-server.dir/src/Lab-03a-server.c.obj	1d87ff4be4717d01
+518	650	7529532073335857	Lab-03b-server.exe	ef5d00509f1441a7
+12	462	7529377901883079	CMakeFiles/Lab-03a-server.dir/src/Lab-03a-server.c.obj	79f95ac1c6eed16f
+4	365	7529372403524598	CMakeFiles/Lab-03a-client.dir/src/Lab-03a-client.c.obj	16c205cc9dd970d9
+464	602	7529377906381559	Lab-03a-server.exe	78200b6e6a18a5f2
+11	464	7529533757430165	CMakeFiles/Lab-03b-client.dir/src/Lab-03b-client.c.obj	a727f8e792357465
+367	468	7529372407249548	Lab-03a-client.exe	b762b4a1902b641f
+464	582	7529533761925976	Lab-03b-client.exe	f835e382bf7f9fc
+18	381	7529535686302357	CMakeFiles/Lab-03b-server.dir/src/Lab-03b-server.c.obj	1841cd2f1ffffa4d
+6	138	7529535949110599	Lab-03b-server.exe	ef5d00509f1441a7
+12	509	7529536683879155	CMakeFiles/Lab-03b-client.dir/src/Lab-03b-client.c.obj	a727f8e792357465
+16	539	7529536683879155	CMakeFiles/Lab-03b-server.dir/src/Lab-03b-server.c.obj	1841cd2f1ffffa4d
+510	680	7529536688857237	Lab-03b-client.exe	f835e382bf7f9fc
+540	686	7529536689257506	Lab-03b-server.exe	ef5d00509f1441a7
+18	410	7529538326334568	CMakeFiles/Lab-03b-server.dir/src/Lab-03b-server.c.obj	1841cd2f1ffffa4d
+411	533	7529538330324562	Lab-03b-server.exe	ef5d00509f1441a7
