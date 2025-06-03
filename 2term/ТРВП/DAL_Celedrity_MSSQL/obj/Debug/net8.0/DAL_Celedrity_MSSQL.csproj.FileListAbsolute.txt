@@ -1,0 +1,16 @@
+D:\Универ\3course\2term\ТРВП\DAL_Celedrity_MSSQL\bin\Debug\net8.0\DAL_Celedrity_MSSQL.deps.json
+D:\Универ\3course\2term\ТРВП\DAL_Celedrity_MSSQL\bin\Debug\net8.0\DAL_Celedrity_MSSQL.dll
+D:\Универ\3course\2term\ТРВП\DAL_Celedrity_MSSQL\bin\Debug\net8.0\DAL_Celedrity_MSSQL.pdb
+D:\Универ\3course\2term\ТРВП\DAL_Celedrity_MSSQL\bin\Debug\net8.0\DAL_Celebrity.dll
+D:\Универ\3course\2term\ТРВП\DAL_Celedrity_MSSQL\bin\Debug\net8.0\DAL_Celebrity.pdb
+D:\Универ\3course\2term\ТРВП\DAL_Celedrity_MSSQL\obj\Debug\net8.0\DAL_Celedrity_MSSQL.csproj.AssemblyReference.cache
+D:\Универ\3course\2term\ТРВП\DAL_Celedrity_MSSQL\obj\Debug\net8.0\DAL_Celedrity_MSSQL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Универ\3course\2term\ТРВП\DAL_Celedrity_MSSQL\obj\Debug\net8.0\DAL_Celedrity_MSSQL.AssemblyInfoInputs.cache
+D:\Универ\3course\2term\ТРВП\DAL_Celedrity_MSSQL\obj\Debug\net8.0\DAL_Celedrity_MSSQL.AssemblyInfo.cs
+D:\Универ\3course\2term\ТРВП\DAL_Celedrity_MSSQL\obj\Debug\net8.0\DAL_Celedrity_MSSQL.csproj.CoreCompileInputs.cache
+D:\Универ\3course\2term\ТРВП\DAL_Celedrity_MSSQL\obj\Debug\net8.0\DAL_Celedrity_MSSQL.sourcelink.json
+D:\Универ\3course\2term\ТРВП\DAL_Celedrity_MSSQL\obj\Debug\net8.0\DAL_Cele.73C0CAFE.Up2Date
+D:\Универ\3course\2term\ТРВП\DAL_Celedrity_MSSQL\obj\Debug\net8.0\DAL_Celedrity_MSSQL.dll
+D:\Универ\3course\2term\ТРВП\DAL_Celedrity_MSSQL\obj\Debug\net8.0\refint\DAL_Celedrity_MSSQL.dll
+D:\Универ\3course\2term\ТРВП\DAL_Celedrity_MSSQL\obj\Debug\net8.0\DAL_Celedrity_MSSQL.pdb
+D:\Универ\3course\2term\ТРВП\DAL_Celedrity_MSSQL\obj\Debug\net8.0\ref\DAL_Celedrity_MSSQL.dll

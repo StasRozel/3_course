@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulpits Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .output {
+            white-space: pre-wrap;
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-top: 10px;
+        }
+        input, button {
+            margin: 5px 0;
+            padding: 5px;
+            width: 100%;
+        }
+        button {
+            cursor: pointer;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pulpits Management</h1>
+
+        <h2>GET Pulpits</h2>
+        <button onclick="getPulpits()">Fetch All Pulpits</button>
+        <div id="getOutput" class="output"></div>
+
+        <h2>POST Pulpit</h2>
+        <div class="form-group">
+            <input type="text" id="postPulpitCode" placeholder="Pulpit Code">
+            <input type="text" id="postPulpitName" placeholder="Pulpit Name">
+            <input type="text" id="postFacultyCode" placeholder="Faculty Code">
+            <button onclick="postPulpit()">Add Pulpit</button>
+        </div>
+        <div id="postOutput" class="output"></div>
+
+        <h2>PUT Pulpit</h2>
+        <div class="form-group">
+            <input type="text" id="putPulpitCode" placeholder="Pulpit Code">
+            <input type="text" id="putPulpitName" placeholder="Updated Pulpit Name">
+            <input type="text" id="putFacultyCode" placeholder="Updated Faculty Code">
+            <button onclick="putPulpit()">Update Pulpit</button>
+        </div>
+        <div id="putOutput" class="output"></div>
+
+        <h2>DELETE Pulpit</h2>
+        <div class="form-group">
+            <input type="text" id="deletePulpitCode" placeholder="Pulpit Code">
+            <button onclick="deletePulpit()">Delete Pulpit</button>
+        </div>
+        <div id="deleteOutput" class="output"></div>
+    </div>
+
+    <script>
+        const apiUrl = '/api/pulpits';
+
+        // GET: Fetch all pulpits
+        async function getPulpits() {
+            try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+                document.getElementById('getOutput').innerText = JSON.stringify(data, null, 2);
+            } catch (error) {
+                document.getElementById('getOutput').innerText = 'Error: ' + error.message;
+            }
+        }
+
+        // POST: Add a new pulpit
+        async function postPulpit() {
+            const code = document.getElementById('postPulpitCode').value;
+            const name = document.getElementById('postPulpitName').value;
+            const faculty = document.getElementById('postFacultyCode').value;
+
+            const payload = { pulpit_code: code, pulpit_name: name, faculty_code: faculty };
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const data = await response.json();
+                document.getElementById('postOutput').innerText = JSON.stringify(data, null, 2);
+            } catch (error) {
+                document.getElementById('postOutput').innerText = 'Error: ' + error.message;
+            }
+        }
+
+        // PUT: Update an existing pulpit
+        async function putPulpit() {
+            const code = document.getElementById('putPulpitCode').value;
+            const name = document.getElementById('putPulpitName').value;
+            const faculty = document.getElementById('putFacultyCode').value;
+
+            const payload = { pulpit_code: code, pulpit_name: name, faculty_code: faculty };
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const data = await response.json();
+                document.getElementById('putOutput').innerText = JSON.stringify(data, null, 2);
+            } catch (error) {
+                document.getElementById('putOutput').innerText = 'Error: ' + error.message;
+            }
+        }
+
+        // DELETE: Remove a pulpit by code
+        async function deletePulpit() {
+            const code = document.getElementById('deletePulpitCode').value;
+
+            try {
+                const response = await fetch(`${apiUrl}/${code}`, {
+                    method: 'DELETE'
+                });
+                const data = await response.json();
+                document.getElementById('deleteOutput').innerText = JSON.stringify(data, null, 2);
+            } catch (error) {
+                document.getElementById('deleteOutput').innerText = 'Error: ' + error.message;
+            }
+        }
+    </script>
+</body>
+</html>

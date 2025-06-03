@@ -1,0 +1,68 @@
+[
+  {
+    "Id": 1,
+    "Surname": "Chomsky",
+    "Firstname": "Noam",
+    "PhotoPath": "/Photo/Chomsky.jpg"
+  },
+  {
+    "Id": 2,
+    "Surname": "Berners-Lee",
+    "Firstname": "Tim",
+    "PhotoPath": "/Photo/Berners-Lee.jpg"
+  },
+  {
+    "Id": 3,
+    "Surname": "Codd",
+    "Firstname": "Edgar",
+    "PhotoPath": "/Photo/Codd.jpg"
+  },
+  {
+    "Id": 4,
+    "Surname": "Knuth",
+    "Firstname": "Donald",
+    "PhotoPath": "/Photo/Knuth.jpg"
+  },
+  {
+    "Id": 5,
+    "Surname": "Torvalds",
+    "Firstname": "Linus",
+    "PhotoPath": "/Photo/Torvalds.jpg"
+  },
+  {
+    "Id": 6,
+    "Surname": "Neumann",
+    "Firstname": "John",
+    "PhotoPath": "/Photo/Neumann.jpg"
+  },
+  {
+    "Id": 7,
+    "Surname": "Dijkstra",
+    "Firstname": "Edsger",
+    "PhotoPath": "/Photo/Dijkstra.jpg"
+  },
+  {
+    "Id": 8,
+    "Surname": "testDel1",
+    "Firstname": "testDel1",
+    "PhotoPath": "photo/testDel1.jpg"
+  },
+  {
+    "Id": 9,
+    "Surname": "testDel2",
+    "Firstname": "testDel2",
+    "PhotoPath": "photo/testDel2.jpg"
+  },
+  {
+    "Id": 1001,
+    "Surname": "testUpd2",
+    "Firstname": "testUpd2",
+    "PhotoPath": "photo/testUpd2.jpg"
+  },
+  {
+    "Id": 1000,
+    "Surname": "testUpd1",
+    "Firstname": "testUpd1",
+    "PhotoPath": "photo/testUpd1.jpg"
+  }
+]

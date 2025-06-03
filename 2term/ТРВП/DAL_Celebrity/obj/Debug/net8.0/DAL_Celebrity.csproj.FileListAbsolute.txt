@@ -1,0 +1,12 @@
+D:\Универ\3course\2term\ТРВП\DAL_Celebrity\bin\Debug\net8.0\DAL_Celebrity.deps.json
+D:\Универ\3course\2term\ТРВП\DAL_Celebrity\bin\Debug\net8.0\DAL_Celebrity.dll
+D:\Универ\3course\2term\ТРВП\DAL_Celebrity\bin\Debug\net8.0\DAL_Celebrity.pdb
+D:\Универ\3course\2term\ТРВП\DAL_Celebrity\obj\Debug\net8.0\DAL_Celebrity.GeneratedMSBuildEditorConfig.editorconfig
+D:\Универ\3course\2term\ТРВП\DAL_Celebrity\obj\Debug\net8.0\DAL_Celebrity.AssemblyInfoInputs.cache
+D:\Универ\3course\2term\ТРВП\DAL_Celebrity\obj\Debug\net8.0\DAL_Celebrity.AssemblyInfo.cs
+D:\Универ\3course\2term\ТРВП\DAL_Celebrity\obj\Debug\net8.0\DAL_Celebrity.csproj.CoreCompileInputs.cache
+D:\Универ\3course\2term\ТРВП\DAL_Celebrity\obj\Debug\net8.0\DAL_Celebrity.sourcelink.json
+D:\Универ\3course\2term\ТРВП\DAL_Celebrity\obj\Debug\net8.0\DAL_Celebrity.dll
+D:\Универ\3course\2term\ТРВП\DAL_Celebrity\obj\Debug\net8.0\refint\DAL_Celebrity.dll
+D:\Универ\3course\2term\ТРВП\DAL_Celebrity\obj\Debug\net8.0\DAL_Celebrity.pdb
+D:\Универ\3course\2term\ТРВП\DAL_Celebrity\obj\Debug\net8.0\ref\DAL_Celebrity.dll

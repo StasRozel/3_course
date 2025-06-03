@@ -1,0 +1,12 @@
+D:\Универ\3course\2term\ТРВП\DAL003\DAL003\bin\Debug\net8.0\DAL003.deps.json
+D:\Универ\3course\2term\ТРВП\DAL003\DAL003\bin\Debug\net8.0\DAL003.dll
+D:\Универ\3course\2term\ТРВП\DAL003\DAL003\bin\Debug\net8.0\DAL003.pdb
+D:\Универ\3course\2term\ТРВП\DAL003\DAL003\obj\Debug\net8.0\DAL003.GeneratedMSBuildEditorConfig.editorconfig
+D:\Универ\3course\2term\ТРВП\DAL003\DAL003\obj\Debug\net8.0\DAL003.AssemblyInfoInputs.cache
+D:\Универ\3course\2term\ТРВП\DAL003\DAL003\obj\Debug\net8.0\DAL003.AssemblyInfo.cs
+D:\Универ\3course\2term\ТРВП\DAL003\DAL003\obj\Debug\net8.0\DAL003.csproj.CoreCompileInputs.cache
+D:\Универ\3course\2term\ТРВП\DAL003\DAL003\obj\Debug\net8.0\DAL003.sourcelink.json
+D:\Универ\3course\2term\ТРВП\DAL003\DAL003\obj\Debug\net8.0\DAL003.dll
+D:\Универ\3course\2term\ТРВП\DAL003\DAL003\obj\Debug\net8.0\refint\DAL003.dll
+D:\Универ\3course\2term\ТРВП\DAL003\DAL003\obj\Debug\net8.0\DAL003.pdb
+D:\Универ\3course\2term\ТРВП\DAL003\DAL003\obj\Debug\net8.0\ref\DAL003.dll
