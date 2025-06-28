@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "Hash": "7nh1AgggFgTwCxWPq+J8GiYi+lxi60pTKrmMTuPYUs8=",
+  "Source": "ASPA006_1",
+  "BasePath": "_content/ASPA006_1",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ASPA006_1/wwwroot",
+      "Source": "ASPA006_1",
+      "ContentRoot": "/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/ASPA006_1/wwwroot/",
+      "BasePath": "_content/ASPA006_1",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/ASPA006_1/wwwroot/index.html",
+      "SourceId": "ASPA006_1",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/ASPA006_1/wwwroot/",
+      "BasePath": "_content/ASPA006_1",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/index.html"
+    },
+    {
+      "Identity": "/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/ASPA006_1/wwwroot/js/gallery.js",
+      "SourceId": "ASPA006_1",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/ASPA006_1/wwwroot/",
+      "BasePath": "_content/ASPA006_1",
+      "RelativePath": "js/gallery.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/js/gallery.js"
+    }
+  ]
+}

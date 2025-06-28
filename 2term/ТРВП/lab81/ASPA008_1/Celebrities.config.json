@@ -1,0 +1,8 @@
+{
+  "celebrities": {
+    "photos_request_path": "/Photos",
+    "photos_folder": "/home/rozel/Документы/Универ/3course/2term/ТРВП/lab81/ASPA008_1/Photos",
+    "connection_string": "Data source=127.0.0.1; Initial Catalog=LES;TrustServerCertificate=True;User Id=SA;Password=Contraseña12345678",
+    "iso3166_country_codes": "/home/rozel/Документы/Универ/3course/2term/ТРВП/lab81/ANC25_WEBAPI_DLL/CountryCodes/country_codes.json"
+  }
+}

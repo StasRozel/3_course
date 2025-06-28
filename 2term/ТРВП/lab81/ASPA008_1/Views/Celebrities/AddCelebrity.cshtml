@@ -1,0 +1,50 @@
+@model ASPA008_1.Models.AddCelebrityViewModel
+@{
+    ViewData["Title"] = "Add Celebrity";
+    Layout = "_Layout";
+}
+
+@section Styles
+{
+    <style>
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"], select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .file-input {
+            margin-bottom: 10px;
+        }
+
+        .btn-submit {
+            background-color: dodgerblue;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn-submit:hover {
+            background-color: #0077ea;
+        }
+    </style>
+}
+
+<h2>Add Celebrity</h2>
+
+@await Html.PartialAsync("_CelebrityForm", Model)

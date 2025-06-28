@@ -13,22 +13,6 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-function countCharacters(text) {
-    const charCount = {};
-    for (const char of text) {
-      charCount[char] = (charCount[char] || 0) + 1;
-    }
-    const charArray = Object.entries(charCount).sort((a, b) => b[1] - a[1]);
-    console.log('Символ | Количество');
-    console.log('-----------------');
-    charArray.forEach(([char, count]) => {
-      const displayChar = char === ' ' ? '[пробел]' : char;
-      console.log(`'${displayChar}' | ${count}`);
-    });
-    console.log(`\nВсего уникальных символов: ${charArray.length}`);
-    console.log(`Общая длина текста: ${text.length} символов`);
-  }
-
 function createTableWithKeyword(keyword) {
     const uniqueChars = Array.from(new Set(keyword.toUpperCase().split('')));
 
@@ -69,8 +53,7 @@ function encrypt(text, keyword) {
         for (let i = 0; i < table.length; i++) {
             for (let j = 0; j < table[i].length; j++) {
                 if (table[i][j] === char) {
-                    const nextJ = (j + 1) % table[i].length;
-                    return table[i][nextJ] || char;
+                    return table[i][0];
                 }
             }
         }
@@ -82,17 +65,14 @@ function encrypt(text, keyword) {
 function decrypt(encryptedText, keyword) {
     const table = createTableWithKeyword(keyword);
 
-    return encryptedText.toUpperCase().split('').map(char => {
+    return encryptedText.toLowerCase().split('').map(char => {
         if (!ALPHABET.includes(char)) {
             return char;
         }
 
         for (let i = 0; i < table.length; i++) {
-            for (let j = 0; j < table[i].length; j++) {
-                if (table[i][j] === char) {
-                    const prevJ = (j - 1 + table[i].length) % table[i].length;
-                    return table[i][prevJ] || char;
-                }
+            if (table[i][0] === char) {
+                return char;
             }
         }
 
@@ -108,20 +88,12 @@ function printTable(table) {
 }
 
 rl.question('Введите ключевое слово: ', (keyword) => {
-    const originalText = fs.readFileSync('./texts/originalTexts/newLand.txt', 'utf8');
-    countCharacters(originalText);
+    const originalText = fs.readFileSync('encode.txt', 'utf8');
+
     const table = createTableWithKeyword(keyword);
     printTable(table);
-    console.time("Execute time");
-    const encryptedText = encrypt(originalText, keyword);
-    console.timeEnd("Execute time");
-    countCharacters(encryptedText);
-    fs.writeFileSync('./texts/encode/encodeNewLand.txt', encryptedText);
 
-    const encodeText = fs.readFileSync('./texts/encode/encodeNewLand.txt', 'utf8');
-    console.time("Execute time");
-    const decodeText = decrypt(encodeText, keyword);
-    console.timeEnd("Execute time");
-    fs.writeFileSync('./texts/decode/decodeNewLand.txt', decodeText);
+    const encryptedText = encrypt(originalText, keyword);
+    fs.writeFileSync('decode.txt', encryptedText);
     rl.close();
 });

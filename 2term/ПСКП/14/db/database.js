@@ -1,12 +1,22 @@
-const { Pool } = require('pg');
+const sql = require('mssql');
 require('dotenv').config();
 
-const pool = new Pool({
+const config = {
     user: process.env.DB_USER,
-    host: process.env.DB_HOST,
-    database: process.env.DB_NAME,
     password: process.env.DB_PASSWORD,
-    port: process.env.DB_PORT,
+    server: process.env.DB_HOST,
+    database: process.env.DB_NAME,
+    options: {
+        encrypt: true, 
+        trustServerCertificate: true 
+    }
+};
+
+const pool = new sql.ConnectionPool(config);
+const poolConnect = pool.connect();
+
+poolConnect.catch(err => {
+    console.error('Database connection failed:', err);
 });
 
 module.exports = pool;

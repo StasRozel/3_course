@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <script>
+        async function sendRequest(url) {
+            try {
+                const response = await fetch(url);
+                const data = await response.text();
+                document.getElementById('response').innerText = data;
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Home Page</h1>
+    <button onclick="sendRequest('/home/index')">Home Index</button>
+    <button onclick="sendRequest('/home/account')">Home Account</button>
+    <button onclick="sendRequest('/calc/salary')">Calc Salary</button>
+    <button onclick="sendRequest('/calc/trans')">Calc Trans</button>
+
+    <h2>Response:</h2>
+    <pre id="response"></pre>
+</body>
+</html>

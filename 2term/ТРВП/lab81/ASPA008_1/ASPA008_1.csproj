@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\ANC25_WEBAPI_DLL\ANC25_WEBAPI_DLL.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <_ContentIncludedByDefault Remove="Views\Shared\Error.cshtml"/>
+        <_ContentIncludedByDefault Remove="Views\Shared\_Layout.cshtml"/>
+        <_ContentIncludedByDefault Remove="Views\Shared\_ValidationScriptsPartial.cshtml"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Update="wwwroot\assets\json\country_codes.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+
+</Project>

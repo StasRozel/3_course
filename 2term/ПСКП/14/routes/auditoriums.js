@@ -5,8 +5,9 @@ const pool = require('../db/database'); // Подключение к базе д
 // GET: Получить список всех аудиторий
 router.get('/', async (req, res) => {
     try {
-        const result = await pool.query('SELECT * FROM auditorium');
-        res.json(result.rows);
+        await pool.connect();
+        const result = await pool.request().query('SELECT * FROM auditorium');
+        res.json(result.recordset);
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
@@ -14,13 +15,16 @@ router.get('/', async (req, res) => {
 
 // POST: Добавить новую аудиторию
 router.post('/', async (req, res) => {
-    const { auditorium, auditorium_name, auditorium_type, auditorium_capacity } = req.body;
+    const { auditorium_name, auditorium_type, auditorium_capacity } = req.body;
     try {
-        const result = await pool.query(
-            'INSERT INTO auditorium (auditorium, auditorium_name, auditorium_type, auditorium_capacity) VALUES ($1, $2, $3) RETURNING *',
-            [auditorium, auditorium_name, auditorium_type, auditorium_capacity]
-        );
-        res.json(result.rows[0]);
+        await pool.connect();
+        const result = await pool.request()
+            .input('auditorium_name', auditorium_name)
+            .input('auditorium_type', auditorium_type)
+            .input('auditorium_capacity', auditorium_capacity)
+            .query('INSERT INTO auditorium (auditorium_name, auditorium_type, auditorium_capacity) OUTPUT INSERTED.* VALUES (@auditorium_name, @auditorium_type, @auditorium_capacity)');
+        
+        res.json(result.recordset[0]);
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
@@ -28,13 +32,16 @@ router.post('/', async (req, res) => {
 
 // PUT: Обновить информацию об аудитории
 router.put('/', async (req, res) => {
-    const { auditorium, auditorium_name, auditorium_type, auditorium_capacity } = req.body;
+    const { auditorium_name, auditorium_type, auditorium_capacity } = req.body;
     try {
-        const result = await pool.query(
-            'UPDATE auditorium SET auditorium_name = $2, auditorium_type = $3, auditorium_capacity = $4 WHERE auditorium = $1 RETURNING *',
-            [auditorium, auditorium_name, auditorium_type, auditorium_capacity]
-        );
-        res.json(result.rows[0]);
+        await pool.connect();
+        const result = await pool.request()
+            .input('auditorium_name', auditorium_name)
+            .input('auditorium_type', auditorium_type)
+            .input('auditorium_capacity', auditorium_capacity)
+            .query('UPDATE auditorium SET auditorium_type = @auditorium_type, auditorium_capacity = @auditorium_capacity OUTPUT INSERTED.* WHERE auditorium_name = @auditorium_name');
+        
+        res.json(result.recordset[0]);
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
@@ -44,11 +51,16 @@ router.put('/', async (req, res) => {
 router.delete('/:auditorium', async (req, res) => {
     const { auditorium } = req.params;
     try {
-        const result = await pool.query(
-            'DELETE FROM auditorium WHERE auditorium = $1 RETURNING *',
-            [auditorium]
-        );
-        res.json(result.rows[0] || { message: 'Auditorium not found' });
+        await pool.connect();
+        const result = await pool.request()
+            .input('auditorium', auditorium)
+            .query('DELETE FROM auditorium OUTPUT DELETED.* WHERE auditorium_name = @auditorium');
+        
+        if (result.recordset.length > 0) {
+            res.json(result.recordset[0]);
+        } else {
+            res.json({ message: 'Auditorium not found' });
+        }
     } catch (err) {
         res.status(500).json({ error: err.message });
     }

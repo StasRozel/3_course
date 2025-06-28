@@ -1,0 +1,17 @@
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/ANC25_WEBAPI_DLL/bin/Release/net8.0/ANC25_WEBAPI_DLL.deps.json
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/ANC25_WEBAPI_DLL/bin/Release/net8.0/ANC25_WEBAPI_DLL.dll
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/ANC25_WEBAPI_DLL/bin/Release/net8.0/ANC25_WEBAPI_DLL.pdb
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/ANC25_WEBAPI_DLL/bin/Release/net8.0/DAL_Celebrity.dll
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/ANC25_WEBAPI_DLL/bin/Release/net8.0/DAL_Celebrity_MSSQL.dll
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/ANC25_WEBAPI_DLL/bin/Release/net8.0/DAL_Celebrity.pdb
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/ANC25_WEBAPI_DLL/bin/Release/net8.0/DAL_Celebrity_MSSQL.pdb
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/ANC25_WEBAPI_DLL/obj/Release/net8.0/ANC25_WEBAPI_DLL.csproj.AssemblyReference.cache
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/ANC25_WEBAPI_DLL/obj/Release/net8.0/ANC25_WEBAPI_DLL.GeneratedMSBuildEditorConfig.editorconfig
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/ANC25_WEBAPI_DLL/obj/Release/net8.0/ANC25_WEBAPI_DLL.AssemblyInfoInputs.cache
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/ANC25_WEBAPI_DLL/obj/Release/net8.0/ANC25_WEBAPI_DLL.AssemblyInfo.cs
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/ANC25_WEBAPI_DLL/obj/Release/net8.0/ANC25_WEBAPI_DLL.csproj.CoreCompileInputs.cache
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/ANC25_WEBAPI_DLL/obj/Release/net8.0/ANC25_WEBAPI_DLL.csproj.CopyComplete
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/ANC25_WEBAPI_DLL/obj/Release/net8.0/ANC25_WEBAPI_DLL.dll
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/ANC25_WEBAPI_DLL/obj/Release/net8.0/refint/ANC25_WEBAPI_DLL.dll
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/ANC25_WEBAPI_DLL/obj/Release/net8.0/ANC25_WEBAPI_DLL.pdb
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/ANC25_WEBAPI_DLL/obj/Release/net8.0/ref/ANC25_WEBAPI_DLL.dll

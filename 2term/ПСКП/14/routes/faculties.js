@@ -5,8 +5,9 @@ const pool = require('../db/database');
 // Получить список всех факультетов
 router.get('/', async (req, res) => {
     try {
-        const result = await pool.query('SELECT * FROM faculty');
-        res.json(result.rows);
+        await pool.connect();
+        const result = await pool.request().query('SELECT * FROM faculty');
+        res.json(result.recordset);
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
@@ -16,11 +17,12 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
     const { faculty_code, faculty_name } = req.body;
     try {
-        const result = await pool.query(
-            'INSERT INTO faculty (FACULTY, FACULTY_NAME) VALUES ($1, $2) RETURNING *',
-            [faculty_code, faculty_name]
-        );
-        res.status(201).json(result.rows[0]);
+        await pool.connect();
+        const result = await pool.request()
+            .input('faculty_code', faculty_code)
+            .input('faculty_name', faculty_name)
+            .query('INSERT INTO faculty (FACULTY, FACULTY_NAME) OUTPUT INSERTED.* VALUES (@faculty_code, @faculty_name)');
+        res.status(201).json(result.recordset[0]);
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
@@ -30,11 +32,12 @@ router.post('/', async (req, res) => {
 router.put('/', async (req, res) => {
     const { faculty_code, faculty_name } = req.body;
     try {
-        const result = await pool.query(
-            'UPDATE faculty SET faculty_name = $2 WHERE faculty = $1 RETURNING *',
-            [faculty_code, faculty_name]
-        );
-        res.json(result.rows[0]);
+        await pool.connect();
+        const result = await pool.request()
+            .input('faculty_code', faculty_code)
+            .input('faculty_name', faculty_name)
+            .query('UPDATE faculty SET faculty_name = @faculty_name OUTPUT INSERTED.* WHERE faculty = @faculty_code');
+        res.json(result.recordset[0]);
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
@@ -44,11 +47,16 @@ router.put('/', async (req, res) => {
 router.delete('/:code', async (req, res) => {
     const { code } = req.params;
     try {
-        const result = await pool.query(
-            'DELETE FROM faculy WHERE faculty = $1 RETURNING *',
-            [code]
-        );
-        res.json(result.rows[0]);
+        await pool.connect();
+        const result = await pool.request()
+            .input('code', code)
+            .query('DELETE FROM faculty OUTPUT DELETED.* WHERE faculty = @code');
+        
+        if (result.recordset.length > 0) {
+            res.json(result.recordset[0]);
+        } else {
+            res.json({ message: 'Faculty not found' });
+        }
     } catch (error) {
         res.status(500).json({ error: error.message });
     }

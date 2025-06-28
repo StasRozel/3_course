@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phonebook</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .form-container, .entries-container {
+      margin-bottom: 20px;
+    }
+    .form-container input {
+      margin: 5px;
+      padding: 5px;
+    }
+    .entry {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    button {
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Phonebook</h1>
+  <div class="form-container">
+    <h2>Add/Edit Entry</h2>
+    <input type="text" id="id" placeholder="ID" required>
+    <input type="text" id="name" placeholder="Name" required>
+    <input type="text" id="phone" placeholder="Phone" required>
+    <input type="email" id="email" placeholder="Email">
+    <button onclick="saveEntry()">Save</button>
+    <button onclick="clearForm()">Clear</button>
+  </div>
+  <div class="entries-container">
+    <h2>Entries</h2>
+    <div id="entries"></div>
+  </div>
+
+  <script>
+    async function fetchEntries() {
+      const response = await fetch('/TS');
+      const entries = await response.json();
+      const entriesDiv = document.getElementById('entries');
+      entriesDiv.innerHTML = '';
+      entries.forEach(entry => {
+        const entryDiv = document.createElement('div');
+        entryDiv.className = 'entry';
+        entryDiv.innerHTML = `
+          <div>
+            <strong>${entry.name}</strong><br>
+            Phone: ${entry.phone}<br>
+            Email: ${entry.email || 'N/A'}
+          </div>
+          <div>
+            <button onclick="editEntry('${entry.id}')">Edit</button>
+            <button onclick="deleteEntry('${entry.id}')">Delete</button>
+          </div>
+        `;
+        entriesDiv.appendChild(entryDiv);
+      });
+    }
+
+    async function saveEntry() {
+      const entry = {
+        id: document.getElementById('id').value,
+        name: document.getElementById('name').value,
+        phone: document.getElementById('phone').value,
+        email: document.getElementById('email').value
+      };
+
+      if (!entry.id || !entry.name || !entry.phone) {
+        alert('ID, Name, and Phone are required');
+        return;
+      }
+
+      const method = document.getElementById('id').disabled ? 'PUT' : 'POST';
+      const response = await fetch('/TS', {
+        method,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(entry)
+      });
+
+      if (response.ok) {
+        clearForm();
+        fetchEntries();
+      } else {
+        alert('Error saving entry');
+      }
+    }
+
+    async function editEntry(id) {
+      const response = await fetch('/TS');
+      const entries = await response.json();
+      const entry = entries.find(e => e.id === id);
+      if (entry) {
+        document.getElementById('id').value = entry.id;
+        document.getElementById('id').disabled = true;
+        document.getElementById('name').value = entry.name;
+        document.getElementById('phone').value = entry.phone;
+        document.getElementById('email').value = entry.email || '';
+      }
+    }
+
+    async function deleteEntry(id) {
+      const response = await fetch('/TS', {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id })
+      });
+
+      if (response.ok) {
+        fetchEntries();
+      } else {
+        alert('Error deleting entry');
+      }
+    }
+
+    function clearForm() {
+      document.getElementById('id').value = '';
+      document.getElementById('id').disabled = false;
+      document.getElementById('name').value = '';
+      document.getElementById('phone').value = '';
+      document.getElementById('email').value = '';
+    }
+
+    // Initial load
+    fetchEntries();
+  </script>
+</body>
+</html>

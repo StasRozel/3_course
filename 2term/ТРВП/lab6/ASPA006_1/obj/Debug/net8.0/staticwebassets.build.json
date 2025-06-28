@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "Hash": "35sT2oUhqwAtjSrFhOCfQDwDw85dkjXhIs6dqAGePGI=",
+  "Source": "ASPA006_1",
+  "BasePath": "_content/ASPA006_1",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ASPA006_1/wwwroot",
+      "Source": "ASPA006_1",
+      "ContentRoot": "/home/rozel/Документы/Универ/ТРВП/ASPA006_1/wwwroot/",
+      "BasePath": "_content/ASPA006_1",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/home/rozel/Документы/Универ/ТРВП/ASPA006_1/wwwroot/index.html",
+      "SourceId": "ASPA006_1",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/rozel/Документы/Универ/ТРВП/ASPA006_1/wwwroot/",
+      "BasePath": "_content/ASPA006_1",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/index.html"
+    },
+    {
+      "Identity": "/home/rozel/Документы/Универ/ТРВП/ASPA006_1/wwwroot/js/gallery.js",
+      "SourceId": "ASPA006_1",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/rozel/Документы/Универ/ТРВП/ASPA006_1/wwwroot/",
+      "BasePath": "_content/ASPA006_1",
+      "RelativePath": "js/gallery.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/js/gallery.js"
+    }
+  ]
+}

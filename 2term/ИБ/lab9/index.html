@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD5 Hasher</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>MD5 Hasher</h1>
+        
+        <div class="form-group">
+            <label for="messageInput">Введите сообщение для хеширования:</label>
+            <textarea id="messageInput" placeholder="Введите ваш текст здесь..."></textarea>
+        </div>
+        
+        <div class="button-group">
+            <button class="btn-primary" onclick="hashMessage()">Вычислить MD5</button>
+            <button class="btn-secondary" onclick="clearAll()">Очистить</button>
+            <button class="btn-secondary" onclick="runBenchmark()">Тест производительности</button>
+        </div>
+        
+        <div id="resultSection" class="result-section hidden">
+            <div class="result-item">
+                <div class="result-label">MD5 Хеш:</div>
+                <div id="hashResult" class="result-value"></div>
+            </div>
+            
+            <div class="performance-grid">
+                <div class="perf-item">
+                    <div id="execTime" class="perf-value">0</div>
+                    <div class="perf-label">мс</div>
+                </div>
+                <div class="perf-item">
+                    <div id="msgLength" class="perf-value">0</div>
+                    <div class="perf-label">символов</div>
+                </div>
+                <div class="perf-item">
+                    <div id="bytesProcessed" class="perf-value">0</div>
+                    <div class="perf-label">байт обработано</div>
+                </div>
+                <div class="perf-item">
+                    <div id="throughput" class="perf-value">0</div>
+                    <div class="perf-label">MB/s</div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="benchmarkSection" class="benchmark-section hidden">
+            <div class="benchmark-title">Тест производительности</div>
+            <div class="progress-bar">
+                <div id="progressFill" class="progress-fill"></div>
+            </div>
+            <div id="benchmarkResults"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

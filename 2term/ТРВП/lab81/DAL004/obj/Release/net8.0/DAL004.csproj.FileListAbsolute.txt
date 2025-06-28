@@ -1,0 +1,12 @@
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/DAL004/bin/Release/net8.0/DAL004.deps.json
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/DAL004/bin/Release/net8.0/DAL004.dll
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/DAL004/bin/Release/net8.0/DAL004.pdb
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/DAL004/obj/Release/net8.0/DAL004.csproj.AssemblyReference.cache
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/DAL004/obj/Release/net8.0/DAL004.GeneratedMSBuildEditorConfig.editorconfig
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/DAL004/obj/Release/net8.0/DAL004.AssemblyInfoInputs.cache
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/DAL004/obj/Release/net8.0/DAL004.AssemblyInfo.cs
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/DAL004/obj/Release/net8.0/DAL004.csproj.CoreCompileInputs.cache
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/DAL004/obj/Release/net8.0/DAL004.dll
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/DAL004/obj/Release/net8.0/refint/DAL004.dll
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/DAL004/obj/Release/net8.0/DAL004.pdb
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/DAL004/obj/Release/net8.0/ref/DAL004.dll

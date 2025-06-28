@@ -1,0 +1,43 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ASPA008_1
+build_property.RootNamespace = ASPA008_1
+build_property.ProjectDir = /home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/ASPA008_1/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/ASPA008_1
+build_property._RazorSourceGeneratorDebug = 
+
+[/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/ASPA008_1/Views/Celebrities/AddCelebrity.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2VsZWJyaXRpZXMvQWRkQ2VsZWJyaXR5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/ASPA008_1/Views/Celebrities/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2VsZWJyaXRpZXMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/ASPA008_1/Views/Celebrities/UpdateCelebrity.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2VsZWJyaXRpZXMvVXBkYXRlQ2VsZWJyaXR5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/ASPA008_1/Views/Celebrities/ViewCelebrity.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2VsZWJyaXRpZXMvVmlld0NlbGVicml0eS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/ASPA008_1/Views/Shared/_CelebrityForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19DZWxlYnJpdHlGb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/ASPA008_1/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 

@@ -1,0 +1,96 @@
+### 
+@hp=http://localhost:5050
+@capi=/api/Celebrities
+###
+
+
+### Get all celebrities
+GET {{hp}}{{capi}}
+
+### Celebrity by ID
+GET {{hp}}{{capi}}/7
+
+### Life events by celebrity ID
+### MapGet("/Lifeevents/{id:int:min(1)}"
+GET {{hp}}{{capi}}/Lifeevents/3
+
+### Delete celebrity by ID
+###.MapDelete("/{id:int:min(1)}",
+DELETE {{hp}}{{capi}}/5
+
+
+### Create new celebrity
+### MapPost("/",
+POST {{hp}}{{capi}}
+Content-Type: application/json
+
+{
+  "fullName": "Андрей Ершов",
+  "nationality": "RU",
+  "reqPhotoPath": "Ershov.jpg"
+}
+
+### Update celebrity by ID
+### MapPut("/{id:int:min(1)}", 
+PUT {{hp}}{{capi}}/14
+Content-Type: application/json
+
+{
+  "fullName": "Андрей Петрович Ершович",
+  "nationality": "RU",
+  "reqPhotoPath": "Ershov.jpg"
+}
+
+### Get celebrity photo by filename
+### MapGet("/photo/{fname}"
+GET {{hp}}{{capi}}/photo/Berners-Lee.jpg
+
+### 
+@lapi=/api/Lifeevents
+###
+
+### All life events
+### MapGet("/",
+GET {{hp}}{{lapi}}
+
+
+### Life event by ID
+### MapGet("/{id:int:min(1)}"
+GET {{hp}}{{lapi}}/10
+
+
+### Life events by celebrity ID 
+### MapGet("/Celebrities/{id:int:min(1)}
+GET {{hp}}{{lapi}}/Celebrities/1
+
+
+### Delete life event by ID
+### MapDelete("/{id:int:min(1)}"
+DELETE {{hp}}{{lapi}}/8
+
+
+### Create new life event
+### MapPost("/", 
+POST {{hp}}{{lapi}}
+Content-Type: application/json
+
+{
+  "celebrityId": 14,
+  "date": "1931-04-19T00:00:00",
+  "description": "Дата рождения",
+  "reqPhotoPath": null
+}
+
+### Update life event by ID
+### MapPut("/{id:int:min(1)}"
+PUT {{hp}}{{lapi}}/14
+Content-Type: application/json
+
+{
+  "celebrityId": 1,
+  "date": "1931-04-19T00:00:00",
+  "description": "Дата рождения. Москва.",
+  "reqPhotoPath": null
+}
+
+###

@@ -1,0 +1,101 @@
+<!-- renderer/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>RSA Encryption & Digital Signature</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>RSA Encryption & Digital Signature</h1>
+    <h1>Secure Messaging</h1>
+    <div class="key-management">
+        <h2>Key Management</h2>
+        <div class="form-group">
+            <label for="keyBits">Key Size (bits):</label>
+            <select id="keyBits">
+                <option value="64">64 bits</option>
+                <option value="512">512 bits</option>
+                <option value="1024">1024 bits</option>
+                <option value="2048">2048 bits</option>
+            </select>
+            <button id="generateKeys">Generate Keys</button>
+        </div>
+
+        <div class="key-display">
+            <div>
+                <h3>My Keys</h3>
+                <div class="key-box">
+                    <h4>Public Key</h4>
+                    <textarea id="myPublicKey" readonly></textarea>
+                    <button id="copyPublicKey">Copy</button>
+                </div>
+                <div class="key-box">
+                    <h4>Private Key</h4>
+                    <textarea id="myPrivateKey" readonly></textarea>
+                    <p class="warning">Keep this secret!</p>
+                </div>
+            </div>
+
+            <div>
+                <h3>Contact's Public Key</h3>
+                <div class="key-box">
+                    <h4>Other Party's Public Key</h4>
+                    <textarea id="recipientPublicKey" placeholder="Paste the other party's public key here (for encrypting to them or verifying their signature)"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="messaging">
+        <h2>Messaging</h2>
+        <div class="send-section">
+            <h3>Send Message</h3>
+            <div class="form-group">
+                <label for="messageToSend">Message:</label>
+                <textarea id="messageToSend" placeholder="Enter your message here"></textarea>
+            </div>
+            <div class="form-group">
+                <button id="encryptAndSign">Encrypt & Sign</button>
+            </div>
+            <div class="result-box">
+                <h4>Encrypted Message:</h4>
+                <textarea id="encryptedMessage" readonly></textarea>
+                <button id="copyEncrypted">Copy</button>
+            </div>
+            <div class="result-box">
+                <h4>Digital Signature:</h4>
+                <textarea id="signature" readonly></textarea>
+                <button id="copySignature">Copy</button>
+            </div>
+        </div>
+
+        <div class="receive-section">
+            <h3>Receive Message</h3>
+            <div class="form-group">
+                <label for="receivedEncrypted">Encrypted Message:</label>
+                <textarea id="receivedEncrypted" placeholder="Paste encrypted message here"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="receivedSignature">Digital Signature:</label>
+                <textarea id="receivedSignature" placeholder="Paste signature here"></textarea>
+            </div>
+            <div class="form-group">
+                <button id="decryptAndVerify">Decrypt & Verify</button>
+            </div>
+            <div class="result-box">
+                <h4>Decrypted Message:</h4>
+                <div id="decryptedMessage"></div>
+            </div>
+            <div class="result-box">
+                <h4>Signature Verification:</h4>
+                <div id="verificationResult"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="./assets/script.js"></script>
+</body>
+</html>

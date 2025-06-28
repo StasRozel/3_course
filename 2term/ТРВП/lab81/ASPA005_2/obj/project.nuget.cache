@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "7A1D2JWm6Rs=",
+  "success": true,
+  "projectFilePath": "/home/rozel/Документы/Универ/3course/2term/ТРВП/lab81/ASPA005_2/ASPA005_2.csproj",
+  "expectedPackageFiles": [
+    "/home/rozel/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

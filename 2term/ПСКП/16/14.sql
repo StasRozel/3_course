@@ -1,3 +1,4 @@
+-- Active: 1743536163547@@127.0.0.1@1433@rsa
 -- DROP TABLE FACULTY
 CREATE TABLE FACULTY
   (
@@ -6,19 +7,19 @@ CREATE TABLE FACULTY
    CONSTRAINT PK_FACULTY PRIMARY KEY(FACULTY) 
   );
      
-delete from FACULTY;
+--delete from FACULTY;
 insert into FACULTY   (FACULTY,   FACULTY_NAME )
-             values  ('ИДиП',   'Издателькое дело и полиграфия');
+             values  ('PPP',   'Publishing and Printing');
 insert into FACULTY   (FACULTY,   FACULTY_NAME )
-            values  ('ХТиТ',   'Химическая технология и техника');
+            values  ('ChTE',   'Chemical Technology and Engineering');
 insert into FACULTY   (FACULTY,   FACULTY_NAME )
-            values  ('ЛХФ',     'Лесохозяйственный факультет');
+            values  ('FMF',     'Forestry Management Faculty');
 insert into FACULTY   (FACULTY,   FACULTY_NAME )
-            values  ('ИЭФ',     'Инженерно-экономический факультет');
+            values  ('EEF',     'Engineering and Economics Faculty');
 insert into FACULTY   (FACULTY,   FACULTY_NAME )
-            values  ('ТТЛП',    'Технология и техника лесной промышленности');
+            values  ('FTTI',    'Forestry Technology and Technical Industry');
 insert into FACULTY   (FACULTY,   FACULTY_NAME )
-            values  ('ТОВ',     'Технология органических веществ');
+            values  ('TOV',     'Technology of Organic Substances');
 
 --------------------------------------------------------------------------------------------
 -- DROP TABLE PULPIT
@@ -31,37 +32,37 @@ CREATE TABLE PULPIT
  CONSTRAINT PK_PULPIT PRIMARY KEY(PULPIT) 
  ); 
  
-delete from PULPIT;  
+--delete from PULPIT;  
 insert into PULPIT   (PULPIT,    PULPIT_NAME,                                                   FACULTY )
-             values  ('ИСиТ',    'Информационных систем и технологий ',                         'ИДиП'  );
+             values  ('ISaT',    'Information Systems and Technologies',                         'PPP'  );
 insert into PULPIT   (PULPIT,    PULPIT_NAME,                                                   FACULTY )
-             values  ('ПОиСОИ', 'Полиграфического оборудования и систем обработки информации ', 'ИДиП'  );
+             values  ('PEaIPS', 'Printing Equipment and Information Processing Systems', 'PPP'  );
 insert into PULPIT   (PULPIT,    PULPIT_NAME,                                                   FACULTY)
-              values  ('ЛВ',      'Лесоводства',                                                 'ЛХФ') ;         
+              values  ('F',      'Forestry',                                                 'FMF') ;         
 insert into PULPIT   (PULPIT,    PULPIT_NAME,                                                   FACULTY)
-             values  ('ОВ',      'Охотоведения',                                                 'ЛХФ') ;   
+             values  ('H',      'Hunting',                                                 'FMF') ;   
 insert into PULPIT   (PULPIT,    PULPIT_NAME,                                                   FACULTY)
-             values  ('ЛУ',      'Лесоустройства',                                              'ЛХФ');           
+             values  ('FM',      'Forest Management',                                              'FMF');           
 insert into PULPIT   (PULPIT,    PULPIT_NAME,                                                   FACULTY)
-             values  ('ЛЗиДВ',   'Лесозащиты и древесиноведения',                               'ЛХФ');                
+             values  ('FPaWS',   'Forest Protection and Wood Science',                               'FMF');                
 insert into PULPIT   (PULPIT,    PULPIT_NAME,                                                   FACULTY)
-             values  ('ЛПиСПС',  'Ландшафтного проектирования и садово-паркового строительства','ЛХФ');                  
+             values  ('LDaSPC',  'Landscape Design and Garden and Park Construction','FMF');                  
 insert into PULPIT   (PULPIT,    PULPIT_NAME,                                                   FACULTY)
-             values  ('ТЛ',     'Транспорта леса',                                              'ТТЛП');                        
+             values  ('FT',     'Forest Transport',                                              'FTTI');                        
 insert into PULPIT   (PULPIT,    PULPIT_NAME,                                                   FACULTY)
-             values  ('ЛМиЛЗ',  'Лесных машин и технологии лесозаготовок',                      'ТТЛП');                        
+             values  ('FMaLT',  'Forest Machinery and Logging Technology',                      'FTTI');                        
 insert into PULPIT   (PULPIT,    PULPIT_NAME,                                                   FACULTY)
-             values  ('ОХ',     'Органической химии',                                           'ТОВ');            
+             values  ('OC',     'Organic Chemistry',                                           'TOV');            
 insert into PULPIT   (PULPIT,    PULPIT_NAME,                                                              FACULTY)
-             values  ('ТНХСиППМ','Технологии нефтехимического синтеза и переработки полимерных материалов','ТОВ');             
+             values  ('TPCSaPPM','Technology of Petrochemical Synthesis and Processing of Polymeric Materials','TOV');             
 insert into PULPIT   (PULPIT,    PULPIT_NAME,                                                      FACULTY)
-             values  ('ТНВиОХТ','Технологии неорганических веществ и общей химической технологии ','ХТиТ');                    
+             values  ('TISaGCT','Technology of Inorganic Substances and General Chemical Technology','ChTE');                    
 insert into PULPIT   (PULPIT,    PULPIT_NAME,                                                                         FACULTY)
-             values  ('ХТЭПиМЭЕ','Химии, технологии электрохимических производств и материалов электронной техники', 'ХТиТ');
+             values  ('CTEPaMET','Chemistry, Technology of Electrochemical Productions and Materials of Electronic Engineering', 'ChTE');
 insert into PULPIT   (PULPIT,    PULPIT_NAME,                                                      FACULTY)
-             values  ('ЭТиМ',    'экономической теории и маркетинга',                              'ИЭФ');   
+             values  ('ETaM',    'Economic Theory and Marketing',                              'EEF');   
 insert into PULPIT   (PULPIT,    PULPIT_NAME,                                                      FACULTY)
-             values  ('МиЭП',   'Менеджмента и экономики природопользования',                      'ИЭФ');    
+             values  ('MaENM',   'Management and Environmental Management',                      'EEF');    
 ------------------------------------------------------------------------------------------------------------------------        - DROP  TABLE TEACHER
 CREATE TABLE TEACHER
  ( 
@@ -75,63 +76,63 @@ CREATE TABLE TEACHER
  
 delete from TEACHER;
 insert into  TEACHER    (TEACHER,   TEACHER_NAME, PULPIT )
-                       values  ('СМЛВ',    'Смелов Владимир Владиславович',  'ИСиТ');
+                       values  ('SMLV',    'Smelov Vladimir Vladislavovich',  'ISaT');
 insert into  TEACHER    (TEACHER,  TEACHER_NAME, PULPIT )
-                       values  ('АКНВЧ',    'Акунович Станислав Иванович',  'ИСиТ');
+                       values  ('AKNVC',    'Akunovich Stanislav Ivanovich',  'ISaT');
 insert into  TEACHER    (TEACHER,  TEACHER_NAME, PULPIT )
-                       values  ('КЛСНВ',    'Колесников Леонид Валерьевич',  'ИСиТ');
+                       values  ('KLSNV',    'Kolesnikov Leonid Valerievich',  'ISaT');
 insert into  TEACHER    (TEACHER,  TEACHER_NAME, PULPIT )
-                       values  ('ГРМН',    'Герман Олег Витольдович',  'ИСиТ');
+                       values  ('GRMN',    'German Oleg Vitoldovich',  'ISaT');
 insert into  TEACHER    (TEACHER,  TEACHER_NAME, PULPIT )
-                       values  ('ЛЩНК',    'Лащенко Анатолий Пвалович',  'ИСиТ');
+                       values  ('LSCNK',    'Lashchenko Anatoly Pavlovich',  'ISaT');
 insert into  TEACHER    (TEACHER,  TEACHER_NAME, PULPIT )
-                       values  ('БРКВЧ',    'Бракович Андрей Игорьевич',  'ИСиТ');
+                       values  ('BRKVCH',    'Brakovich Andrey Igorevich',  'ISaT');
 insert into  TEACHER    (TEACHER,  TEACHER_NAME, PULPIT )
-                       values  ('ДДК',     'Дедко Александр Аркадьевич',  'ИСиТ');
+                       values  ('DDK',     'Dedko Alexander Arkadievich',  'ISaT');
 insert into  TEACHER    (TEACHER,  TEACHER_NAME, PULPIT )
-                       values  ('КБЛ',     'Кабайло Александр Серафимович',  'ИСиТ');
+                       values  ('KBL',     'Kabaylo Alexander Serafimovich',  'ISaT');
 insert into  TEACHER    (TEACHER,  TEACHER_NAME, PULPIT )
-                       values  ('УРБ',     'Урбанович Павел Павлович',  'ИСиТ');
+                       values  ('URB',     'Urbanovich Pavel Pavlovich',  'ISaT');
 insert into  TEACHER    (TEACHER,  TEACHER_NAME, PULPIT )
-                       values  ('РМНК',     'Романенко Дмитрий Михайлович',  'ИСиТ');
+                       values  ('RMNK',     'Romanenko Dmitry Mikhailovich',  'ISaT');
 insert into  TEACHER    (TEACHER,  TEACHER_NAME, PULPIT )
-                       values  ('ПСТВЛВ',  'Пустовалова Наталия Николаевна', 'ИСиТ' );
+                       values  ('PSTVLV',  'Pustovalova Natalia Nikolaevna', 'ISaT' );
 insert into  TEACHER    (TEACHER,  TEACHER_NAME, PULPIT )
-                       values  ('?',     'Неизвестный',  'ИСиТ');
+                       values  ('?',     'Unknown',  'ISaT');
 insert into  TEACHER    (TEACHER,  TEACHER_NAME, PULPIT )
-                      values  ('ГРН',     'Гурин Николай Иванович',  'ИСиТ');
+                      values  ('GRN',     'Gurin Nikolai Ivanovich',  'ISaT');
 insert into  TEACHER    (TEACHER,  TEACHER_NAME, PULPIT )
-                       values  ('ЖЛК',     'Жиляк Надежда Александровна',  'ИСиТ');
+                       values  ('ZLK',     'Zhilyak Nadezhda Alexandrovna',  'ISaT');
 insert into  TEACHER    (TEACHER,  TEACHER_NAME, PULPIT )
-                       values  ('БРТШВЧ',   'Барташевич Святослав Александрович',  'ПОиСОИ');
+                       values  ('BRTSHVC',   'Bartashevich Svyatoslav Alexandrovich',  'PEaIPS');
 insert into  TEACHER    (TEACHER,  TEACHER_NAME, PULPIT )
-                       values  ('ЮДНКВ',   'Юденков Виктор Степанович',  'ПОиСОИ');
+                       values  ('YDNKV',   'Yudenkov Viktor Stepanovich',  'PEaIPS');
 insert into  TEACHER    (TEACHER,  TEACHER_NAME, PULPIT )
-                       values  ('БРНВСК',   'Барановский Станислав Иванович',  'ЭТиМ');
+                       values  ('BRNVSK',   'Baranovsky Stanislav Ivanovich',  'ETaM');
 insert into  TEACHER    (TEACHER,  TEACHER_NAME, PULPIT )
-                       values  ('НВРВ',   'Неверов Александр Васильевич',  'МиЭП');
+                       values  ('NVRV',   'Neverov Alexander Vasilievich',  'MaENM');
 insert into  TEACHER    (TEACHER,  TEACHER_NAME, PULPIT )
-                       values  ('РВКЧ',   'Ровкач Андрей Иванович',  'ОВ');
+                       values  ('RVKCH',   'Rovkach Andrey Ivanovich',  'H');
 insert into  TEACHER    (TEACHER,  TEACHER_NAME, PULPIT )
-                       values  ('ДМДК', 'Демидко Марина Николаевна',  'ЛПиСПС');
+                       values  ('DMDK', 'Demidko Marina Nikolaevna',  'LDaSPC');
 insert into  TEACHER    (TEACHER,  TEACHER_NAME, PULPIT )
-                       values  ('МШКВСК',   'Машковский Владимир Петрович',  'ЛУ');
+                       values  ('MSHKVSK',   'Mashkovsky Vladimir Petrovich',  'FM');
 insert into  TEACHER    (TEACHER,  TEACHER_NAME, PULPIT )
-                       values  ('ЛБХ',   'Лабоха Константин Валентинович',  'ЛВ');
+                       values  ('LBKh',   'Labokha Konstantin Valentinovich',  'F');
 insert into  TEACHER    (TEACHER,  TEACHER_NAME, PULPIT )
-                       values  ('ЗВГЦВ',   'Звягинцев Вячеслав Борисович',  'ЛЗиДВ'); 
+                       values  ('ZVGCV',   'Zvyagintsev Vyacheslav Borisovich',  'FPaWS'); 
 insert into  TEACHER    (TEACHER,  TEACHER_NAME, PULPIT )
-                       values  ('БЗБРДВ',   'Безбородов Владимир Степанович',  'ОХ'); 
+                       values  ('BZBRDV',   'Bezborodov Vladimir Stepanovich',  'OC'); 
 insert into  TEACHER    (TEACHER,  TEACHER_NAME, PULPIT )
-                       values  ('ПРКПЧК',   'Прокопчук Николай Романович',  'ТНХСиППМ'); 
+                       values  ('PRKPCHK',   'Prokopchuk Nikolai Romanovich',  'TPCSaPPM'); 
 insert into  TEACHER    (TEACHER,  TEACHER_NAME, PULPIT )
-                       values  ('НСКВЦ',   'Насковец Михаил Трофимович',  'ТЛ'); 
+                       values  ('NSKVTS',   'Naskovets Mikhail Trofimovich',  'FT'); 
 insert into  TEACHER    (TEACHER,  TEACHER_NAME, PULPIT )
-                       values  ('МХВ',   'Мохов Сергей Петрович',  'ЛМиЛЗ'); 
+                       values  ('MKhV',   'Mokhov Sergey Petrovich',  'FMaLT'); 
 insert into  TEACHER    (TEACHER,  TEACHER_NAME, PULPIT )
-                       values  ('ЕЩНК',   'Ещенко Людмила Семеновна',  'ТНВиОХТ'); 
+                       values  ('ESCHNK',   'Eshchenko Lyudmila Semenovna',  'TISaGCT'); 
 insert into  TEACHER    (TEACHER,  TEACHER_NAME, PULPIT )
-                       values  ('ЖРСК',   'Жарский Иван Михайлович',  'ХТЭПиМЭЕ'); 
+                       values  ('ZHRSK',   'Zharsky Ivan Mikhailovich',  'CTEPaMET'); 
 ---------------------------------------------------------------------------------------------------------------------
 -- DROP TABLE SUBJECT 
 CREATE TABLE SUBJECT
@@ -145,61 +146,61 @@ CREATE TABLE SUBJECT
 
 delete from SUBJECT;
 insert into SUBJECT   (SUBJECT,   SUBJECT_NAME,        PULPIT )
-                       values ('СУБД',   'Системы управления базами данных',                   'ИСиТ');
+                       values ('DBMS',   'Database Management Systems',                   'ISaT');
 insert into SUBJECT   (SUBJECT,   SUBJECT_NAME,        PULPIT)
-                       values ('БД',     'Базы данных',                                        'ИСиТ');
+                       values ('DB',     'Databases',                                        'ISaT');
 insert into SUBJECT   (SUBJECT,   SUBJECT_NAME,        PULPIT )
-                       values ('ИНФ',    'Информацтонные технологии',                          'ИСиТ');
+                       values ('INF',    'Information Technologies',                          'ISaT');
 insert into SUBJECT   (SUBJECT,   SUBJECT_NAME,        PULPIT )
-                       values ('ОАиП',  'Основы алгоритмизации и программирования',            'ИСиТ');
+                       values ('BAaP',  'Basics of Algorithmization and Programming',            'ISaT');
 insert into SUBJECT   (SUBJECT,   SUBJECT_NAME,        PULPIT )
-                       values ('ПЗ',     'Представление знаний в компьютерных системах',       'ИСиТ');
+                       values ('KR',     'Knowledge Representation in Computer Systems',       'ISaT');
 insert into SUBJECT   (SUBJECT,   SUBJECT_NAME,        PULPIT )
-                       values ('ПСП',    'Пограммирование сетевых приложений',                 'ИСиТ');
+                       values ('NP',    'Network Programming',                 'ISaT');
 insert into SUBJECT   (SUBJECT,   SUBJECT_NAME,        PULPIT )
-                       values ('МСОИ',     'Моделирование систем обработки информации',        'ИСиТ');
+                       values ('MISP',     'Modeling of Information Processing Systems',        'ISaT');
 insert into SUBJECT   (SUBJECT,   SUBJECT_NAME,        PULPIT )
-                       values ('ПИС',     'Проектирование информационных систем',              'ИСиТ');
+                       values ('DIS',     'Design of Information Systems',              'ISaT');
 insert into SUBJECT   (SUBJECT,   SUBJECT_NAME,        PULPIT )
-                       values ('КГ',      'Компьютерная геометрия ',                           'ИСиТ');
+                       values ('CG',      'Computer Geometry',                           'ISaT');
 insert into SUBJECT   (SUBJECT,   SUBJECT_NAME,        PULPIT )
-                       values ('ПМАПЛ',   'Полиграфические машины, автоматы и поточные линии', 'ПОиСОИ');
+                       values ('PMAL',   'Printing Machines, Automatic Machines and Production Lines', 'PEaIPS');
 insert into SUBJECT   (SUBJECT,   SUBJECT_NAME,        PULPIT )
-                       values ('КМС',     'Компьютерные мультимедийные системы',               'ИСиТ');
+                       values ('CMS',     'Computer Multimedia Systems',               'ISaT');
 insert into SUBJECT   (SUBJECT,   SUBJECT_NAME,        PULPIT )
-                       values ('ОПП',     'Организация полиграфического производства',         'ПОиСОИ');
+                       values ('PPO',     'Organization of Printing Production',         'PEaIPS');
 insert into SUBJECT   (SUBJECT,   SUBJECT_NAME,                            PULPIT)
-               values ('ДМ',   'Дискретная матеатика',                     'ИСиТ');
+               values ('DM',   'Discrete Mathematics',                     'ISaT');
 insert into SUBJECT   (SUBJECT,   SUBJECT_NAME,                             PULPIT )
-               values ('МП',   'Математисеское программирование',          'ИСиТ');  
+               values ('MP',   'Mathematical Programming',          'ISaT');  
 insert into SUBJECT   (SUBJECT,   SUBJECT_NAME,                             PULPIT )
-               values ('ЛЭВМ', 'Логические основы ЭВМ',                     'ИСиТ');                   
+               values ('LFPC', 'Logical Foundations of Computers',                     'ISaT');                   
 insert into SUBJECT   (SUBJECT,   SUBJECT_NAME,                             PULPIT )
-               values ('ООП',  'Объектно-ориентированное программирование', 'ИСиТ');
+               values ('OOP',  'Object-Oriented Programming', 'ISaT');
 insert into SUBJECT   (SUBJECT,   SUBJECT_NAME,        PULPIT )
-                       values ('ЭП',     'Экономика природопользования',                       'МиЭП');
+                       values ('EE',     'Environmental Economics',                       'MaENM');
 insert into SUBJECT   (SUBJECT,   SUBJECT_NAME,        PULPIT )
-                       values ('ЭТ',     'Экономическая теория',                               'ЭТиМ');
+                       values ('ET',     'Economic Theory',                               'ETaM');
 insert into SUBJECT   (SUBJECT,   SUBJECT_NAME,        PULPIT )
-                       values ('БЛЗиПсOO','Биология лесных зверей и птиц с осн. охотов.',      'ОВ');
+                       values ('BFAaBFWFB','Biology of Forest Animals and Birds with Fundamentals of Hunting',      'H');
 insert into SUBJECT   (SUBJECT,   SUBJECT_NAME,        PULPIT )
-                       values ('ОСПиЛПХ','Основы садовопаркового и лесопаркового хозяйства',  'ЛПиСПС');
+                       values ('BGPaFPM','Basics of Garden and Park and Forest Park Management',  'LDaSPC');
 insert into SUBJECT   (SUBJECT,   SUBJECT_NAME,        PULPIT )
-                       values ('ИГ',     'Инженерная геодезия ',                              'ЛУ');
+                       values ('EG',     'Engineering Geodesy',                              'FM');
 insert into SUBJECT   (SUBJECT,   SUBJECT_NAME,        PULPIT )
-                       values ('ЛВ',    'Лесоводство',                                        'ЛЗиДВ');
+                       values ('F',    'Forestry',                                        'FPaWS');
 insert into SUBJECT   (SUBJECT,   SUBJECT_NAME,        PULPIT )
-                       values ('ОХ',    'Органическая химия',                                 'ОХ');   
+                       values ('OC',    'Organic Chemistry',                                 'OC');   
 insert into SUBJECT   (SUBJECT,   SUBJECT_NAME,        PULPIT )
-                       values ('ТРИ',    'Технология резиновых изделий',                      'ТНХСиППМ'); 
+                       values ('TRP',    'Technology of Rubber Products',                      'TPCSaPPM'); 
 insert into SUBJECT   (SUBJECT,   SUBJECT_NAME,        PULPIT )
-                       values ('ВТЛ',    'Водный транспорт леса',                             'ТЛ');
+                       values ('WTF',    'Water Transport of Forest',                             'FT');
 insert into SUBJECT   (SUBJECT,   SUBJECT_NAME,        PULPIT )
-                       values ('ТиОЛ',   'Технология и оборудование лесозаготовок',           'ЛМиЛЗ'); 
+                       values ('TaLE',   'Technology and Logging Equipment',           'FMaLT'); 
 insert into SUBJECT   (SUBJECT,   SUBJECT_NAME,        PULPIT )
-                       values ('ТОПИ',   'Технология обогащения полезных ископаемых ',        'ТНВиОХТ');
+                       values ('TOPM',   'Technology of Ore Processing and Minerals',        'TISaGCT');
 insert into SUBJECT   (SUBJECT,   SUBJECT_NAME,        PULPIT )
-                       values ('ПЭХ',    'Прикладная электрохимия',                           'ХТЭПиМЭЕ');          
+                       values ('AEC',    'Applied Electrochemistry',                           'CTEPaMET');          
 ---------------------------------------------------------------------------------------------------------------------
 -- DROP TABLE AUDITORIUM_TYPE 
 create table AUDITORIUM_TYPE 
@@ -210,69 +211,67 @@ create table AUDITORIUM_TYPE
 
 delete from AUDITORIUM_TYPE;
 insert into AUDITORIUM_TYPE   (AUDITORIUM_TYPE,   AUDITORIUM_TYPENAME )
-                       values  ('ЛК',   'Лекционная');
+                       values  ('LH',   'Lecture Hall');
 insert into AUDITORIUM_TYPE   (AUDITORIUM_TYPE,   AUDITORIUM_TYPENAME )
-                       values  ('ЛБ-К',   'Компьютерный класс');
+                       values  ('LC-C',   'Computer Class');
 insert into AUDITORIUM_TYPE   (AUDITORIUM_TYPE,   AUDITORIUM_TYPENAME )
-                       values  ('ЛК-К', 'Лекционная с уст. компьютерами');
+                       values  ('LH-C', 'Lecture Hall with Computers');
 insert into AUDITORIUM_TYPE   (AUDITORIUM_TYPE,   AUDITORIUM_TYPENAME )
-                       values  ('ЛБ-X', 'Химическая лаборатория');
+                       values  ('LC-Ch', 'Chemical Laboratory');
 insert into AUDITORIUM_TYPE   (AUDITORIUM_TYPE,   AUDITORIUM_TYPENAME )
-                       values  ('ЛБ-СК', 'Спец. компьютерный класс');
+                       values  ('LC-SC', 'Special Computer Class');
 ---------------------------------------------------------------------------------------------------------------------
 -- DROP TABLE AUDITORIUM 
 create table AUDITORIUM 
 (
- AUDITORIUM           NCHAR(10) primary key,  -- код аудитории
- AUDITORIUM_NAME      VARCHAR(200),          -- аудитория 
- AUDITORIUM_CAPACITY  INTEGER,              -- вместимость
- AUDITORIUM_TYPE      NCHAR(10) not null      -- тип аудитории
+ AUDITORIUM           NCHAR(10) primary key,  -- auditorium code
+ AUDITORIUM_NAME      VARCHAR(200),          -- auditorium 
+ AUDITORIUM_CAPACITY  INTEGER,              -- capacity
+ AUDITORIUM_TYPE      NCHAR(10) not null      -- auditorium type
                       references AUDITORIUM_TYPE(AUDITORIUM_TYPE) ON DELETE CASCADE 
 );
 
 delete from AUDITORIUM;
 insert into  AUDITORIUM   (AUDITORIUM,   AUDITORIUM_NAME, AUDITORIUM_TYPE, AUDITORIUM_CAPACITY )
-                       values  ('206-1',   '206-1', 'ЛБ-К', 15);
+                       values  ('206-1',   '206-1', 'LC-C', 15);
 insert into  AUDITORIUM   (AUDITORIUM,   AUDITORIUM_NAME, AUDITORIUM_TYPE, AUDITORIUM_CAPACITY)
-                       values  ('301-1',   '301-1', 'ЛБ-К', 15);
+                       values  ('301-1',   '301-1', 'LC-C', 15);
 insert into  AUDITORIUM   (AUDITORIUM,   AUDITORIUM_NAME, AUDITORIUM_TYPE, AUDITORIUM_CAPACITY )
-                       values  ('236-1',   '236-1', 'ЛК',   60);
+                       values  ('236-1',   '236-1', 'LH',   60);
 insert into  AUDITORIUM   (AUDITORIUM,   AUDITORIUM_NAME, AUDITORIUM_TYPE, AUDITORIUM_CAPACITY )
-                       values  ('313-1',   '313-1', 'ЛК',   60);
+                       values  ('313-1',   '313-1', 'LH',   60);
 insert into  AUDITORIUM   (AUDITORIUM,   AUDITORIUM_NAME, AUDITORIUM_TYPE, AUDITORIUM_CAPACITY )
-                       values  ('324-1',   '324-1', 'ЛК',   50);
+                       values  ('324-1',   '324-1', 'LH',   50);
 insert into  AUDITORIUM   (AUDITORIUM,   AUDITORIUM_NAME, AUDITORIUM_TYPE, AUDITORIUM_CAPACITY )
-                       values  ('413-1',   '413-1', 'ЛБ-К', 15);
+                       values  ('413-1',   '413-1', 'LC-C', 15);
 insert into  AUDITORIUM   (AUDITORIUM,   AUDITORIUM_NAME, AUDITORIUM_TYPE, AUDITORIUM_CAPACITY )
-                       values  ('423-1',   '423-1', 'ЛБ-К', 90);
+                       values  ('423-1',   '423-1', 'LC-C', 90);
 insert into  AUDITORIUM   (AUDITORIUM,   AUDITORIUM_NAME, AUDITORIUM_TYPE, AUDITORIUM_CAPACITY )
-                       values  ('408-2',   '408-2', 'ЛК',  90);
+                       values  ('408-2',   '408-2', 'LH',  90);
 insert into  AUDITORIUM   (AUDITORIUM,   AUDITORIUM_NAME, AUDITORIUM_TYPE, AUDITORIUM_CAPACITY )
-                       values  ('103-4',   '103-4', 'ЛК',  90);
+                       values  ('103-4',   '103-4', 'LH',  90);
 insert into  AUDITORIUM   (AUDITORIUM,   AUDITORIUM_NAME, AUDITORIUM_TYPE, AUDITORIUM_CAPACITY )
-                       values  ('105-4',   '105-4', 'ЛК',  90);
+                       values  ('105-4',   '105-4', 'LH',  90);
 insert into  AUDITORIUM   (AUDITORIUM,   AUDITORIUM_NAME, AUDITORIUM_TYPE, AUDITORIUM_CAPACITY )
-                       values  ('107-4',   '107-4', 'ЛК',  90);
+                       values  ('107-4',   '107-4', 'LH',  90);
 insert into  AUDITORIUM   (AUDITORIUM,   AUDITORIUM_NAME, AUDITORIUM_TYPE, AUDITORIUM_CAPACITY )
-                       values  ('110-4',   '110-4', 'ЛК',  30);
+                       values  ('110-4',   '110-4', 'LH',  30);
 insert into  AUDITORIUM   (AUDITORIUM,   AUDITORIUM_NAME, AUDITORIUM_TYPE, AUDITORIUM_CAPACITY )
-                       values  ('111-4',   '111-4', 'ЛК',  30);
+                       values  ('111-4',   '111-4', 'LH',  30);
 insert into  AUDITORIUM   (AUDITORIUM,   AUDITORIUM_NAME, AUDITORIUM_TYPE, AUDITORIUM_CAPACITY )
-                      values  ('114-4',   '114-4', 'ЛК-К',  90 );
+                      values  ('114-4',   '114-4', 'LH-C',  90 );
 insert into  AUDITORIUM   (AUDITORIUM,   AUDITORIUM_NAME, AUDITORIUM_TYPE, AUDITORIUM_CAPACITY )
-                       values ('132-4',   '132-4', 'ЛК',   90);
+                       values ('132-4',   '132-4', 'LH',   90);
 insert into  AUDITORIUM   (AUDITORIUM,   AUDITORIUM_NAME, AUDITORIUM_TYPE, AUDITORIUM_CAPACITY )
-                       values ('02Б-4',   '02Б-4', 'ЛК',   90);
+                       values ('02B-4',   '02B-4', 'LH',   90);
 insert into  AUDITORIUM   (AUDITORIUM,   AUDITORIUM_NAME, AUDITORIUM_TYPE, AUDITORIUM_CAPACITY )
-                       values ('229-4',   '229-4', 'ЛК',   90);
+                       values ('229-4',   '229-4', 'LH',   90);
 insert into  AUDITORIUM   (AUDITORIUM,   AUDITORIUM_NAME, AUDITORIUM_TYPE, AUDITORIUM_CAPACITY )
-                       values  ('304-4',   '304-4','ЛБ-К', 90);
+                       values  ('304-4',   '304-4','LC-C', 90);
 insert into  AUDITORIUM   (AUDITORIUM,   AUDITORIUM_NAME, AUDITORIUM_TYPE, AUDITORIUM_CAPACITY )
-                       values  ('314-4',   '314-4', 'ЛК',  90);
+                       values  ('314-4',   '314-4', 'LH',  90);
 insert into  AUDITORIUM   (AUDITORIUM,   AUDITORIUM_NAME, AUDITORIUM_TYPE, AUDITORIUM_CAPACITY )
-                       values  ('320-4',   '320-4', 'ЛК',  90);
+                       values  ('320-4',   '320-4', 'LH',  90);
 insert into  AUDITORIUM   (AUDITORIUM,   AUDITORIUM_NAME, AUDITORIUM_TYPE, AUDITORIUM_CAPACITY )
-                       values  ('429-4',   '429-4', 'ЛК',  90);
-insert into  AUDITORIUM   (AUDITORIUM,   AUDITORIUM_NAME, AUDITORIUM_TYPE, AUDITORIUM_CAPACITY )
-                        values  ('?',   '???', 'ЛК',  90);
+                       values  ('429-4',   '429-4', 'LH',  90);
 -----------------------------------------------------------------------------------------------------------------------

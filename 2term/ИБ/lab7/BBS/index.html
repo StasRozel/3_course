@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>BBS Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.5;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        input,
+        select {
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .sequence-display {
+            width: 750px;
+            font-family: monospace;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            max-height: 200px;
+            overflow-y: auto;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .stat-card {
+            background-color: #e9e9e9;
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Генератор BBS (Блюма-Блюма-Шуба)</h1>
+
+        <div class="card">
+            <h2>Настройки</h2>
+            <div>
+                <label for="seed">Начальное значение (seed):</label>
+                <input type="text" id="seed" placeholder="Оставьте пустым для случайного значения">
+            </div>
+            <div>
+                <label for="length">Количество битов:</label>
+                <input type="number" id="length" value="512" min="1" max="1024">
+            </div>
+            <div>
+                <button id="generate">Сгенерировать последовательность</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Результат</h2>
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-value" id="zero-count">0</div>
+                    <div class="stat-label">Количество нулей</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="one-count">0</div>
+                    <div class="stat-label">Количество единиц</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="ratio">0</div>
+                    <div class="stat-label">Соотношение 1/всего</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="generation-time">0</div>
+                    <div class="stat-label">Время генерации (мс)</div>
+                </div>
+            </div>
+            <div>
+                <h3>Сгенерированная последовательность:</h3>
+                <div class="sequence-display" id="sequence"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Подключаем модуль BBS
+        const BBSGenerator = require('./bbs.js');
+        const fs = require('fs');
+        const { dialog } = require('@electron/remote');
+
+        // Создаем экземпляр генератора
+        let generator = new BBSGenerator();
+        let sequence = [];
+
+        // Получаем элементы DOM
+        const seedInput = document.getElementById('seed');
+        const lengthInput = document.getElementById('length');
+        const generateButton = document.getElementById('generate');
+        const sequenceDisplay = document.getElementById('sequence');
+        const zeroCountElement = document.getElementById('zero-count');
+        const oneCountElement = document.getElementById('one-count');
+        const ratioElement = document.getElementById('ratio');
+        const generationTimeElement = document.getElementById('generation-time');
+
+        // Функция для генерации последовательности
+        function generateSequence() {
+            const seed = seedInput.value.trim();
+            const length = parseInt(lengthInput.value, 10);
+
+            if (isNaN(length) || length <= 0) {
+                alert('Пожалуйста, введите корректное количество битов');
+                return;
+            }
+
+            generator.reset(seed || null);
+            const startTime = performance.now();
+            sequence = generator.generateSequence(length);
+            const endTime = performance.now();
+
+            // Отображаем последовательность
+            sequenceDisplay.textContent = sequence.join('');
+
+            // Обновляем статистику
+            const stats = generator.analyzeSequence();
+            zeroCountElement.textContent = stats.zeros;
+            oneCountElement.textContent = stats.ones;
+            ratioElement.textContent = stats.ratio.toFixed(3);
+            generationTimeElement.textContent = (endTime - startTime).toFixed(2);
+        }
+
+        // Обработчики событий
+        generateButton.addEventListener('click', generateSequence);
+
+        // Инициализация
+        function init() {
+            // Используем генератор без параметров
+            generator = new BBSGenerator();
+        }
+
+        // Запускаем инициализацию после загрузки DOM
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/DAL_Celebrity_MSSQL/bin/Release/net8.0/DAL_Celebrity_MSSQL.deps.json
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/DAL_Celebrity_MSSQL/bin/Release/net8.0/DAL_Celebrity_MSSQL.dll
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/DAL_Celebrity_MSSQL/bin/Release/net8.0/DAL_Celebrity_MSSQL.pdb
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/DAL_Celebrity_MSSQL/bin/Release/net8.0/DAL_Celebrity.dll
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/DAL_Celebrity_MSSQL/bin/Release/net8.0/DAL_Celebrity.pdb
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/DAL_Celebrity_MSSQL/obj/Release/net8.0/DAL_Celebrity_MSSQL.csproj.AssemblyReference.cache
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/DAL_Celebrity_MSSQL/obj/Release/net8.0/DAL_Celebrity_MSSQL.GeneratedMSBuildEditorConfig.editorconfig
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/DAL_Celebrity_MSSQL/obj/Release/net8.0/DAL_Celebrity_MSSQL.AssemblyInfoInputs.cache
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/DAL_Celebrity_MSSQL/obj/Release/net8.0/DAL_Celebrity_MSSQL.AssemblyInfo.cs
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/DAL_Celebrity_MSSQL/obj/Release/net8.0/DAL_Celebrity_MSSQL.csproj.CoreCompileInputs.cache
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/DAL_Celebrity_MSSQL/obj/Release/net8.0/DAL_Celebrity_MSSQL.csproj.CopyComplete
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/DAL_Celebrity_MSSQL/obj/Release/net8.0/DAL_Celebrity_MSSQL.dll
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/DAL_Celebrity_MSSQL/obj/Release/net8.0/refint/DAL_Celebrity_MSSQL.dll
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/DAL_Celebrity_MSSQL/obj/Release/net8.0/DAL_Celebrity_MSSQL.pdb
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/DAL_Celebrity_MSSQL/obj/Release/net8.0/ref/DAL_Celebrity_MSSQL.dll

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login (Forms)</title>
+</head>
+<body>
+    <form id="loginForm">
+        <label for="username">Логин:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <button type="submit">Войти</button>
+    </form>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                const response = await fetch('/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ username, password })
+                });
+
+                const text = await response.text();
+                console.log('Ответ от /login:', text);
+
+                let data;
+                try {
+                    data = JSON.parse(text);
+                } catch (e) {
+                    console.error('Ошибка парсинга JSON:', e);
+                    alert('Ошибка сервера: неверный формат ответа');
+                    return;
+                }
+
+                if (response.ok && data.redirect) {
+                    console.log('Успешный логин, перенаправление на:', data.redirect);
+                    window.location.href = data.redirect;
+                } else {
+                    alert(data.error || 'Неверные учетные данные');
+                }
+            } catch (error) {
+                console.error('Ошибка:', error);
+                alert('Ошибка сервера');
+            }
+        });
+
+        // Отладка: Проверка cookie после загрузки
+        window.addEventListener('load', () => {
+            console.log('Cookies:', document.cookie);
+        });
+
+        // Обработка выхода
+        document.addEventListener('click', (event) => {
+            if (event.target.id === 'logout') {
+                console.log('Выход, перенаправление на /logout');
+                window.location.href = '/logout';
+            }
+        });
+    </script>
+</body>
+</html>

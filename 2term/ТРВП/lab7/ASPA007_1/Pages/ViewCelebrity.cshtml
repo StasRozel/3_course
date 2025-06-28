@@ -1,0 +1,94 @@
+@page "{id:int}"
+@model ASPA007_1.Pages.ViewCelebrityModel
+@{
+    ViewData["Title"] = Model.Celebrity.FullName;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"]</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        .celebrity-image {
+            width: 100%;
+            max-height: 600px;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+
+        .celebrity-info {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 20px 0;
+            color: dodgerblue;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Celebrity Details</h1>
+    </header>
+
+    <a href="/" class="back-link">← Back to all celebrities</a>
+
+    <div class="celebrity-info">
+        <h1>@Model.Celebrity.FullName</h1>
+        <img src="/celebrities/@(Model.Celebrity.ReqPhotoPath)" alt="@Model.Celebrity.FullName"
+             class="celebrity-image"/>
+        <p><strong>Nationality:</strong> @Model.Celebrity.Nationality</p>
+    </div>
+
+    <a href="/" class="back-link">← Back to all celebrities</a>
+
+    <footer>
+        <p>Copyright BSTU <i>Development</i></p>
+    </footer>
+</div>
+</body>
+</html>

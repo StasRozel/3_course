@@ -1,0 +1,6 @@
+{
+  "Celebrities": {
+    "PhotoPathFolder": "/home/rozel/Документы/Универ/ТРВП/Celebrities",
+    "ConnectionString": "Data source=127.0.0.1; Initial Catalog=LES;TrustServerCertificate=True;User Id=SA;Password=Contraseña12345678"
+  }
+}

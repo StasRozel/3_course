@@ -1,0 +1,12 @@
+/home/rozel/Документы/Универ/3course/2term/ТРВП/lab81/DAL_Celebrity/bin/Debug/net8.0/DAL_Celebrity.deps.json
+/home/rozel/Документы/Универ/3course/2term/ТРВП/lab81/DAL_Celebrity/bin/Debug/net8.0/DAL_Celebrity.dll
+/home/rozel/Документы/Универ/3course/2term/ТРВП/lab81/DAL_Celebrity/bin/Debug/net8.0/DAL_Celebrity.pdb
+/home/rozel/Документы/Универ/3course/2term/ТРВП/lab81/DAL_Celebrity/obj/Debug/net8.0/DAL_Celebrity.GeneratedMSBuildEditorConfig.editorconfig
+/home/rozel/Документы/Универ/3course/2term/ТРВП/lab81/DAL_Celebrity/obj/Debug/net8.0/DAL_Celebrity.AssemblyInfoInputs.cache
+/home/rozel/Документы/Универ/3course/2term/ТРВП/lab81/DAL_Celebrity/obj/Debug/net8.0/DAL_Celebrity.AssemblyInfo.cs
+/home/rozel/Документы/Универ/3course/2term/ТРВП/lab81/DAL_Celebrity/obj/Debug/net8.0/DAL_Celebrity.csproj.CoreCompileInputs.cache
+/home/rozel/Документы/Универ/3course/2term/ТРВП/lab81/DAL_Celebrity/obj/Debug/net8.0/DAL_Celebrity.sourcelink.json
+/home/rozel/Документы/Универ/3course/2term/ТРВП/lab81/DAL_Celebrity/obj/Debug/net8.0/DAL_Celebrity.dll
+/home/rozel/Документы/Универ/3course/2term/ТРВП/lab81/DAL_Celebrity/obj/Debug/net8.0/refint/DAL_Celebrity.dll
+/home/rozel/Документы/Универ/3course/2term/ТРВП/lab81/DAL_Celebrity/obj/Debug/net8.0/DAL_Celebrity.pdb
+/home/rozel/Документы/Универ/3course/2term/ТРВП/lab81/DAL_Celebrity/obj/Debug/net8.0/ref/DAL_Celebrity.dll

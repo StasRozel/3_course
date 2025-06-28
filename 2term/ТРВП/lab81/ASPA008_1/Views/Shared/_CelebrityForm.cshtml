@@ -1,0 +1,71 @@
+@using ANC25_WEBAPI_DLL
+@using ASPA008_1.Helpers
+@using ASPA008_1.Models
+@using DAL_Celebrity.Entity
+@model object
+@inject CountryCodesProvider CountryService
+
+<div class="form-container">
+    @using (Html.BeginForm(ViewContext.RouteData.Values["action"].ToString(), "Celebrities", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        var isUpdate = Model is UpdateCelebrityViewModel;
+        var addViewModel = Model as AddCelebrityViewModel;
+        var updateViewModel = Model as UpdateCelebrityViewModel;
+
+        if (isUpdate)
+        {
+            <input type="hidden" name="Id" value="@updateViewModel.Id"/>
+            <input type="hidden" name="ExistingPhotoPath" value="@updateViewModel.ExistingPhotoPath"/>
+        }
+
+        <div class="form-group">
+            <label for="FullName">Celebrity Full Name</label>
+            @Html.TextBox("FullName", addViewModel?.FullName, new { @class = "form-control", required = "required", placeholder = "Enter full name" })
+        </div>
+
+        <div class="form-group">
+            <label for="Nationality">Nationality</label>
+            @Html.DropDownList("Nationality",
+                new SelectList(
+                    CountryService.GetAllCountryCodes().Select(c => new { Value = c.code, Text = c.countryLabel }),
+                    "Value", "Text", addViewModel?.Nationality),
+                "-- Select Nationality --",
+                new { @class = "form-control", required = "required" })
+        </div>
+
+        @if (isUpdate)
+        {
+            <div class="form-group">
+                <label>Current Photo:</label>
+                <div>
+                    @Html.ZoomableImage(new Celebrity
+                    {
+                        ReqPhotoPath = updateViewModel.ExistingPhotoPath,
+                        FullName = updateViewModel.FullName,
+                        Nationality = updateViewModel.Nationality
+                    })
+                </div>
+                <label for="Photo">Upload New Photo (optional):</label>
+                <input type="file" id="Photo" name="Photo" class="file-input form-control" accept="image/*"/>
+            </div>
+
+            <div class="form-group button-group">
+                <button type="submit" class="btn-update">Update Celebrity</button>
+                <a href="/" class="btn-cancel">Cancel</a>
+            </div>
+        }
+        else
+        {
+            <div class="form-group">
+                <label for="Photo">Photo</label>
+                <input type="file" id="Photo" name="Photo" class="file-input form-control" required accept="image/*"/>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn-update">Create Celebrity</button>
+            </div>
+        }
+
+        @Html.AntiForgeryToken()
+    }
+</div>

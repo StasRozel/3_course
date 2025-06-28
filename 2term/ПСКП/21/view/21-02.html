@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login (Digest)</title>
+    <!-- Подключаем библиотеку md5 для клиентских вычислений -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.19.0/js/md5.min.js"></script>
+</head>
+<body>
+    <form id="loginForm">
+        <label for="username">Логин:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <button type="submit">Войти</button>
+    </form>
+    <script>
+        // Функция для отправки запросов с заголовком Authorization
+        async function fetchWithAuth(url, options = {}) {
+            const authData = JSON.parse(localStorage.getItem('authData') || '{}');
+            if (authData.authHeader) {
+                console.log('authHeader из localStorage:', authData.authHeader);
+                options.headers = {
+                    ...options.headers,
+                    'Authorization': authData.authHeader
+                };
+            } else {
+                console.warn('authHeader не найден в localStorage');
+            }
+            return fetch(url, options);
+        }
+
+        // Парсинг заголовка WWW-Authenticate
+        function parseAuthenticateHeader(header) {
+            const params = {};
+            header.replace(/(\w+)="([^"]+)"|(\w+)=([^,]+)/g, (_, key1, value1, key2, value2) => {
+                params[key1 || key2] = value1 || value2;
+            });
+            return params;
+        }
+
+        // Формирование Digest Authorization заголовка
+        function createDigestHeader(username, password, method, uri, authParams) {
+            const { realm, nonce, qop } = authParams;
+            const nc = '00000001';
+            const cnonce = btoa(Math.random().toString()).slice(0, 8);
+            
+            const ha1 = md5(`${username}:${realm}:${password}`);
+            const ha2 = md5(`${method}:${uri}`);
+            const response = md5(`${ha1}:${nonce}:${nc}:${cnonce}:${qop}:${ha2}`);
+
+            return `Digest username="${username}", realm="${realm}", nonce="${nonce}", uri="${uri}", qop=${qop}, nc=${nc}, cnonce="${cnonce}", response="${response}"`;
+        }
+
+        // Обработка отправки формы логина
+        document.getElementById('loginForm').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const uri = '/login';
+            const method = 'POST';
+
+            try {
+                // Первый запрос для получения WWW-Authenticate
+                let response = await fetch('/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+
+                if (response.status === 401) {
+                    const authHeader = response.headers.get('WWW-Authenticate');
+                    console.log('WWW-Authenticate:', authHeader);
+                    if (!authHeader) {
+                        alert('Сервер не предоставил параметры аутентификации');
+                        return;
+                    }
+
+                    const authParams = parseAuthenticateHeader(authHeader);
+                    console.log('Извлеченные параметры:', authParams);
+
+                    // Формируем Digest заголовок
+                    const digestHeader = createDigestHeader(username, password, method, uri, authParams);
+                    console.log('Создан Digest заголовок:', digestHeader);
+
+                    // Повторный запрос с Digest заголовком
+                    response = await fetch('/login', {
+                        method: 'POST',
+                        headers: {
+                            'Authorization': digestHeader,
+                            'Content-Type': 'application/json'
+                        }
+                    });
+                }
+
+                const text = await response.text();
+                console.log('Ответ от /login:', text);
+
+                let data;
+                try {
+                    data = JSON.parse(text);
+                } catch (e) {
+                    console.error('Ошибка парсинга JSON:', e);
+                    alert('Ошибка сервера: неверный формат ответа');
+                    return;
+                }
+
+                if (response.ok && data.redirect) {
+                    // Сохраняем данные для последующих запросов
+                    const authData = {
+                        username,
+                        password,
+                        authHeader: createDigestHeader(username, password, 'GET', '/resource', {
+                            realm: 'http://localhost:3000/resource',
+                            nonce: btoa(Math.random().toString()).slice(0, 16), // Новый nonce для /resource
+                            qop: 'auth'
+                        })
+                    };
+                    console.log('Сохранение authData в localStorage:', authData);
+                    localStorage.setItem('authData', JSON.stringify(authData));
+                    console.log('Проверка localStorage:', localStorage.getItem('authData'));
+                    window.location.href = data.redirect;
+                } else {
+                    alert(data.error || 'Неверные учетные данные');
+                }
+            } catch (error) {
+                console.error('Ошибка:', error);
+                alert('Ошибка сервера');
+            }
+        });
+
+        // Проверка при загрузке /resource
+        window.addEventListener('load', async () => {
+            if (window.location.pathname === '/resource') {
+                console.log('Загрузка /resource, отправка запроса с authHeader');
+                try {
+                    const response = await fetchWithAuth('/resource');
+                    if (!response.ok) {
+                        console.log('Запрос к /resource неуспешен, перенаправление на /');
+                        localStorage.removeItem('authData');
+                        window.location.href = '/';
+                    } else {
+                        console.log('Доступ к /resource получен');
+                    }
+                } catch (error) {
+                    console.error('Ошибка при загрузке /resource:', error);
+                    localStorage.removeItem('authData');
+                    window.location.href = '/';
+                }
+            }
+        });
+
+        // Обработка выхода
+        document.addEventListener('click', (event) => {
+            if (event.target.id === 'logout') {
+                console.log('Выход, удаление authData');
+                localStorage.removeItem('authData');
+                window.location.href = '/logout';
+            }
+        });
+    </script>
+</body>
+</html>

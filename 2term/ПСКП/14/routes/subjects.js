@@ -5,8 +5,9 @@ const pool = require('../db/database'); // Подключение к базе д
 // GET: Получить список всех дисциплин
 router.get('/', async (req, res) => {
     try {
-        const result = await pool.query('SELECT * FROM subject');
-        res.json(result.rows);
+        await pool.connect();
+        const result = await pool.request().query('SELECT * FROM subject');
+        res.json(result.recordset);
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
@@ -16,11 +17,14 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
     const { subject_code, subject_name, pulpit } = req.body;
     try {
-        const result = await pool.query(
-            'INSERT INTO subject (subject, subject_name, pulpit) VALUES ($1, $2) RETURNING *',
-            [subject_code, subject_name, pulpit]
-        );
-        res.json(result.rows[0]);
+        await pool.connect();
+        const result = await pool.request()
+            .input('subject_code', subject_code)
+            .input('subject_name', subject_name)
+            .input('pulpit', pulpit)
+            .query('INSERT INTO subject (subject, subject_name, pulpit) OUTPUT INSERTED.* VALUES (@subject_code, @subject_name, @pulpit)');
+        
+        res.json(result.recordset[0]);
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
@@ -30,11 +34,14 @@ router.post('/', async (req, res) => {
 router.put('/', async (req, res) => {
     const { subject_code, subject_name, pulpit } = req.body;
     try {
-        const result = await pool.query(
-            'UPDATE subject SET subject_name = $2, pulpit = $3 WHERE subject = $1 RETURNING *',
-            [subject_code, subject_name, pulpit]
-        );
-        res.json(result.rows[0]);
+        await pool.connect();
+        const result = await pool.request()
+            .input('subject_code', subject_code)
+            .input('subject_name', subject_name)
+            .input('pulpit', pulpit)
+            .query('UPDATE subject SET subject_name = @subject_name, pulpit = @pulpit OUTPUT INSERTED.* WHERE subject = @subject_code');
+        
+        res.json(result.recordset[0]);
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
@@ -44,11 +51,16 @@ router.put('/', async (req, res) => {
 router.delete('/:code', async (req, res) => {
     const { code } = req.params;
     try {
-        const result = await pool.query(
-            'DELETE FROM subject WHERE subject = $1 RETURNING *',
-            [code]
-        );
-        res.json(result.rows[0] || { message: 'Subject not found' });
+        await pool.connect();
+        const result = await pool.request()
+            .input('code', code)
+            .query('DELETE FROM subject OUTPUT DELETED.* WHERE subject = @code');
+        
+        if (result.recordset.length > 0) {
+            res.json(result.recordset[0]);
+        } else {
+            res.json({ message: 'Subject not found' });
+        }
     } catch (err) {
         res.status(500).json({ error: err.message });
     }

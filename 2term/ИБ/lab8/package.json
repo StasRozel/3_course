@@ -1,0 +1,20 @@
+{
+  "name": "merkle-hellman-crypto",
+  "version": "1.0.0",
+  "description": "Реализация криптосистемы Меркла-Хеллмана (рюкзачное шифрование)",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "cryptography",
+    "merkle-hellman",
+    "knapsack"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "big-integer": "^1.6.52",
+    "electron": "^32.1.2"
+  }
+}

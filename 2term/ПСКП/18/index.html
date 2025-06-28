@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Демонстрация запросов</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .request {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .response {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Демонстрация работы запросов</h1>
+
+        <!-- GET запросы -->
+        <div class="request">
+            <h2>GET /api/faculties</h2>
+            <button onclick="sendRequest('GET', '/api/faculties')">Отправить запрос</button>
+            <div class="response" id="response-get-faculties"></div>
+        </div>
+
+        <div class="request">
+            <h2>GET /api/pulpits</h2>
+            <button onclick="sendRequest('GET', '/api/pulpits')">Отправить запрос</button>
+            <div class="response" id="response-get-pulpits"></div>
+        </div>
+
+        <div class="request">
+            <h2>GET /api/teachers</h2>
+            <button onclick="sendRequest('GET', '/api/teachers')">Отправить запрос</button>
+            <div class="response" id="response-get-teachers"></div>
+        </div>
+
+        <div class="request">
+            <h2>GET /api/subjects</h2>
+            <button onclick="sendRequest('GET', '/api/subjects')">Отправить запрос</button>
+            <div class="response" id="response-get-subjects"></div>
+        </div>
+
+        <div class="request">
+            <h2>GET /api/auditoriumtypes</h2>
+            <button onclick="sendRequest('GET', '/api/auditoriumtypes')">Отправить запрос</button>
+            <div class="response" id="response-get-auditoriumtypes"></div>
+        </div>
+
+        <div class="request">
+            <h2>GET /api/auditoriums</h2>
+            <button onclick="sendRequest('GET', '/api/auditoriums')">Отправить запрос</button>
+            <div class="response" id="response-get-auditoriums"></div>
+        </div>
+
+        <!-- POST запросы -->
+        <div class="request">
+            <h2>POST /api/faculties</h2>
+            <form id="form-post-faculties" onsubmit="event.preventDefault(); sendRequest('POST', '/api/faculties', getFormData('form-post-faculties'))">
+                <input type="text" name="faculty" placeholder="faculty" required>
+                <input type="text" name="faculty_name" placeholder="faculty_name" required>
+                <button type="submit">Отправить запрос</button>
+            </form>
+            <div class="response" id="response-post-faculties"></div>
+        </div>
+
+        <div class="request">
+            <h2>POST /api/pulpits</h2>
+            <form id="form-post-pulpits" onsubmit="event.preventDefault(); sendRequest('POST', '/api/pulpits', getFormData('form-post-pulpits'))">
+                <input type="text" name="pulpit" placeholder="pulpit" required>
+                <input type="text" name="pulpit_name" placeholder="pulpit_name" required>
+                <input type="text" name="faculty" placeholder="faculty" required>
+                <button type="submit">Отправить запрос</button>
+            </form>
+            <div class="response" id="response-post-pulpits"></div>
+        </div>
+
+        <div class="request">
+            <h2>POST /api/subjects</h2>
+            <form id="form-post-subjects" onsubmit="event.preventDefault(); sendRequest('POST', '/api/subjects', getFormData('form-post-subjects'))">
+                <input type="text" name="subject" placeholder="subject" required>
+                <input type="text" name="subject_name" placeholder="subject_name" required>
+                <input type="text" name="pulpit" placeholder="pulpit" required>
+                <button type="submit">Отправить запрос</button>
+            </form>
+            <div class="response" id="response-post-subjects"></div>
+        </div>
+
+        <div class="request">
+            <h2>POST /api/auditoriumstypes</h2>
+            <form id="form-post-auditoriumstypes" onsubmit="event.preventDefault(); sendRequest('POST', '/api/auditoriumstypes', getFormData('form-post-auditoriumstypes'))">
+                <input type="text" name="auditorium_type" placeholder="auditorium_type" required>
+                <input type="text" name="auditorium_typename" placeholder="auditorium_typename" required>
+                <button type="submit">Отправить запрос</button>
+            </form>
+            <div class="response" id="response-post-auditoriumstypes"></div>
+        </div>
+
+        <div class="request">
+            <h2>POST /api/auditoriums</h2>
+            <form id="form-post-auditoriums" onsubmit="event.preventDefault(); sendRequest('POST', '/api/auditoriums', getFormData('form-post-auditoriums'))">
+                <input type="text" name="auditorium" placeholder="auditorium" required>
+                <input type="text" name="auditorium_name" placeholder="auditorium_name" required>
+                <input type="number" name="auditorium_capacity" placeholder="auditorium_capacity" required>
+                <input type="text" name="auditorium_type" placeholder="auditorium_type" required>
+                <button type="submit">Отправить запрос</button>
+            </form>
+            <div class="response" id="response-post-auditoriums"></div>
+        </div>
+
+        <!-- PUT запросы -->
+        <div class="request">
+            <h2>PUT /api/faculties</h2>
+            <form id="form-put-faculties" onsubmit="event.preventDefault(); sendRequest('PUT', '/api/faculties', getFormData('form-put-faculties'))">
+                <input type="text" name="faculty" placeholder="faculty" required>
+                <input type="text" name="faculty_name" placeholder="faculty_name" required>
+                <button type="submit">Отправить запрос</button>
+            </form>
+            <div class="response" id="response-put-faculties"></div>
+        </div>
+
+        <div class="request">
+            <h2>PUT /api/pulpits</h2>
+            <form id="form-put-pulpits" onsubmit="event.preventDefault(); sendRequest('PUT', '/api/pulpits', getFormData('form-put-pulpits'))">
+                <input type="text" name="pulpit" placeholder="pulpit" required>
+                <input type="text" name="pulpit_name" placeholder="pulpit_name" required>
+                <input type="text" name="faculty" placeholder="faculty" required>
+                <button type="submit">Отправить запрос</button>
+            </form>
+            <div class="response" id="response-put-pulpits"></div>
+        </div>
+
+        <div class="request">
+            <h2>PUT /api/subjects</h2>
+            <form id="form-put-subjects" onsubmit="event.preventDefault(); sendRequest('PUT', '/api/subjects', getFormData('form-put-subjects'))">
+                <input type="text" name="subject" placeholder="subject" required>
+                <input type="text" name="subject_name" placeholder="subject_name" required>
+                <input type="text" name="pulpit" placeholder="pulpit" required>
+                <button type="submit">Отправить запрос</button>
+            </form>
+            <div class="response" id="response-put-subjects"></div>
+        </div>
+
+        <div class="request">
+            <h2>PUT /api/auditoriumstypes</h2>
+            <form id="form-put-auditoriumstypes" onsubmit="event.preventDefault(); sendRequest('PUT', '/api/auditoriumstypes', getFormData('form-put-auditoriumstypes'))">
+                <input type="text" name="auditorium_type" placeholder="auditorium_type" required>
+                <input type="text" name="auditorium_typename" placeholder="auditorium_typename" required>
+                <button type="submit">Отправить запрос</button>
+            </form>
+            <div class="response" id="response-put-auditoriumstypes"></div>
+        </div>
+
+        <div class="request">
+            <h2>PUT /api/auditoriums</h2>
+            <form id="form-put-auditoriums" onsubmit="event.preventDefault(); sendRequest('PUT', '/api/auditoriums', getFormData('form-put-auditoriums'))">
+                <input type="text" name="auditorium" placeholder="auditorium" required>
+                <input type="text" name="auditorium_name" placeholder="auditorium_name" required>
+                <input type="number" name="auditorium_capacity" placeholder="auditorium_capacity" required>
+                <input type="text" name="auditorium_type" placeholder="auditorium_type" required>
+                <button type="submit">Отправить запрос</button>
+            </form>
+            <div class="response" id="response-put-auditoriums"></div>
+        </div>
+
+        <!-- DELETE запросы -->
+        <div class="request">
+            <h2>DELETE /api/faculties/:code</h2>
+            <form id="form-delete-faculties" onsubmit="event.preventDefault(); sendRequest('DELETE', `/api/faculties/${document.getElementById('delete-faculty-code').value}`)">
+                <input type="text" id="delete-faculty-code" placeholder="faculty code" required>
+                <button type="submit">Отправить запрос</button>
+            </form>
+            <div class="response" id="response-delete-faculties"></div>
+        </div>
+
+        <div class="request">
+            <h2>DELETE /api/pulpits/:code</h2>
+            <form id="form-delete-pulpits" onsubmit="event.preventDefault(); sendRequest('DELETE', `/api/pulpits/${document.getElementById('delete-pulpit-code').value}`)">
+                <input type="text" id="delete-pulpit-code" placeholder="pulpit code" required>
+                <button type="submit">Отправить запрос</button>
+            </form>
+            <div class="response" id="response-delete-pulpits"></div>
+        </div>
+
+        <div class="request">
+            <h2>DELETE /api/subjects/:code</h2>
+            <form id="form-delete-subjects" onsubmit="event.preventDefault(); sendRequest('DELETE', `/api/subjects/${document.getElementById('delete-subject-code').value}`)">
+                <input type="text" id="delete-subject-code" placeholder="subject code" required>
+                <button type="submit">Отправить запрос</button>
+            </form>
+            <div class="response" id="response-delete-subjects"></div>
+        </div>
+
+        <div class="request">
+            <h2>DELETE /api/auditoriumtypes/:code</h2>
+            <form id="form-delete-auditoriumtypes" onsubmit="event.preventDefault(); sendRequest('DELETE', `/api/auditoriumtypes/${document.getElementById('delete-auditoriumtype-code').value}`)">
+                <input type="text" id="delete-auditoriumtype-code" placeholder="auditorium_type code" required>
+                <button type="submit">Отправить запрос</button>
+            </form>
+            <div class="response" id="response-delete-auditoriumtypes"></div>
+        </div>
+
+        <div class="request">
+            <h2>DELETE /api/auditoriums/:code</h2>
+            <form id="form-delete-auditoriums" onsubmit="event.preventDefault(); sendRequest('DELETE', `/api/auditoriums/${document.getElementById('delete-auditorium-code').value}`)">
+                <input type="text" id="delete-auditorium-code" placeholder="auditorium code" required>
+                <button type="submit">Отправить запрос</button>
+            </form>
+            <div class="response" id="response-delete-auditoriums"></div>
+        </div>
+    </div>
+
+    <script>
+        async function sendRequest(method, url, data = null) {
+            const options = {
+                method: method,
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            };
+
+            if (data) {
+                options.body = JSON.stringify(data);
+            }
+
+            try {
+                const response = await fetch(url, options);
+                const result = await response.json();
+                document.getElementById(`response-${method.toLowerCase()}-${url.split('/')[2]}`).innerText = JSON.stringify(result, null, 2);
+            } catch (error) {
+                document.getElementById(`response-${method.toLowerCase()}-${url.split('/')[2]}`).innerText = 'Ошибка: ' + error.message;
+            }
+        }
+
+        function getFormData(formId) {
+            const form = document.getElementById(formId);
+            const formData = new FormData(form);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+            return data;
+        }
+    </script>
+</body>
+</html>

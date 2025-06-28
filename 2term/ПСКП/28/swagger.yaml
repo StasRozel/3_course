@@ -1,0 +1,100 @@
+openapi: 3.0.3
+info:
+  title: Phonebook API
+  description: REST API for managing a phonebook
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000
+    description: Local server
+paths:
+  /TS:
+    get:
+      summary: Get all phonebook entries
+      description: Retrieves the complete list of phonebook entries in JSON format
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PhoneEntry'
+    post:
+      summary: Add a new phone entry
+      description: Creates a new phonebook entry
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PhoneEntry'
+      responses:
+        '201':
+          description: Entry created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PhoneEntry'
+        '400':
+          description: Invalid input
+    put:
+      summary: Update a phonebook entry
+      description: Updates an existing phonebook entry
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PhoneEntry'
+      responses:
+        '200':
+          description: Entry updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PhoneEntry'
+        '404':
+          description: Entry not found
+    delete:
+      summary: Delete a phonebook entry
+      description: Deletes a phonebook entry by ID
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: string
+                  description: Unique identifier of the phone entry
+              required:
+                - id
+      responses:
+        '204':
+          description: Entry deleted successfully
+        '404':
+          description: Entry not found
+components:
+  schemas:
+    PhoneEntry:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier of the phone entry
+        name:
+          type: string
+          description: Name of the contact
+        phone:
+          type: string
+          description: Phone number
+        email:
+          type: string
+          description: Email address
+          format: email
+      required:
+        - id
+        - name
+        - phone

@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>RC4 Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      line-height: 1.5;
+    }
+    
+    .container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    
+    h1, h2, h3 {
+      color: #333;
+    }
+    
+    button {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    
+    button:hover {
+      background-color: #45a049;
+    }
+    
+    input, select {
+      padding: 8px;
+      margin: 5px 0;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    
+    .sequence-display {
+      font-family: monospace;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      max-height: 200px;
+      overflow-y: auto;
+      padding: 10px;
+      background-color: #f1f1f1;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+    
+    .stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    
+    .stat-card {
+      background-color: #e9e9e9;
+      padding: 10px;
+      border-radius: 4px;
+      text-align: center;
+    }
+    
+    .stat-value {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    
+    .stat-label {
+      font-size: 14px;
+      color: #666;
+    }
+    
+    .key-input {
+      width: 50px;
+      margin-right: 5px;
+      text-align: center;
+    }
+    
+    .key-container {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    
+    canvas {
+      width: 100%;
+      max-height: 300px;
+      margin-top: 20px;
+    }
+    
+    .tabs {
+      display: flex;
+      margin-bottom: 10px;
+    }
+    
+    .tab {
+      padding: 10px 20px;
+      cursor: pointer;
+      background-color: #ddd;
+      border: none;
+      border-radius: 4px 4px 0 0;
+      margin-right: 5px;
+    }
+    
+    .tab.active {
+      background-color: #f9f9f9;
+      border-bottom: 2px solid #4CAF50;
+    }
+    
+    .tab-content {
+      display: none;
+    }
+    
+    .tab-content.active {
+      display: block;
+    }
+    
+    .perf-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    
+    .perf-table th, .perf-table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    
+    .perf-table th {
+      background-color: #f2f2f2;
+    }
+    
+    .perf-table tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Генератор RC4</h1>
+    
+    <div class="card">
+      <h2>Настройки</h2>
+      <div>
+        <label for="n-value">Параметр n (размер S-блока = 2^n):</label>
+        <input type="number" id="n-value" value="8" min="4" max="16">
+      </div>
+      <div>
+        <label>Ключ:</label>
+        <div class="key-container" id="key-container">
+          <input type="number" class="key-input" value="13" min="0" max="255">
+          <input type="number" class="key-input" value="19" min="0" max="255">
+          <input type="number" class="key-input" value="90" min="0" max="255">
+          <input type="number" class="key-input" value="92" min="0" max="255">
+          <input type="number" class="key-input" value="240" min="0" max="255">
+          <button id="add-key">+</button>
+          <button id="remove-key">-</button>
+        </div>
+      </div>
+      <div>
+        <label for="byte-count">Количество байтов для генерации:</label>
+        <input type="number" id="byte-count" value="1024" min="1" max="1000000">
+      </div>
+      <div>
+        <button id="generate">Сгенерировать последовательность</button>
+        <button id="benchmark">Запустить тест производительности</button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="tabs">
+        <button class="tab active" data-tab="result">Результат</button>
+        <button class="tab" data-tab="analysis">Анализ</button>
+        <button class="tab" data-tab="performance">Производительность</button>
+      </div>
+      
+      <div class="tab-content active" id="result-tab">
+        <h2>Сгенерированная последовательность</h2>
+        <div class="stats">
+          <div class="stat-card">
+            <div class="stat-value" id="byte-count-value">0</div>
+            <div class="stat-label">Байт сгенерировано</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="time-value">0</div>
+            <div class="stat-label">Время (мс)</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="speed-value">0</div>
+            <div class="stat-label">Байт/секунду</div>
+          </div>
+        </div>
+        <div>
+          <h3>Представление (первые 256 байт):</h3>
+          <div class="sequence-display" id="sequence-hex"></div>
+        </div>
+      </div>
+      
+      <div class="tab-content" id="analysis-tab">
+        <h2>Анализ последовательности</h2>
+        <div class="stats">
+          <div class="stat-card">
+            <div class="stat-value" id="entropy-value">0</div>
+            <div class="stat-label">Энтропия (биты)</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="unique-value">0</div>
+            <div class="stat-label">Уникальных байтов</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="ideal-ratio">0</div>
+            <div class="stat-label">% от идеала</div>
+          </div>
+        </div>
+        <div>
+          <h3>Распределение байтов:</h3>
+          <canvas id="distribution-chart"></canvas>
+        </div>
+      </div>
+      
+      <div class="tab-content" id="performance-tab">
+        <h2>Оценка производительности</h2>
+        <div>
+          <h3>Скорость генерации:</h3>
+          <canvas id="performance-chart"></canvas>
+        </div>
+        <div>
+          <h3>Детали тестов:</h3>
+          <table class="perf-table" id="perf-table">
+            <thead>
+              <tr>
+                <th>Тест #</th>
+                <th>Размер (байт)</th>
+                <th>Время (мс)</th>
+                <th>Скорость (байт/с)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Здесь будут строки с результатами тестов -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Подключаем модуль RC4
+    const RC4Generator = require('./rc4.js');
+    const fs = require('fs');
+    const { dialog } = require('@electron/remote');
+    
+    // Создаем экземпляр генератора с параметрами по умолчанию
+    let generator = new RC4Generator();
+    let generatedBytes = null;
+    let distributionChart = null;
+    let performanceChart = null;
+    
+    // Функция для форматирования байта в шестнадцатеричное представление
+    function byteToHex(byte) {
+      return byte.toString(16).padStart(2, '0');
+    }
+    
+    // Функция для генерации последовательности
+    function generateSequence() {
+      // Получаем параметры из формы
+      const nValue = parseInt(document.getElementById('n-value').value, 10);
+      const keyInputs = document.querySelectorAll('.key-input');
+      const key = Array.from(keyInputs).map(input => parseInt(input.value, 10));
+      const byteCount = parseInt(document.getElementById('byte-count').value, 10);
+      
+      // Проверяем корректность значений
+      if (isNaN(nValue) || nValue < 4 || nValue > 16) {
+        alert('Параметр n должен быть числом от 4 до 16');
+        return;
+      }
+      
+      if (key.some(isNaN)) {
+        alert('Ключ должен состоять из чисел от 0 до 255');
+        return;
+      }
+      
+      if (isNaN(byteCount) || byteCount < 1) {
+        alert('Количество байтов должно быть положительным числом');
+        return;
+      }
+      
+      // Создаем новый генератор с заданными параметрами
+      generator = new RC4Generator(nValue, key);
+      
+      // Генерируем последовательность
+      const startTime = performance.now();
+      generatedBytes = generator.generateBytes(byteCount);
+      const endTime = performance.now();
+      
+      // Отображаем результат
+      displaySequence(generatedBytes, endTime - startTime);
+      
+      // Выполняем и отображаем анализ
+      analyzeSequence(generatedBytes);
+    }
+    
+    // Отображение сгенерированной последовательности
+    function displaySequence(bytes, time) {
+      const byteCountValue = document.getElementById('byte-count-value');
+      const timeValue = document.getElementById('time-value');
+      const speedValue = document.getElementById('speed-value');
+      const sequenceHex = document.getElementById('sequence-hex');
+      
+      // Отображаем статистику
+      byteCountValue.textContent = bytes.length;
+      timeValue.textContent = time.toFixed(2);
+      const bytesPerSecond = bytes.length / (time / 1000);
+      speedValue.textContent = Math.round(bytesPerSecond);
+      
+      // Отображаем первые 256 байтов в шестнадцатеричном формате с пробелами
+      const displayLimit = Math.min(bytes.length, 256);
+      const hexArray = Array.from(bytes.slice(0, displayLimit)).map(byteToHex);
+      
+      // Группируем по 16 байт в строке
+      const hexLines = [];
+      for (let i = 0; i < hexArray.length; i += 16) {
+        hexLines.push(hexArray.slice(i, i + 16).join(' '));
+      }
+      
+      sequenceHex.textContent = hexLines.join('\n');
+    }
+    
+    // Анализ последовательности
+    function analyzeSequence(bytes) {
+      const analysis = generator.analyzeSequence(bytes);
+      
+      // Обновляем статистику
+      document.getElementById('entropy-value').textContent = analysis.entropy.toFixed(2);
+      document.getElementById('unique-value').textContent = analysis.uniqueBytes;
+      const idealRatio = (analysis.uniqueBytes / 256) * 100;
+      document.getElementById('ideal-ratio').textContent = idealRatio.toFixed(1) + '%';
+      
+      // Обновляем график распределения
+      updateDistributionChart(analysis.distribution);
+    }
+    
+    // Обновление графика распределения
+    function updateDistributionChart(distribution) {
+      const ctx = document.getElementById('distribution-chart').getContext('2d');
+      
+      // Уничтожаем предыдущий график, если он существует
+      if (distributionChart) {
+        distributionChart.destroy();
+      }
+      
+      // Создаем метки для оси X (значения байтов)
+      const labels = Array.from({length: 256}, (_, i) => i);
+      
+      // Определяем данные для графика
+      const data = {
+        labels: labels,
+        datasets: [{
+          label: 'Частота байтов',
+          data: distribution,
+          backgroundColor: 'rgba(75, 192, 192, 0.2)',
+          borderColor: 'rgba(75, 192, 192, 1)',
+          borderWidth: 1
+        }]
+      };
+      
+      // Создаем новый график
+      distributionChart = new Chart(ctx, {
+        type: 'bar',
+        data: data,
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'top',
+            },
+            title: {
+              display: true,
+              text: 'Распределение байтов'
+            }
+          },
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    }
+    
+    // Тест производительности
+    function runBenchmark() {
+      // Получаем параметры из формы
+      const nValue = parseInt(document.getElementById('n-value').value, 10);
+      const keyInputs = document.querySelectorAll('.key-input');
+      const key = Array.from(keyInputs).map(input => parseInt(input.value, 10));
+      
+      // Проверяем корректность значений
+      if (isNaN(nValue) || nValue < 4 || nValue > 16) {
+        alert('Параметр n должен быть числом от 4 до 16');
+        return;
+      }
+      
+      if (key.some(isNaN)) {
+        alert('Ключ должен состоять из чисел от 0 до 255');
+        return;
+      }
+      
+      // Создаем новый генератор с заданными параметрами
+      generator = new RC4Generator(nValue, key);
+      
+      // Размеры для тестирования (байт)
+      const testSizes = [1024, 10240, 102400, 1024000];
+      
+      // Запускаем тесты для каждого размера
+      testSizes.forEach(size => {
+        generator.generateBytes(size);
+      });
+      
+      // Получаем и отображаем результаты тестирования
+      const stats = generator.getPerformanceStats();
+      updatePerformanceDisplay(stats);
+    }
+    
+    // Обновление отображения производительности
+    function updatePerformanceDisplay(stats) {
+      // Обновляем таблицу с результатами тестов
+      const tableBody = document.querySelector('#perf-table tbody');
+      tableBody.innerHTML = '';
+      
+      stats.detailedStats.forEach((test, index) => {
+        const row = document.createElement('tr');
+        
+        const testCell = document.createElement('td');
+        testCell.textContent = (index + 1);
+        
+        const sizeCell = document.createElement('td');
+        sizeCell.textContent = test.count.toLocaleString();
+        
+        const timeCell = document.createElement('td');
+        timeCell.textContent = test.time.toFixed(2);
+        
+        const speedCell = document.createElement('td');
+        speedCell.textContent = Math.round(test.bytesPerSecond).toLocaleString();
+        
+        row.appendChild(testCell);
+        row.appendChild(sizeCell);
+        row.appendChild(timeCell);
+        row.appendChild(speedCell);
+        
+        tableBody.appendChild(row);
+      });
+      
+      // Обновляем график производительности
+      updatePerformanceChart(stats.detailedStats);
+    }
+    
+    // Обновление графика производительности
+    function updatePerformanceChart(detailedStats) {
+      const ctx = document.getElementById('performance-chart').getContext('2d');
+      
+      // Уничтожаем предыдущий график, если он существует
+      if (performanceChart) {
+        performanceChart.destroy();
+      }
+      
+      // Создаем метки для оси X (размеры тестов)
+      const labels = detailedStats.map(test => `${(test.count / 1024).toFixed(1)} KB`);
+      
+      // Определяем данные для графика
+      const data = {
+        labels: labels,
+        datasets: [{
+          label: 'Скорость (МБ/с)',
+          data: detailedStats.map(test => test.bytesPerSecond / (1024 * 1024)),
+          backgroundColor: 'rgba(54, 162, 235, 0.2)',
+          borderColor: 'rgba(54, 162, 235, 1)',
+          borderWidth: 1
+        }]
+      };
+      
+      // Создаем новый график
+      performanceChart = new Chart(ctx, {
+        type: 'line',
+        data: data,
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'top',
+            },
+            title: {
+              display: true,
+              text: 'Скорость генерации RC4'
+            }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: 'МБ/с'
+              }
+            },
+            x: {
+              title: {
+                display: true,
+                text: 'Размер данных'
+              }
+            }
+          }
+        }
+      });
+    }
+    
+    // Копирование в буфер обмена
+    function copyToClipboard() {
+      if (!generatedBytes) {
+        alert('Сначала сгенерируйте последовательность');
+        return;
+      }
+      
+      const hexString = Array.from(generatedBytes).map(byteToHex).join(' ');
+      navigator.clipboard.writeText(hexString)
+        .then(() => alert('Последовательность скопирована в буфер обмена'))
+        .catch(err => alert('Ошибка при копировании: ' + err));
+    }
+    
+    // Сохранение в файл
+    function saveToFile() {
+      if (!generatedBytes) {
+        alert('Сначала сгенерируйте последовательность');
+        return;
+      }
+      
+      const options = {
+        title: 'Сохранить последовательность',
+        defaultPath: `rc4-sequence-${Date.now()}.bin`,
+        filters: [
+          { name: 'Binary Files', extensions: ['bin'] },
+          { name: 'All Files', extensions: ['*'] }
+        ]
+      };
+      
+      dialog.showSaveDialog(options)
+        .then(result => {
+          if (!result.canceled && result.filePath) {
+            fs.writeFileSync(result.filePath, Buffer.from(generatedBytes));
+            alert(`Файл сохранен: ${result.filePath}`);
+          }
+        })
+        .catch(err => alert('Ошибка при сохранении файла: ' + err));
+    }
+    
+    // Управление вкладками
+    function setupTabs() {
+      const tabs = document.querySelectorAll('.tab');
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          // Удаляем активный класс у всех вкладок
+          tabs.forEach(t => t.classList.remove('active'));
+          // Добавляем активный класс текущей вкладке
+          tab.classList.add('active');
+          
+          // Скрываем все содержимое вкладок
+          const tabContents = document.querySelectorAll('.tab-content');
+          tabContents.forEach(content => content.classList.remove('active'));
+          
+          // Показываем содержимое выбранной вкладки
+          const tabId = tab.getAttribute('data-tab');
+          document.getElementById(`${tabId}-tab`).classList.add('active');
+        });
+      });
+    }
+    
+    // Управление полями ввода ключа
+    function setupKeyInputs() {
+      const addButton = document.getElementById('add-key');
+      const removeButton = document.getElementById('remove-key');
+      const keyContainer = document.getElementById('key-container');
+      
+      // Добавить новое поле для ключа
+      addButton.addEventListener('click', () => {
+        const input = document.createElement('input');
+        input.type = 'number';
+        input.className = 'key-input';
+        input.value = Math.floor(Math.random() * 256);
+        input.min = 0;
+        input.max = 255;
+        
+        // Вставляем перед кнопками
+        keyContainer.insertBefore(input, addButton);
+      });
+      
+      // Удалить последнее поле для ключа
+      removeButton.addEventListener('click', () => {
+        const keyInputs = document.querySelectorAll('.key-input');
+        if (keyInputs.length > 1) {
+          keyContainer.removeChild(keyInputs[keyInputs.length - 1]);
+        }
+      });
+    }
+    
+    // Инициализация приложения при загрузке DOM
+    document.addEventListener('DOMContentLoaded', () => {
+      // Инициализация вкладок
+      setupTabs();
+      
+      // Инициализация полей ввода ключа
+      setupKeyInputs();
+      
+      // Привязка обработчиков событий кнопок
+      document.getElementById('generate').addEventListener('click', generateSequence);
+      document.getElementById('benchmark').addEventListener('click', runBenchmark);
+      document.getElementById('copyToClipboard').addEventListener('click', copyToClipboard);
+      document.getElementById('saveToFile').addEventListener('click', saveToFile);
+      
+      // Создаем экземпляр генератора с параметрами по умолчанию
+      generator = new RC4Generator();
+    });
+  </script>
+</body>
+</html>

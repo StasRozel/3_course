@@ -15,22 +15,6 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-function countCharacters(text) {
-    const charCount = {};
-    for (const char of text) {
-      charCount[char] = (charCount[char] || 0) + 1;
-    }
-    const charArray = Object.entries(charCount).sort((a, b) => b[1] - a[1]);
-    console.log('Символ | Количество');
-    console.log('-----------------');
-    charArray.forEach(([char, count]) => {
-      const displayChar = char === ' ' ? '[пробел]' : char;
-      console.log(`'${displayChar}' | ${count}`);
-    });
-    console.log(`\nВсего уникальных символов: ${charArray.length}`);
-    console.log(`Общая длина текста: ${text.length} символов`);
-  }
-
 function removeDuplicateLetters(word) {
     return Array.from(new Set(word)).join('').toUpperCase();
 }
@@ -60,7 +44,7 @@ function createMapAlphabet(newAlphabet) {
     }
 }
 
-function _encode(text, replacements) {
+function _decode(text, replacements) {
     let result = '';
 
     for (const char of text.toUpperCase()) {
@@ -70,7 +54,7 @@ function _encode(text, replacements) {
     return result;
 }
 
-function _decode(text, replacements) {
+function _encode(text, replacements) {
     const reversedReplacements = Object.fromEntries(
         Object.entries(replacements).map(([key, value]) => [value, key])
     );
@@ -87,21 +71,15 @@ function _decode(text, replacements) {
 rl.question('Введите число: ', (number) => {
     rl.question('Введите ключевое слово: ', (keyword) => {
 
-        const text = fs.readFileSync('./texts/originalTexts/newLand.txt', 'utf8');
-        countCharacters(text);
+        const text = fs.readFileSync('encode.txt', 'utf8');
         const newAlphabet = createNewAlphabet(keyword, number);
         console.log(newAlphabet);
         createMapAlphabet(newAlphabet);
-        console.time("Execute time");
-        const encodeText = _encode(text, alphabets);
-        console.timeEnd("Execute time");
-        countCharacters(encodeText);
-        fs.writeFileSync('./texts/encode/encodeNewLand.txt', encodeText);
-        const textEncode = fs.readFileSync('./texts/encode/encodeNewLand.txt', 'utf8');
-        console.time("Execute time");
-        const textDecode = _decode(textEncode, alphabets); 
-        console.timeEnd("Execute time");
-        fs.writeFileSync('./texts/decode/decodeNewLand.txt', textDecode);
+        const decodeText = _decode(text, alphabets);
+        fs.writeFileSync('decode.txt', decodeText);
+        const textDecode = fs.readFileSync('decode.txt', 'utf8');
+        const textEncode = _encode(textDecode, alphabets); 
+        fs.writeFileSync('encodeNew.txt', textEncode);
         rl.close();
     });
 });

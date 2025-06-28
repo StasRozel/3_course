@@ -5,8 +5,9 @@ const pool = require('../db/database');
 // Получить список всех кафедр
 router.get('/', async (req, res) => {
     try {
-        const result = await pool.query('SELECT * FROM pulpit');
-        res.json(result.rows);
+        await pool.connect();
+        const result = await pool.request().query('SELECT * FROM pulpit');
+        res.json(result.recordset);
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
@@ -16,11 +17,13 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
     const { pulpit_code, pulpit_name, faculty_code } = req.body;
     try {
-        const result = await pool.query(
-            'INSERT INTO pulpit (pulpit, pulpit_name, faculty) VALUES ($1, $2, $3) RETURNING *',
-            [pulpit_code, pulpit_name, faculty_code]
-        );
-        res.status(201).json(result.rows[0]);
+        await pool.connect();
+        const result = await pool.request()
+            .input('pulpit_code', pulpit_code)
+            .input('pulpit_name', pulpit_name)
+            .input('faculty_code', faculty_code)
+            .query('INSERT INTO pulpit (pulpit, pulpit_name, faculty) OUTPUT INSERTED.* VALUES (@pulpit_code, @pulpit_name, @faculty_code)');
+        res.status(201).json(result.recordset[0]);
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
@@ -30,11 +33,13 @@ router.post('/', async (req, res) => {
 router.put('/', async (req, res) => {
     const { pulpit_code, pulpit_name, faculty_code } = req.body;
     try {
-        const result = await pool.query(
-            'UPDATE pulpit SET pulpit_name = $2, faculty = $3 WHERE pulpit = $1 RETURNING *',
-            [pulpit_code, pulpit_name, faculty_code]
-        );
-        res.json(result.rows[0]);
+        await pool.connect();
+        const result = await pool.request()
+            .input('pulpit_code', pulpit_code)
+            .input('pulpit_name', pulpit_name)
+            .input('faculty_code', faculty_code)
+            .query('UPDATE pulpit SET pulpit_name = @pulpit_name, faculty = @faculty_code OUTPUT INSERTED.* WHERE pulpit = @pulpit_code');
+        res.json(result.recordset[0]);
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
@@ -44,11 +49,16 @@ router.put('/', async (req, res) => {
 router.delete('/:code', async (req, res) => {
     const { code } = req.params;
     try {
-        const result = await pool.query(
-            'DELETE FROM pulpit WHERE pulpit = $1 RETURNING *',
-            [code]
-        );
-        res.json(result.rows[0]);
+        await pool.connect();
+        const result = await pool.request()
+            .input('code', code)
+            .query('DELETE FROM pulpit OUTPUT DELETED.* WHERE pulpit = @code');
+        
+        if (result.recordset.length > 0) {
+            res.json(result.recordset[0]);
+        } else {
+            res.json({ message: 'Pulpit not found' });
+        }
     } catch (error) {
         res.status(500).json({ error: error.message });
     }

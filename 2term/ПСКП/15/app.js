@@ -1,8 +1,11 @@
 const express = require('express');
+require('dotenv').config();
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const bodyParser = require('body-parser');
 
-const uri = "your mongodb app url";
+const username = process.env.DB_USERNAME;
+const password = process.env.DB_PASSWORD;
+const uri = `mongodb+srv://${username}:${password}@cluster0.ireiwhw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
 const client = new MongoClient(uri, {
   serverApi: {
     version: ServerApiVersion.v1,
@@ -43,11 +46,34 @@ app.get('/api/pulpits', async (req, res) => {
 
 // POST: добавить факультет
 app.post('/api/faculties', async (req, res) => {
+  const session = client.startSession();
+  
   try {
-    const result = await db.collection('faculty').insertOne(req.body);
-    res.json(result);
+    session.startTransaction();
+
+    const tovFaculty = await db.collection('faculty').insertOne(
+      {
+        faculty_name: 'Тех111нологии Органических Веществ',
+        faculty: 'ТОВ11'
+      }, 
+      { session }
+    );
+    //throw new Error();
+    const result = await db.collection('faculty').insertOne(req.body, { session });
+    
+
+    await session.commitTransaction();
+    
+    // Возвращаем результаты обоих вставок
+    res.json({
+      originalInsert: result,
+      tovInsert: tovFaculty
+    });
   } catch (err) {
+    await session.abortTransaction();
     res.status(400).json({ error: err.message });
+  } finally {
+    await session.endSession();
   }
 });
 

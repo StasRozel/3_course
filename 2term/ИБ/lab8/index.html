@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Merkle-Hellman Cryptosystem</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+  <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-2xl">
+    <h1 class="text-2xl font-bold mb-6 text-center">Криптосистема Меркла-Хеллмана</h1>
+
+    <!-- Key Generation -->
+    <div class="mb-6">
+      <h2 class="text-lg font-semibold mb-2">Генерация ключей</h2>
+      <div class="flex space-x-4 mb-4">
+        <div>
+          <label class="block text-sm">Размер ключа (биты):</label>
+          <input id="bitsCount" type="number" value="100" class="border rounded p-2 w-24">
+        </div>
+        <div>
+          <label class="block text-sm">Биты на символ (S):</label>
+          <input id="sValue" type="number" value="8" class="border rounded p-2 w-24">
+        </div>
+      </div>
+      <button id="generateKeys" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Сгенерировать ключи</button>
+    </div>
+
+    <!-- Key Info -->
+    <div class="mb-6">
+      <h2 class="text-lg font-semibold mb-2">Информация о ключах</h2>
+      <div id="keyInfo" class="text-sm bg-gray-100 p-4 rounded overflow-auto max-h-40" style="word-break: break-all;"></div>
+    </div>
+
+    <!-- Encryption -->
+    <div class="mb-6">
+      <h2 class="text-lg font-semibold mb-2">Шифрование</h2>
+      <textarea id="message" class="w-full border rounded p-2 mb-2" rows="4" placeholder="Введите сообщение..."></textarea>
+      <button id="encrypt" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Зашифровать</button>
+      <div id="encrypted" class="text-sm bg-gray-100 p-4 rounded mt-2 hidden overflow-auto max-h-40" style="word-break: break-all;"></div>
+      <div id="encryptTime" class="text-sm text-gray-600 mt-1 hidden">Время шифрования: <span id="encryptTimeValue">0</span> мс</div>
+    </div>
+
+    <!-- Decryption -->
+    <div>
+      <h2 class="text-lg font-semibold mb-2">Расшифрование</h2>
+      <textarea id="encryptedInput" class="w-full border rounded p-2 mb-2" rows="4" placeholder="Введите зашифрованное сообщение (числа через запятую)..."></textarea>
+      <button id="decrypt" class="bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600">Расшифровать</button>
+      <div id="decrypted" class="text-sm bg-gray-100 p-4 rounded mt-2 hidden"></div>
+      <div id="decryptTime" class="text-sm text-gray-600 mt-1 hidden">Время расшифрования: <span id="decryptTimeValue">0</span> мс</div>
+    </div>
+  </div>
+
+  <script>
+    const { MerkleHellman } = require('./merkle-hellman');
+
+    // Глобальные переменные
+    let currentMerkleHellman = null;
+
+    // Обработчики событий
+    document.getElementById('generateKeys').addEventListener('click', () => {
+      const bitsCount = parseInt(document.getElementById('bitsCount').value);
+      const s = parseInt(document.getElementById('sValue').value);
+      
+      try {
+        currentMerkleHellman = new MerkleHellman(bitsCount, s);
+        currentMerkleHellman.generatePublicKey();
+        
+        const keyInfo = currentMerkleHellman.getKeyInfo();
+        const keyInfoDiv = document.getElementById('keyInfo');
+        keyInfoDiv.innerHTML = `
+          <p><strong>Открытый ключ:</strong><br>${keyInfo.publicKey.join(', ')}</p>
+          <p><strong>Закрытый ключ:</strong><br>${keyInfo.privateKey.join(', ')}</p>
+          <p><strong>Модуль:</strong><br>${keyInfo.modulus}</p>
+          <p><strong>Множитель:</strong><br>${keyInfo.multiplier}</p>
+        `;
+        
+        console.log('Ключи сгенерированы успешно');
+      } catch (error) {
+        console.error('Ошибка при генерации ключей:', error);
+        alert('Ошибка при генерации ключей: ' + error.message);
+      }
+    });
+
+    document.getElementById('encrypt').addEventListener('click', () => {
+      if (!currentMerkleHellman) {
+        alert('Сначала сгенерируйте ключи!');
+        return;
+      }
+
+      const message = document.getElementById('message').value.trim();
+      if (!message) {
+        alert('Введите сообщение для шифрования!');
+        return;
+      }
+      
+      try {
+        const startTime = performance.now();
+        const encrypted = currentMerkleHellman.encrypt(message);
+        const endTime = performance.now();
+        const encryptTime = (endTime - startTime).toFixed(2);
+
+        const encryptedStrings = encrypted.map(x => x.toString());
+        
+        const encryptedDiv = document.getElementById('encrypted');
+        encryptedDiv.innerHTML = `<p><strong>Зашифрованное сообщение:</strong><br>${encryptedStrings.join(', ')}</p>`;
+        encryptedDiv.classList.remove('hidden');
+        
+        document.getElementById('encryptTimeValue').textContent = encryptTime;
+        document.getElementById('encryptTime').classList.remove('hidden');
+
+        // Автоматически заполняем поле для расшифровки
+        document.getElementById('encryptedInput').value = encryptedStrings.join(', ');
+        
+        console.log('Сообщение зашифровано успешно');
+      } catch (error) {
+        console.error('Ошибка при шифровании:', error);
+        alert('Ошибка при шифровании: ' + error.message);
+      }
+    });
+
+    document.getElementById('decrypt').addEventListener('click', () => {
+      if (!currentMerkleHellman) {
+        alert('Сначала сгенерируйте ключи!');
+        return;
+      }
+
+      const encryptedInput = document.getElementById('encryptedInput').value.trim();
+      if (!encryptedInput) {
+        alert('Введите зашифрованное сообщение!');
+        return;
+      }
+      
+      try {
+        const encryptedArray = encryptedInput.split(',').map(x => x.trim());
+        const startTime = performance.now();
+        const decrypted = currentMerkleHellman.decrypt(encryptedArray);
+        const endTime = performance.now();
+        const decryptTime = (endTime - startTime).toFixed(2);
+        
+        const decryptedDiv = document.getElementById('decrypted');
+        decryptedDiv.innerHTML = `<p><strong>Расшифрованное сообщение:</strong> ${decrypted}</p>`;
+        decryptedDiv.classList.remove('hidden');
+        
+        document.getElementById('decryptTimeValue').textContent = decryptTime;
+        document.getElementById('decryptTime').classList.remove('hidden');
+        
+        console.log('Сообщение расшифровано успешно');
+      } catch (error) {
+        console.error('Ошибка при расшифровании:', error);
+        alert('Ошибка при расшифровании: ' + error.message);
+      }
+    });
+  </script>
+</body>
+</html>

@@ -5,8 +5,9 @@ const pool = require('../db/database'); // Подключение к базе д
 // GET: Получить список всех типов аудиторий
 router.get('/', async (req, res) => {
     try {
-        const result = await pool.query('SELECT * FROM auditorium_type');
-        res.json(result.rows);
+        await pool.connect();
+        const result = await pool.request().query('SELECT * FROM auditorium_type');
+        res.json(result.recordset);
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
@@ -16,11 +17,12 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
     const { auditorium_type, type_name } = req.body;
     try {
-        const result = await pool.query(
-            'INSERT INTO auditorium_type (auditorium_type, auditorium_typename) VALUES ($1, $2) RETURNING *',
-            [auditorium_type, type_name]
-        );
-        res.json(result.rows[0]);
+        await pool.connect();
+        const result = await pool.request()
+            .input('auditorium_type', auditorium_type)
+            .input('type_name', type_name)
+            .query('INSERT INTO auditorium_type (auditorium_type, auditorium_typename) OUTPUT INSERTED.* VALUES (@auditorium_type, @type_name)');
+        res.json(result.recordset[0]);
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
@@ -30,11 +32,12 @@ router.post('/', async (req, res) => {
 router.put('/', async (req, res) => {
     const { auditorium_type, type_name } = req.body;
     try {
-        const result = await pool.query(
-            'UPDATE auditorium_type SET auditorium_typename = $2 WHERE auditorium_type = $1 RETURNING *',
-            [auditorium_type, type_name]
-        );
-        res.json(result.rows[0]);
+        await pool.connect();
+        const result = await pool.request()
+            .input('auditorium_type', auditorium_type)
+            .input('type_name', type_name)
+            .query('UPDATE auditorium_type SET auditorium_typename = @type_name OUTPUT INSERTED.* WHERE auditorium_type = @auditorium_type');
+        res.json(result.recordset[0]);
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
@@ -44,11 +47,16 @@ router.put('/', async (req, res) => {
 router.delete('/:type', async (req, res) => {
     const { type } = req.params;
     try {
-        const result = await pool.query(
-            'DELETE FROM auditorium_type WHERE auditorium_type = $1 RETURNING *',
-            [type]
-        );
-        res.json(result.rows[0] || { message: 'Auditorium type not found' });
+        await pool.connect();
+        const result = await pool.request()
+            .input('type', type)
+            .query('DELETE FROM auditorium_type OUTPUT DELETED.* WHERE auditorium_type = @type');
+        
+        if (result.recordset.length > 0) {
+            res.json(result.recordset[0]);
+        } else {
+            res.json({ message: 'Auditorium type not found' });
+        }
     } catch (err) {
         res.status(500).json({ error: err.message });
     }

@@ -1,0 +1,6 @@
+{
+  "Celebrities": {
+    "PhotoPathFolder": "/home/alexei/Documents/bstu/ASP_NET_CORE/Celebrities",
+    "ConnectionString": "Data source=127.0.0.1; Initial Catalog=LES;TrustServerCertificate=True;User Id=SA;Password=Contraseña12345678"
+  }
+}

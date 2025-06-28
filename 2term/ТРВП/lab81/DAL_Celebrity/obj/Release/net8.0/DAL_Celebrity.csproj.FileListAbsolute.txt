@@ -1,0 +1,11 @@
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/DAL_Celebrity/bin/Release/net8.0/DAL_Celebrity.deps.json
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/DAL_Celebrity/bin/Release/net8.0/DAL_Celebrity.dll
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/DAL_Celebrity/bin/Release/net8.0/DAL_Celebrity.pdb
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/DAL_Celebrity/obj/Release/net8.0/DAL_Celebrity.GeneratedMSBuildEditorConfig.editorconfig
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/DAL_Celebrity/obj/Release/net8.0/DAL_Celebrity.AssemblyInfoInputs.cache
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/DAL_Celebrity/obj/Release/net8.0/DAL_Celebrity.AssemblyInfo.cs
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/DAL_Celebrity/obj/Release/net8.0/DAL_Celebrity.csproj.CoreCompileInputs.cache
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/DAL_Celebrity/obj/Release/net8.0/DAL_Celebrity.dll
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/DAL_Celebrity/obj/Release/net8.0/refint/DAL_Celebrity.dll
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/DAL_Celebrity/obj/Release/net8.0/DAL_Celebrity.pdb
+/home/alexei/Documents/bstu/ASP_NET_CORE/ASPA/DAL_Celebrity/obj/Release/net8.0/ref/DAL_Celebrity.dll

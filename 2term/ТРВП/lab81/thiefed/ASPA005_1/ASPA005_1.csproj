@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Celebrities\Celebrities.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Celebrities\Celebrities.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\ТРВП\ASPA\DAL004\DAL004.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="DAL004">
+      <HintPath>..\..\..\ТРВП\ASPA\DAL004\bin\Release\net8.0\DAL004.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

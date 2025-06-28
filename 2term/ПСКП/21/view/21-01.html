@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login (Basic)</title>
+</head>
+<body>
+    <form id="loginForm">
+        <label for="username">Логин:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <button type="submit">Войти</button>
+    </form>
+    <div id="content"></div>
+    <script>
+        // Функция для отправки запросов с заголовком Authorization
+        async function fetchWithAuth(url, authHeader, options = {}) {
+            console.log('authHeader для запроса:', authHeader || 'отсутствует');
+            if (authHeader) {
+                options.headers = {
+                    ...options.headers,
+                    'Authorization': authHeader
+                };
+            } else {
+                console.warn('authHeader не предоставлен');
+            }
+            return fetch(url, options);
+        }
+
+        // Обработка отправки формы логина
+        document.getElementById('loginForm').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                const encodedUsername = encodeURIComponent(username);
+                const encodedPassword = encodeURIComponent(password);
+                const authHeader = 'Basic ' + btoa(`${encodedUsername}:${encodedPassword}`);
+                console.log('Создан authHeader:', authHeader);
+
+                const response = await fetch('/login', {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': authHeader,
+                        'Content-Type': 'application/json'
+                    }
+                });
+
+                const text = await response.text();
+                console.log('Ответ от /login:', text);
+
+                let data;
+                try {
+                    data = JSON.parse(text);
+                } catch (e) {
+                    console.error('Ошибка парсинга JSON:', e);
+                    alert('Ошибка сервера: неверный формат ответа');
+                    return;
+                }
+
+                if (response.ok && data.redirect && data.authHeader) {
+                    console.log('Получен authHeader от сервера:', data.authHeader);
+                    // Отправляем запрос к адресу редиректа с полученным authHeader
+                    console.log('Отправка запроса к:', data.redirect);
+                    const resourceResponse = await fetchWithAuth(data.redirect, data.authHeader);
+                    if (resourceResponse.ok) {
+                        console.log('Доступ к /resource получен');
+                        const resourceHtml = await resourceResponse.text();
+                        document.getElementById('content').innerHTML = resourceHtml;
+                        document.getElementById('loginForm').style.display = 'none';
+                    } else {
+                        console.log('Запрос к /resource неуспешен, перенаправление на /');
+                        window.location.href = '/';
+                    }
+                } else {
+                    alert(data.error || 'Неверные учетные данные');
+                }
+            } catch (error) {
+                console.error('Ошибка:', error);
+                if (error.name === 'DOMException') {
+                    alert('Логин и пароль должны содержать только латинские символы');
+                } else {
+                    alert('Ошибка сервера');
+                }
+            }
+        });
+
+        // Проверка при загрузке /resource
+        window.addEventListener('load', async () => {
+            if (window.location.pathname === '/resource') {
+                console.log('Загрузка /resource, но без authHeader перенаправляем на /');
+                window.location.href = '/';
+            }
+        });
+
+        // Обработка выхода
+        document.addEventListener('click', (event) => {
+            if (event.target.id === 'logout') {
+                console.log('Выход, перенаправление на /logout');
+                window.location.href = '/logout';
+            }
+        });
+    </script>
+</body>
+</html>

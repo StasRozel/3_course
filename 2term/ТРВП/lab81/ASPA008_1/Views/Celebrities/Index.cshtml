@@ -1,0 +1,62 @@
+@model ASPA008_1.Models.CelebritiesViewModel
+@{
+    ViewData["Title"] = "Celebrities Dictionary";
+    Layout = "_Layout";
+}
+
+@section Styles
+{
+    <style>
+        .celebrities-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .celebrity-card {
+            background-color: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+            color: #111827;
+        }
+
+        .celebrity-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .celebrity-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .celebrity-card h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 1rem;
+            color: #111827;
+        }
+    </style>
+}
+
+<div class="celebrities-container">
+    <a href="/AddCelebrity" class="celebrity-card">
+        <img src="/Photos/diamond.png" alt="Add Celebrity"/>
+        <h2>Add New Celebrity</h2>
+    </a>
+
+    @foreach (var celebrity in Model.Celebrities)
+    {
+        <a href="/ViewCelebrity/@celebrity.Id" class="celebrity-card">
+            <img src="/Photos/@(celebrity.ReqPhotoPath)" alt="@celebrity.FullName"/>
+            <h2>@celebrity.FullName</h2>
+        </a>
+    }
+</div>
