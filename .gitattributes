@@ -1,0 +1,3 @@
+myenv/* linguist-vendored
+venv/* linguist-vendored
+env/* linguist-vendored
